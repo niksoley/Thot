@@ -1,0 +1,176 @@
+/* CSS Desenvolvido de 500px a 768px */
+
+/*--------------------------------------------------------------------------------------
+Agência Thot
+0. GLOBAL
+1. MENU
+2. BANNER
+3. SERVICOS
+4. TESTEMUNHOS
+5. CONTATO
+6. MAPA
+7. SOCIAL
+8. RODAPÉ
+ ----------------------------------------------------------------------------------------*/
+
+/*--------------------
+    0. GLOBAL
+ ----------------------*/
+
+/*--------------------
+      1. MENU
+ ----------------------*/
+
+#menu {
+  padding: 30px 70px;
+}
+
+#menuContato,
+#menuContato:hover {
+  font-size: 22pt;
+}
+
+/*--------------------
+      2. BANNER
+ ----------------------*/
+
+#banner {
+  padding: 120px 70px 180px;
+}
+
+#banner div p {
+  font-size: 30pt;
+}
+
+#banner div p span {
+  font-size: 28pt;
+}
+
+/*--------------------
+     3. SERVICOS
+----------------------*/
+
+#servicos {
+  padding: 70px;
+}
+
+#servicos img {
+  width: 70%;
+}
+
+#textoServicos {
+  margin : 40px 0;
+  padding: 0 10px;
+}
+
+#textoServicos h2 {
+  font-size: 30pt;
+}
+
+#textoServicos h1 {
+  font-size: 30pt;
+}
+
+#servicos p {
+  font-size: 20pt;
+  margin   : 50px 0 20px;
+}
+
+#servicosCliqueAqui,
+#servicosCliqueAqui:hover,
+#servicosCliqueAqui:link {
+  font-size: 24pt;
+}
+
+/*--------------------
+     4. LAYOUTS
+----------------------*/
+
+/*--------------------
+     5. PLANOS
+----------------------*/
+#planos {
+  padding: 90px 70px 0;
+}
+
+#planos div {
+  padding: 0 30px;
+}
+
+#planos h2 {
+  font-size: 30pt;
+  margin   : 0 0 60px;
+}
+
+#planos h2 span {
+  font-size: 30pt;
+}
+
+#planos h3 {
+  font-size: 20pt;
+  margin   : 0 30px 60px;
+}
+
+#planosCliqueAqui,
+#planosCliqueAqui:hover {
+  font-size: 24pt;
+  padding  : 20px 45px;
+  margin   : 0 0 130px;
+}
+
+/*--------------------
+     6. TESTEMUNHOS
+----------------------*/
+#testemunhos {
+  padding: 60px 55px;
+}
+
+#testemunhos h2 {
+  font-size    : 34pt;
+  margin-bottom: 70px;
+}
+
+.openQuote {
+  font-size: 38pt;
+}
+
+.endQuote {
+  font-size: 38pt;
+}
+
+.carousel-item {
+  font-size: 18pt;
+  margin   : 0 0 130px;
+}
+
+.nome {
+  font-size: 22pt;
+}
+
+.emprego {
+  font-size: 22pt;
+}
+
+/*--------------------
+     7. Contato
+----------------------*/
+
+#contato {
+  padding: 90px 60px 150px;
+}
+
+#contato h2 {
+  margin   : 0 0 60px;
+  font-size: 38pt;
+}
+
+.form-control {
+  font-size  : 20pt;
+  line-height: 2;
+}
+
+.btn-primary {
+  font-size: 34pt;
+  padding  : 10px 70px;
+  margin   : 50px 0 0;
+}

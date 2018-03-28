@@ -1,0 +1,275 @@
+/* CSS Desenvolvido de 992px a 2000px */
+
+/*--------------------------------------------------------------------------------------
+Agência Thot
+0. GLOBAL
+1. MENU
+2. BANNER
+3. SERVICOS
+4. TESTEMUNHOS
+5. CONTATO
+6. MAPA
+7. SOCIAL
+8. SUBMENU
+9. RODAPÉ
+ ----------------------------------------------------------------------------------------*/
+
+/*--------------------
+    0. GLOBAL
+ ----------------------*/
+
+/*--------------------
+      1. MENU
+ ----------------------*/
+
+#menu {
+  padding         : 30px 70px;
+  background-color: white;
+  position        : fixed;
+  z-index         : 10;
+  box-shadow      : 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 2px 0 rgba(0, 0, 0, 0.09);
+}
+
+#menuContato,
+#menuContato:hover {
+  font-size: 28pt;
+}
+
+#menuSpacer {
+  display: block;
+  height : 140px;
+}
+
+/*--------------------
+      2. BANNER
+ ----------------------*/
+
+#banner {
+  padding              : 120px 0 300px 150px;
+  background-attachment: fixed;
+}
+
+#banner div {
+  width: 550px;
+}
+
+#banner div p {
+  font-size: 40pt;
+}
+
+#banner div p span {
+  font-size: 38pt;
+}
+
+/*--------------------
+     3. SERVICOS
+----------------------*/
+
+#servicos {
+  padding        : 150px 70px;
+  flex-direction : row;
+  justify-content: space-around;
+}
+
+#servicos img {
+  width    : 35%;
+  min-width: 400px;
+}
+
+#card {
+  width      : 40%;
+  align-items: flex-start;
+  margin-left: 60px;
+}
+
+#textoServicos {
+  margin : 40px 0;
+  padding: 0;
+}
+
+#textoServicos h2 {
+  font-size: 36pt;
+}
+
+#textoServicos h1 {
+  font-size: 36pt;
+}
+
+#servicos p {
+  font-size: 22pt;
+  margin   : 50px 0 20px;
+}
+
+#servicosCliqueAqui,
+#servicosCliqueAqui:hover,
+#servicosCliqueAqui:link {
+  font-size: 24pt;
+}
+
+/*--------------------
+     4. LAYOUTS
+----------------------*/
+
+/*--------------------
+     5. PLANOS
+----------------------*/
+#planos {
+  padding: 110px 70px 0;
+}
+
+#planos div {
+  padding: 0 30px;
+}
+
+#planos h2 {
+  font-size: 30pt;
+  margin   : 0 0 60px;
+}
+
+#planos h2 span {
+  font-size: 30pt;
+}
+
+#planos h3 {
+  font-size: 20pt;
+  margin   : 0 30px 100px;
+}
+
+#planosCliqueAqui,
+#planosCliqueAqui:hover {
+  font-size: 24pt;
+  padding  : 20px 45px;
+  margin   : 0 0 130px;
+}
+
+#planos img {
+  width : 40%;
+  margin: 0 0 -3vh;
+}
+
+/*--------------------
+     6. TESTEMUNHOS
+----------------------*/
+#testemunhos {
+  padding: 60px 55px;
+}
+
+#testemunhos h2 {
+  font-size    : 36pt;
+  margin-bottom: 70px;
+  text-align   : left;
+}
+
+.containerTestemunhos {
+  display    : flex;
+  align-items: center;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.subTestemunhos {
+  text-align: center;
+  font-size : 18pt;
+  margin    : 0 20px;
+}
+
+.openQuote {
+  font-size: 38pt;
+}
+
+.endQuote {
+  font-size: 38pt;
+}
+
+.nome {
+  font-size: 24pt;
+}
+
+.emprego {
+  font-size: 24pt;
+}
+
+/*--------------------
+     7. Contato
+----------------------*/
+
+#contato {
+  padding   : 150px 350px;
+  height    : 85vh;
+  text-align: center;
+}
+
+#contato h2 {
+  display: none;
+}
+
+#contato form {
+  background-color: black;
+  max-width       : 600px;
+  padding         : 30px 50px;
+  margin          : auto;
+  height          : 50vh;
+  box-shadow      : -10px 10px 10px 0 rgba(0, 0, 0, 0.5), -13px 13px 17px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  font-size  : 10pt;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  font-size: 15pt;
+  padding  : 5px 40px;
+  margin   : 0;
+}
+
+/*--------------------
+     8. Sub Menu
+----------------------*/
+
+#subMenu {
+  background-color: #424242;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : flex-end;
+  padding         : 40px 150px;
+}
+
+#subMenu h3 {
+  font-family    : "Montserrat", sans-serif;
+  font-weight    : bold;
+  color          : #FFFFFF;
+  font-size      : 14pt;
+  text-decoration: none;
+  margin         : 0;
+}
+
+#subMenu a {
+  font-family    : "Montserrat", sans-serif;
+  font-weight    : normal;
+  color          : #FFFFFF;
+  font-size      : 14pt;
+  text-decoration: none;
+}
+
+/*--------------------
+     9. RODAPÉ
+----------------------*/
+
+footer {
+  padding        : 30px 150px;
+  display        : flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color      : #FFFFFF;
+  font-size  : 10pt;
+  margin     : 0;
+  line-height: 2;
+  display    : inline;
+}
