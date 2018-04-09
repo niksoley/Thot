@@ -273,3 +273,105 @@ footer p {
   line-height: 2;
   display    : inline;
 }
+
+/*--------------------
+     10. Planos
+----------------------*/
+
+#planosDetalhado {
+  padding   : 150px 0;
+  text-align: center;
+}
+
+#planosDetalhado span {
+  font-size: 34pt;
+}
+
+#planosDetalhado h2 {
+  margin   : auto auto 150px;
+  max-width: none;
+  font-size: 34pt;
+}
+
+.carousel-inner,
+.innerIdentifier {
+  display        : flex;
+  justify-content: center;
+}
+
+.planosContainer {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #5A7F90;
+  padding     : 50px 10px 35px;
+  width       : 27%;
+  margin      : 0 10px;
+}
+
+.planosContainer .planosCategoria {
+  font-family  : "Montserrat", sans-serif;
+  font-weight  : bold;
+  font-size    : 18pt;
+  margin-bottom: 50px;
+}
+
+#planosMedianoAvancado,
+#planosMedianoBasico,
+#planosMedianoProfissional,
+.planosDivSuperior {
+  font-size : 12pt;
+  text-align: left;
+  padding   : 0 30px;
+}
+
+.planosDivSuperior {
+  border-bottom: 2px solid #5A7F90;
+}
+
+#planosMedianoAvancado span,
+#planosMedianoBasico span,
+#planosMedianoProfissional span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 12pt;
+  color      : #AFD14A;
+}
+
+#planosMedianoAvancado span {
+  color: #A0444B;
+}
+
+#planosMedianoProfissional span {
+  color: #5A7F90;
+}
+
+#planosMedianoAvancado li,
+#planosMedianoBasico li,
+#planosMedianoProfissional li,
+.planosDivSuperior li {
+  margin-bottom: 10px;
+  line-height  : 1.2;
+}
+
+.planosDivInferior {
+  margin-top : 120px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 15pt;
+  color      : #515151;
+}
+
+.preço {
+  font-size: 24pt;
+}
+
+.planosDetalhadoCliqueAqui {
+  background-color: black;
+  font-family     : "Montserrat", sans-serif;
+  font-weight     : normal;
+  font-size       : 12pt;
+  color           : white;
+  display         : inline-block;
+  padding         : 15px 45px;
+  margin-top      : 50px;
+}

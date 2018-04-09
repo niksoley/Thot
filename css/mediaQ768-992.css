@@ -186,3 +186,72 @@ Agência Thot
   padding  : 10px 70px;
   margin   : 50px 0 0;
 }
+
+/*--------------------
+     10. Planos
+----------------------*/
+
+#planosDetalhado {
+  padding   : 100px 0 0;
+  text-align: center;
+}
+
+#planosDetalhado span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 32pt;
+  color      : #5A7F90;
+}
+
+#planosDetalhado h2 {
+  margin   : auto auto 120px;
+  max-width: 350px;
+  font-size: 32pt;
+}
+
+.planosContainer {
+  padding: 70px 60px 50px;
+  width  : 60%;
+}
+
+.planosContainer .planosCategoria {
+  font-size    : 24pt;
+  margin-bottom: 75px;
+}
+
+#planosMedianoAvancado,
+#planosMedianoBasico,
+#planosMedianoProfissional,
+.planosDivSuperior {
+  font-size: 16pt;
+  padding  : 0 30px;
+}
+
+#planosMedianoAvancado span,
+#planosMedianoBasico span,
+#planosMedianoProfissional span {
+  font-size: 16pt;
+}
+
+#planosMedianoAvancado li,
+#planosMedianoBasico li,
+#planosMedianoProfissional li,
+.planosDivSuperior li {
+  margin-bottom: 10px;
+  line-height  : 1.2;
+}
+
+.planosDivInferior {
+  margin-top: 120px;
+  font-size : 19pt;
+}
+
+.preço {
+  font-size: 28pt;
+}
+
+.planosDetalhadoCliqueAqui {
+  font-size : 14pt;
+  padding   : 18px 50px;
+  margin-top: 50px;
+}
