@@ -30,6 +30,10 @@ Agência Thot
   display        : flex;
   justify-content: space-between;
   align-items    : center;
+  z-index        : 10;
+  box-shadow     : 0 10px 8px -1px rgba(0, 0, 0, 0.3), 0 15px 12px -12px rgba(0, 0, 0, 0.6);
+  position       : relative;
+  z-index        : 5;
 }
 
 #menu img {
@@ -68,10 +72,7 @@ Agência Thot
   display            : flex;
   align-items        : center;
   max-height         : 90vh;
-}
-
-#banner {
-  text-align: left;
+  text-align         : left;
 }
 
 #banner div p {
@@ -175,8 +176,8 @@ Agência Thot
 }
 
 #visualContainer {
-  width                     : 100%;
   overflow-x                : scroll;
+  white-space               : nowrap;
   overflow-y                : hidden;
   -ms-overflow-scrolling    : touch;
   -moz-overflow-scrolling   : touch;
@@ -191,26 +192,18 @@ Agência Thot
 }
 
 .innerSlide {
-  width: 50%;
-  /* border-style: solid;
-  border-width: 5px;
-  border-color: purple; */
-}
-
-.holder {
-  width          : 260%;
-  padding        : 0 30px;
-  display        : flex;
-  justify-content: center;
-
+  display  : inline-block;
+  width    : 80%;
+  max-width: 320px;
+  padding  : 0 5px;
 }
 
 .slide-image {
-  max-width   : 90%;
+  max-width   : 100%;
+  max-height  : 85vh;
   border-style: solid;
   border-width: 5px;
   border-color: white;
-  max-height  : 85vh;
 }
 
 /*--------------------
@@ -409,4 +402,119 @@ footer {
 
 footer p {
   display: none;
+}
+
+/*--------------------
+     10. Planos
+----------------------*/
+
+#planosDetalhado {
+  padding    : 80px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 24pt;
+  text-align : center;
+}
+
+#planosDetalhado span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 24pt;
+  color      : #5A7F90;
+}
+
+#planosDetalhado h2 {
+  margin   : auto auto 60px;
+  max-width: 300px;
+}
+
+.carousel-inner {
+  display        : flex;
+  justify-content: center;
+}
+
+.planosContainer {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #5A7F90;
+  padding     : 50px 10px 25px;
+  width       : 80%;
+}
+
+.planosContainer .planosCategoria {
+  font-family  : "Montserrat", sans-serif;
+  font-weight  : bold;
+  font-size    : 18pt;
+  margin-bottom: 50px;
+}
+
+.planosContainer #planoBasico {
+  color: #AFD14A;
+}
+
+.planosContainer #planoProfissional {
+  color: #5A7F90;
+}
+
+.planosContainer #planosAvancado {
+  color: #A0444B;
+}
+
+#planosMedianoAvancado,
+#planosMedianoBasico,
+#planosMedianoProfissional,
+.planosDivSuperior {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 12pt;
+  text-align : left;
+  padding    : 0 30px;
+}
+
+#planosMedianoAvancado span,
+#planosMedianoBasico span,
+#planosMedianoProfissional span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 12pt;
+  color      : #AFD14A;
+}
+
+#planosMedianoAvancado span {
+  color: #A0444B;
+}
+
+#planosMedianoProfissional span {
+  color: #5A7F90;
+}
+
+#planosMedianoAvancado li,
+#planosMedianoBasico li,
+#planosMedianoProfissional li,
+.planosDivSuperior li {
+  margin-bottom: 10px;
+  line-height  : 1.2;
+}
+
+.planosDivInferior {
+  margin-top : 120px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 15pt;
+  color      : #515151;
+}
+
+.preço {
+  font-size: 24pt;
+}
+
+.planosDetalhadoCliqueAqui {
+  background-color: black;
+  font-family     : "Montserrat", sans-serif;
+  font-weight     : normal;
+  font-size       : 12pt;
+  color           : white;
+  display         : inline-block;
+  padding         : 15px 45px;
+  margin-top      : 50px;
 }

@@ -1,3 +1,13 @@
+var myDiv = $("#visualContainer");
+
+// var scrollto = myDiv.offset().left + (($("#visualContainer").get(0).scrollWidth) / 2);
+var scrollto = myDiv.offset().left + (myDiv.width() / 2);
+
+myDiv.animate({
+  scrollLeft: scrollto
+});
+
+
 //OverflowScrolling test
 
 function hasOverflowScrolling() {
