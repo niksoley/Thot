@@ -179,6 +179,7 @@ Agência Thot
   overflow-x                : scroll;
   white-space               : nowrap;
   overflow-y                : hidden;
+  padding                   : 0 40px;
   -ms-overflow-scrolling    : touch;
   -moz-overflow-scrolling   : touch;
   -o-overflow-scrolling     : touch;
@@ -194,16 +195,65 @@ Agência Thot
 .innerSlide {
   display  : inline-block;
   width    : 80%;
-  max-width: 320px;
-  padding  : 0 5px;
+  margin   : 0 5px;
+  max-width: 350px;
 }
 
 .slide-image {
   max-width   : 100%;
-  max-height  : 85vh;
+  max-height  : 100vh;
   border-style: solid;
   border-width: 5px;
   border-color: white;
+}
+
+.modal {
+  display         : none;
+  /* Hidden by default */
+  position        : fixed;
+  /* Stay in place */
+  z-index         : 1;
+  /* Sit on top */
+  padding-top     : 100px;
+  /* Location of the box */
+  left            : 0;
+  top             : 0;
+  width           : 100%;
+  /* Full width */
+  height          : 100%;
+  /* Full height */
+  overflow        : auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0,0,0);
+  /* Fallback color */
+  background-color: rgba(0,0,0,0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin      : auto;
+  display     : block;
+  width       : 100%;
+  max-width   : 700px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+}
+
+#caption,
+.modal-content {
+  animation-name    : zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 /*--------------------
@@ -274,6 +324,16 @@ Agência Thot
 }
 
 @keyframes testemunhosFadeIn {
+  0 {
+    background-color: rgba(90,127,144,0);
+  }
+
+  100% {
+    background-color: rgba(90,127,144,1);
+  }
+}
+
+@-webkit-keyframes testemunhosFadeIn {
   0 {
     background-color: rgba(90,127,144,0);
   }
@@ -359,9 +419,29 @@ Agência Thot
   font-family     : "Montserrat", sans-serif;
   font-weight     : normal;
   font-size       : 14pt;
-  color           : #FFFFFF;
   background-color: black;
   line-height     : 1.5;
+}
+
+/* WebKit, Blink, Edge */
+.form-control::-webkit-input-placeholder {
+  color: white;
+}
+/* Mozilla Firefox 4 to 18 */
+.form-control:-moz-placeholder {
+  color: white;
+}
+/* Mozilla Firefox 19+ */
+.form-control::-moz-placeholder {
+  color: white;
+}
+/* Internet Explorer 10-11 */
+.form-control:-ms-input-placeholder {
+  color: white;
+}
+/* Microsoft Edge */
+.form-control::-ms-input-placeholder {
+  color: white;
 }
 
 #buttonBox {

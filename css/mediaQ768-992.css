@@ -23,21 +23,29 @@ Agência Thot
  ----------------------*/
 
 #menu {
-  padding: 30px 70px;
+  padding: 15px 70px;
 }
 
 #menuContato,
 #menuContato:hover {
-  font-size: 22pt;
+  font-size: 16pt;
 }
+
+#menu img {
+  height: 60px;
+}
+
+/* #menuSpacer {
+  display: block;
+  height : 90px;
+} */
 
 /*--------------------
       2. BANNER
  ----------------------*/
 
 #banner {
-  padding              : 100px 70px 180px;
-  background-attachment: fixed;
+  padding: 100px 70px 240px;
 }
 
 #banner div {
@@ -45,11 +53,11 @@ Agência Thot
 }
 
 #banner div p {
-  font-size: 30pt;
+  font-size: 24pt;
 }
 
 #banner div p span {
-  font-size: 28pt;
+  font-size: 22pt;
 }
 
 /*--------------------
@@ -71,28 +79,43 @@ Agência Thot
 }
 
 #textoServicos h2 {
-  font-size: 36pt;
+  font-size: 26pt;
 }
 
 #textoServicos h1 {
-  font-size: 36pt;
+  font-size: 26pt;
 }
 
 #servicos p {
-  font-size: 20pt;
-  margin   : 50px 0 20px;
+  font-size: 16pt;
+  margin   : 40px 0 20px;
 }
 
 #servicosCliqueAqui,
 #servicosCliqueAqui:hover,
 #servicosCliqueAqui:link {
-  font-size: 24pt;
+  font-size: 16pt;
 }
 
 /*--------------------
      4. LAYOUTS
 ----------------------*/
 
+#visualContainer {
+  padding: 0 60px;
+}
+
+#layouts h2 {
+  font-size  : 26pt;
+  font-weight: normal;
+}
+
+.innerSlide {
+  display  : inline-block;
+  width    : 60%;
+  margin   : 0 20px;
+  max-width: 500px;
+}
 /*--------------------
      5. PLANOS
 ----------------------*/
@@ -105,22 +128,22 @@ Agência Thot
 }
 
 #planos h2 {
-  font-size: 30pt;
-  margin   : 0 0 60px;
+  font-size: 26pt;
+  margin   : 0 0 40px;
 }
 
 #planos h2 span {
-  font-size: 30pt;
+  font-size: 26pt;
 }
 
 #planos h3 {
-  font-size: 20pt;
+  font-size: 16pt;
   margin   : 0 30px 60px;
 }
 
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-size: 24pt;
+  font-size: 16pt;
   padding  : 20px 45px;
   margin   : 0 0 130px;
 }
@@ -138,7 +161,7 @@ Agência Thot
 }
 
 #testemunhos h2 {
-  font-size    : 34pt;
+  font-size    : 26pt;
   margin-bottom: 70px;
 }
 
@@ -151,16 +174,16 @@ Agência Thot
 }
 
 .carousel-item {
-  font-size: 18pt;
+  font-size: 16pt;
   margin   : 0 0 130px;
 }
 
 .nome {
-  font-size: 22pt;
+  font-size: 18pt;
 }
 
 .emprego {
-  font-size: 22pt;
+  font-size: 18pt;
 }
 
 /*--------------------
@@ -173,18 +196,36 @@ Agência Thot
 
 #contato h2 {
   margin   : 0 0 60px;
-  font-size: 38pt;
+  font-size: 26pt;
+}
+
+#form {
+  padding: 0 80px;
 }
 
 .form-control {
-  font-size  : 20pt;
+  font-size  : 16pt;
+  line-height: 2;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control::placeholder {
+  font-size  : 14pt;
+  line-height: 2;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size  : 14pt !important;
   line-height: 2;
 }
 
 .btn-primary {
-  font-size: 34pt;
+  font-size: 16pt;
   padding  : 10px 70px;
-  margin   : 50px 0 0;
+  margin   : 10px 0;
 }
 
 /*--------------------
@@ -197,25 +238,22 @@ Agência Thot
 }
 
 #planosDetalhado span {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size  : 32pt;
-  color      : #5A7F90;
+  font-size: 26pt;
 }
 
 #planosDetalhado h2 {
   margin   : auto auto 120px;
   max-width: 350px;
-  font-size: 32pt;
+  font-size: 26pt;
 }
 
 .planosContainer {
-  padding: 70px 60px 50px;
+  padding: 30px;
   width  : 60%;
 }
 
 .planosContainer .planosCategoria {
-  font-size    : 24pt;
+  font-size    : 20pt;
   margin-bottom: 75px;
 }
 
@@ -223,14 +261,14 @@ Agência Thot
 #planosMedianoBasico,
 #planosMedianoProfissional,
 .planosDivSuperior {
-  font-size: 16pt;
+  font-size: 14pt;
   padding  : 0 30px;
 }
 
 #planosMedianoAvancado span,
 #planosMedianoBasico span,
 #planosMedianoProfissional span {
-  font-size: 16pt;
+  font-size: 14pt;
 }
 
 #planosMedianoAvancado li,
@@ -242,12 +280,12 @@ Agência Thot
 }
 
 .planosDivInferior {
-  margin-top: 120px;
-  font-size : 19pt;
+  margin-top: 90px;
+  font-size : 16pt;
 }
 
 .preço {
-  font-size: 28pt;
+  font-size: 26pt;
 }
 
 .planosDetalhadoCliqueAqui {

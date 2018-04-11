@@ -1,57 +1,49 @@
 var myDiv = $("#visualContainer");
 
-// var scrollto = myDiv.offset().left + (($("#visualContainer").get(0).scrollWidth) / 2);
-var scrollto = myDiv.offset().left + (myDiv.width() / 2);
+// função tamanho total do div com scroll
+function scrollSize() {
+  return myDiv.get(0).scrollWidth;
+};
 
-myDiv.animate({
-  scrollLeft: scrollto
-});
-
-
-//OverflowScrolling test
-
-function hasOverflowScrolling() {
-  var prefixes = ['webkit', 'moz', 'o', 'ms'];
-  var div = document.createElement('div');
-  var body = document.getElementsByTagName('body')[0];
-  var hasIt = false;
-
-  body.appendChild(div);
-
-  for (var i = 0; i < prefixes.length; i++) {
-    var prefix = prefixes[i];
-    div.style[prefix + 'OverflowScrolling'] = 'touch';
-  }
-
-  // And the non-prefixed property
-  div.style.overflowScrolling = 'touch';
-
-  // Now check the properties
-  var computedStyle = window.getComputedStyle(div);
-
-  // First non-prefixed
-  hasIt = !!computedStyle.overflowScrolling;
-
-  // Now prefixed...
-  for (var i = 0; i < prefixes.length; i++) {
-    var prefix = prefixes[i];
-    if (!!computedStyle[prefix + 'OverflowScrolling']) {
-      hasIt = true;
-      break;
-    }
-  }
-
-  // Cleanup old div elements
-  div.parentNode.removeChild(div);
-
-  return hasIt;
+// função tamnaho do scroll menos viewport
+function scrollViewPortSize() {
+  return scrollSize() - myDiv.innerWidth()
 }
-// alert(hasOverflowScrolling());
 
-//if OverflowScrolling:touch is false, use inertial scrolling code
-
-if (hasOverflowScrolling) {
-
-
-
+// função ponto médio do scroll
+function midScroll() {
+  return myDiv.offset().left + (scrollViewPortSize() / 2);
 }
+
+// função alinhamento do layout
+function layoutAlign() {
+  myDiv.animate({
+    scrollLeft: midScroll()
+  });
+}
+
+layoutAlign();
+
+// rodar alinhamento ao mudar tamanho da tela
+document.getElementsByTagName("BODY")[0].onresize = function() {
+  layoutAlign()
+};
+
+// rodar alinhamento ao mudar tamanho da tela
+
+// document.getElementById("visualContainer").addEventListener("touchend", alignTouch);
+//
+// function alignTouch() {
+//   myDiv.on('scroll', function() {
+//     var val = $(this).scrollLeft();
+//     if (val >= (scrollViewPortSize() / 3)) {
+//       layoutAlign();
+//
+//     }
+//     console.log(val);
+//     val = 0
+//
+//   })
+// };
+
+// && (val <= (scrollViewPortSize() / 1.8))
