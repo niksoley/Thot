@@ -41,7 +41,7 @@ Agência Thot
 
 #menuSpacer {
   display: block;
-  height : 90px;
+  height : 100px;
 }
 
 /*--------------------
@@ -111,17 +111,9 @@ Agência Thot
 }
 
 #servicosCliqueAqui,
-#servicosCliqueAqui:hover,
-#servicosCliqueAqui:link {
-  font-weight     : normal;
-  font-size       : 18pt;
-  background-color: #5A7F90;
-  padding         : 13px 28px;
-}
-
-#servicosCliqueAqui:hover,
-#servicosCliqueAqui:link {
-  background-color: black;
+#servicosCliqueAqui:hover {
+  font-size: 18pt;
+  padding  : 13px 28px;
 }
 
 /*--------------------
@@ -185,16 +177,9 @@ Agência Thot
 
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-weight     : normal;
-  font-size       : 18pt;
-  background-color: #5A7F90;
-  padding         : 13px 28px;
-  margin-bottom   : 120px;
-}
-
-#planosCliqueAqui:hover,
-#planosCliqueAqui:link {
-  background-color: black;
+  font-size    : 18pt;
+  padding      : 13px 28px;
+  margin-bottom: 120px;
 }
 
 #planos img {
@@ -370,6 +355,10 @@ footer p {
   display        : flex;
   flex-direction : column;
   justify-content: space-between;
+}
+
+.planosContainer:hover {
+  background-color: #E2E2E2;
 }
 
 .planosContainer .planosCategoria {

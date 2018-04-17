@@ -26,7 +26,7 @@ Agência Thot
 
 #menu {
   width          : 100%;
-  padding        : 30px 15px;
+  padding        : 20px 15px;
   display        : flex;
   justify-content: space-between;
   align-items    : center;
@@ -37,13 +37,13 @@ Agência Thot
 }
 
 #menu img {
-  height: 80px;
+  height: 60px;
 }
 
 #menuContato,
 #menuContato:hover {
   font-family     : "Montserrat", sans-serif;
-  font-size       : 18pt;
+  font-size       : 14pt;
   font-weight     : normal;
   color           : #FFFFFF;
   background-color: black;
@@ -53,9 +53,12 @@ Agência Thot
   text-decoration : none;
 }
 
+#menuContato:hover {
+  background-color: #353535;
+}
+
 #menuSpacer {
   display: none;
-  z-index: -1;
 }
 
 /*--------------------
@@ -78,7 +81,7 @@ Agência Thot
 #banner div p {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 22pt;
+  font-size  : 20pt;
   line-height: 150%;
   color      : #FFFFFF;
   margin     : 30px 0 0;
@@ -87,7 +90,7 @@ Agência Thot
 #banner div p span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 20pt;
+  font-size  : 18pt;
   color      : #AFD14A;
 }
 
@@ -109,7 +112,7 @@ Agência Thot
 #card {
   display       : flex;
   flex-direction: column;
-  align-items   : center;
+  align-items   : flex-start;
 }
 
 #textoServicos {
@@ -121,7 +124,7 @@ Agência Thot
   display    : inline;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 22pt;
+  font-size  : 20pt;
   color      : #000000;
 }
 
@@ -129,29 +132,32 @@ Agência Thot
   display    : inline;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 22pt;
+  font-size  : 20pt;
   color      : #AFD14A;
 }
 
 #textoServicos p {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 16pt;
+  font-size  : 14pt;
   color      : #000000;
   margin     : 50px 0 0;
 }
 
 #servicosCliqueAqui,
-#servicosCliqueAqui:hover,
-#servicosCliqueAqui:link {
+#servicosCliqueAqui:hover {
   font-family     : "Montserrat", sans-serif;
-  font-weight     : bold;
-  font-size       : 20pt;
+  font-weight     : normal;
+  font-size       : 14pt;
   color           : #FFFFFF;
   background-color: #5A7F90;
   padding         : 20px 35px;
   margin          : 0 0 30px;
   text-decoration : none;
+}
+
+#servicosCliqueAqui:hover {
+  background-color: #3F5A67;
 }
 
 /*--------------------
@@ -167,8 +173,8 @@ Agência Thot
 
 #layouts h2 {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size  : 22pt;
+  font-weight: normal;
+  font-size  : 20pt;
   line-height: 1.5;
   color      : #FFFFFF;
   padding    : 0 40px;
@@ -212,16 +218,14 @@ Agência Thot
   /* Hidden by default */
   position        : fixed;
   /* Stay in place */
-  z-index         : 1;
+  z-index         : 15;
   /* Sit on top */
-  padding-top     : 100px;
+  padding         : 100px 0;
   /* Location of the box */
   left            : 0;
   top             : 0;
   width           : 100%;
   /* Full width */
-  height          : 100%;
-  /* Full height */
   overflow        : auto;
   /* Enable scroll if needed */
   background-color: rgb(0,0,0);
@@ -234,7 +238,6 @@ Agência Thot
   margin      : auto;
   display     : block;
   width       : 100%;
-  max-width   : 700px;
   border-style: solid;
   border-width: 5px;
   border-color: white;
@@ -256,6 +259,23 @@ Agência Thot
   }
 }
 
+/* The Close Button */
+.close {
+  position   : relative;
+  margin     : auto;
+  color      : #f1f1f1;
+  font-size  : 40px;
+  font-weight: bold;
+  transition : 0.3s;
+}
+
+.close:focus,
+.close:hover {
+  color          : #bbb;
+  text-decoration: none;
+  cursor         : pointer;
+}
+
 /*--------------------
      5. PLANOS
 ----------------------*/
@@ -271,7 +291,7 @@ Agência Thot
 #planos h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 24pt;
+  font-size  : 20pt;
   color      : #000000;
   margin     : 0 0 50px;
 }
@@ -279,14 +299,14 @@ Agência Thot
 #planos h2 span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 24pt;
+  font-size  : 20pt;
   color      : #5A7F90;
 }
 
 #planos h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 16pt;
+  font-size  : 14pt;
   color      : #000000;
   margin     : 0 30px 50px;
 }
@@ -294,13 +314,17 @@ Agência Thot
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
   font-family     : "Montserrat", sans-serif;
-  font-weight     : bold;
-  font-size       : 20pt;
+  font-weight     : normal;
+  font-size       : 14pt;
   color           : #FFFFFF;
   text-decoration : none;
   background-color: #5A7F90;
   padding         : 20px 35px;
   margin          : 0 0 100px;
+}
+
+#planosCliqueAqui:hover {
+  background-color: #3F5A67;
 }
 
 #planos img {
@@ -347,7 +371,7 @@ Agência Thot
   text-align   : center;
   font-family  : "Montserrat", sans-serif;
   font-weight  : normal;
-  font-size    : 28pt;
+  font-size    : 20pt;
   margin-bottom: 50px;
 }
 
@@ -372,20 +396,20 @@ Agência Thot
   text-align : center;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 16pt;
+  font-size  : 14pt;
   margin     : 0 0 100px;
 }
 
 .nome {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 20pt;
+  font-size  : 16pt;
 }
 
 .emprego {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 20pt;
+  font-size  : 16pt;
 }
 
 .carousel-indicators li {
@@ -412,13 +436,13 @@ Agência Thot
   margin     : 0 0 40px;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 28pt;
+  font-size  : 20pt;
 }
 
 .form-control {
   font-family     : "Montserrat", sans-serif;
   font-weight     : normal;
-  font-size       : 14pt;
+  font-size       : 10pt;
   background-color: black;
   line-height     : 1.5;
 }
@@ -451,12 +475,16 @@ Agência Thot
 .btn-primary {
   font-family     : "Montserrat", sans-serif;
   font-weight     : normal;
-  font-size       : 24pt;
+  font-size       : 14pt;
   color           : black !important;
   background-color: white !important;
   border-width    : 5px;
   border-color    : black !important;
   padding         : 5px 40px;
+}
+
+.btn-primary:hover {
+  background-color: #C9CACC !important;
 }
 
 .btn-primary p {
@@ -496,7 +524,7 @@ footer p {
 #planosDetalhado span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 24pt;
+  font-size  : 20pt;
   color      : #5A7F90;
 }
 
@@ -505,7 +533,7 @@ footer p {
   max-width  : 300px;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 24pt;
+  font-size  : 20pt;
 }
 
 .carousel-inner {
@@ -524,7 +552,7 @@ footer p {
 .planosContainer .planosCategoria {
   font-family  : "Montserrat", sans-serif;
   font-weight  : bold;
-  font-size    : 18pt;
+  font-size    : 16pt;
   margin-bottom: 50px;
 }
 
@@ -597,4 +625,8 @@ footer p {
   display         : inline-block;
   padding         : 15px 45px;
   margin-top      : 50px;
+}
+
+.planosDetalhadoCliqueAqui:hover {
+  background-color: #353535;
 }

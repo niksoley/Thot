@@ -65,7 +65,7 @@ Agência Thot
 ----------------------*/
 
 #servicos {
-  padding: 70px;
+  padding: 70px 110px;
 }
 
 #servicos img {
@@ -74,7 +74,7 @@ Agência Thot
 
 #textoServicos {
   margin   : 40px 0;
-  padding  : 0 40px;
+  padding  : 0;
   max-width: 770px;
 }
 
@@ -92,8 +92,7 @@ Agência Thot
 }
 
 #servicosCliqueAqui,
-#servicosCliqueAqui:hover,
-#servicosCliqueAqui:link {
+#servicosCliqueAqui:hover {
   font-size: 16pt;
 }
 
