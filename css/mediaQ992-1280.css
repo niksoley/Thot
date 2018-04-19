@@ -148,7 +148,12 @@ Agência Thot
 
 .modal-content {
   width : 80%;
-  margin: 50px auto;
+  margin: auto;
+}
+
+.close {
+  margin   : 0 0 10px;
+  font-size: 80px;
 }
 
 /*--------------------
