@@ -29,21 +29,51 @@ document.getElementsByTagName("BODY")[0].onresize = function() {
   layoutAlign()
 };
 
-// rodar alinhamento ao mudar tamanho da tela
+// pegar posicao do scroll
 
-// document.getElementById("visualContainer").addEventListener("touchend", alignTouch);
-//
-// function alignTouch() {
-//   myDiv.on('scroll', function() {
-//     var val = $(this).scrollLeft();
-//     if (val >= (scrollViewPortSize() / 3)) {
-//       layoutAlign();
-//
-//     }
-//     console.log(val);
-//     val = 0
-//
-//   })
-// };
+// $(document).ready(function() {
+//   $("#visualContainer").scroll(function() {
+//     var horizontalPosition = $("#visualContainer").scrollLeft();
+//     console.log(horizontalPosition);
+//   });
+// });
 
-// && (val <= (scrollViewPortSize() / 1.8))
+document.getElementById("visualContainer").addEventListener("touchend", cardAlign);
+document.getElementById("visualContainer").addEventListener("touchstart", stopAnimation);
+
+function stopAnimation() {
+  myDiv.stop();
+}
+
+function cardAlign() {
+  setTimeout(function() {
+    myDiv.css("-ms-overflow-scrolling", "auto");
+    myDiv.css("overflow-scrolling", "auto");
+    myDiv.css("-moz-overflow-scrolling", "auto");
+    myDiv.css("-o-overflow-scrolling", "auto");
+    myDiv.css("-webkit-overflow-scrolling", "auto");
+    myDiv.stop();
+
+    var horizontalPosition = $("#visualContainer").scrollLeft();
+    console.log(horizontalPosition);
+    if ((horizontalPosition > (midScroll() - (midScroll() / 3))) && (horizontalPosition < (midScroll() + (midScroll() / 3)))) {
+      layoutAlign();
+    }
+    if (horizontalPosition < (midScroll() - (midScroll() / 3))) {
+      myDiv.animate({
+        scrollLeft: "0"
+      });
+    }
+    if (horizontalPosition > (midScroll() + (midScroll() / 3))) {
+      myDiv.animate({
+        scrollLeft: scrollViewPortSize()
+      });
+    }
+    myDiv.css("-ms-overflow-scrolling", "touch");
+    myDiv.css("overflow-scrolling", "touch");
+    myDiv.css("-moz-overflow-scrolling", "touch");
+    myDiv.css("-o-overflow-scrolling", "touch");
+    myDiv.css("-webkit-overflow-scrolling", "touch");
+  }, 2500);
+
+};
