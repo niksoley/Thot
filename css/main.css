@@ -642,3 +642,11 @@ footer p {
 .planosDetalhadoCliqueAqui:hover {
   background-color: #353535;
 }
+
+.carousel-control-prev-icon {
+  background-image: url("../img/Seta_preta.png") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("../img/Seta_preta.png") !important;
+}
