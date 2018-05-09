@@ -18,9 +18,9 @@
     <!-- (desktops, 992 and up) -->
     <link rel="stylesheet" media="(min-width: 992px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
     <!-- Large devices (large desktops, 1280px and up) -->
-    <link rel="stylesheet" media="(min-width: 1280px) and (max-width: 1920px)" href="css/mediaQ1280-1920.css"/>
+    <link rel="stylesheet" media="(min-width: 1280px) and (max-width: 2000px)" href="css/mediaQ1280-2000.css"/>
     <!-- Large devices (large desktops, 1920px and up) -->
-    <link rel="stylesheet" media="(min-width: 1920px)" href="css/mediaQMin1920.css"/>
+    <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
     <title>Thot</title>
     <link rel="icon" href="img/Thot-01.svg">
@@ -68,8 +68,10 @@
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgModal">
+
+        <div id="imgModalContainer">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="imgModal"></div>
       </div>
     </section>
     <!-- End of Layout -->
@@ -160,18 +162,12 @@
     </section>
     <!-- End of Contato -->
     <!-- Sub Menu -->
-    <section id="subMenu">
-      <a href="#menuSpacer">
-        <h3>THOT</h3>
-      </a>
-      <a href="#servicos">Serviços</a>
-      <a href="#planos">Planos</a>
-      <a href="#contato">Contato</a>
-    </section>
+    <!-- <section id="subMenu"> <a href="#menuSpacer"> <h3>THOT</h3> </a> <a href="#servicos">Serviços</a> <a href="#planos">Planos</a> <a href="#contato">Contato</a> </section> -->
     <!-- End of Sub Menu -->
     <footer>
       <img src="img/Thot_bottom2.png" alt="">
       <p>© 2018 THOT. All rights reserved</p>
+      <div w3-include-html="h1.html"></div>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

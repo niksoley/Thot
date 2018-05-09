@@ -145,8 +145,12 @@ Agência Thot
   max-width: 100%;
 }
 
+#imgModalContainer {
+  width: 80%;
+}
+
 .modal-content {
-  width : 80%;
+  width : 100%;
   margin: auto;
 }
 
@@ -344,10 +348,27 @@ footer p {
   font-size: 28pt;
 }
 
-.carousel-inner,
-.innerIdentifier {
-  display        : flex;
-  justify-content: center;
+.sliderPlanos {
+  width   : 100%;
+  height  : 100%;
+  padding : 0 200px;
+  overflow: auto;
+}
+
+.holder {
+  width      : 100%;
+  height     : 100%;
+  overflow-y : auto;
+  display    : flex;
+  align-items: stretch;
+}
+
+.slide-wrapper {
+  width   : 33.333%;
+  height  : 1200px;
+  float   : none;
+  position: static;
+  overflow: auto;
 }
 
 .planosContainer {
@@ -355,8 +376,8 @@ footer p {
   border-width   : 3px;
   border-color   : #5A7F90;
   padding        : 50px 10px 35px;
-  width          : 24%;
-  margin         : 0 10px;
+  width          : 85%;
+  height         : 1200px;
   display        : flex;
   flex-direction : column;
   justify-content: space-between;

@@ -18,8 +18,8 @@
       $("div.subTestemunhos").removeClass("carousel-item");
 
       // Planos Carousel
-      $("div.innerIdentifier").removeClass("carousel-inner");
-      $("div.planosContainer").removeClass("carousel-item");
+      // $("div.innerIdentifier").removeClass("carousel-inner");
+      // $("div.planosContainer").removeClass("carousel-item");
 
 
 
@@ -45,8 +45,8 @@
         $("div.subTestemunhos").addClass("carousel-item"); //<div< Class SubTestemunhos
 
         // Planos Carousel
-        $("div.innerIdentifier").addClass("carousel-inner");
-        $("div.planosContainer").addClass("carousel-item");
+        // $("div.innerIdentifier").addClass("carousel-inner");
+        // $("div.planosContainer").addClass("carousel-item");
 
       } else if (screenWidth >= 768 && screenWidth < 992) {
 
@@ -58,8 +58,8 @@
         $("div.subTestemunhos").addClass("carousel-item"); //<div< Class SubTestemunhos
 
         // Planos Carousel
-        $("div.innerIdentifier").addClass("carousel-inner");
-        $("div.planosContainer").addClass("carousel-item");
+        // $("div.innerIdentifier").addClass("carousel-inner");
+        // $("div.planosContainer").addClass("carousel-item");
 
 
       } else if (screenWidth >= 992 && screenWidth < 2000) {
@@ -72,8 +72,8 @@
         $("div.subTestemunhos").removeClass("carousel-item");
 
         // Planos Carousel
-        $("div.innerIdentifier").removeClass("carousel-inner");
-        $("div.planosContainer").removeClass("carousel-item");
+        // $("div.innerIdentifier").removeClass("carousel-inner");
+        // $("div.planosContainer").removeClass("carousel-item");
 
       } else if (screenWidth >= 2000) {
 

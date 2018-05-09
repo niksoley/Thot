@@ -14,7 +14,12 @@ function reply_click(clicked_id) {
   String.prototype.splice = function(idx, rem, str) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
   };
-  var result = srcString.splice((srcString.length - 4), 0, "full");
+
+  if (screen.width < 992) {
+    var result = srcString.splice((srcString.length - 4), 0, "full");
+  } else {
+    var result = srcString.splice((srcString.length - 4), 0, "full2");
+  }
 
   modalImg.src = result;
 
