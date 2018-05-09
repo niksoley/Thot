@@ -255,7 +255,8 @@ Agência Thot
 }
 
 #contato h2 {
-  display: none;
+  margin   : 0 0 60px;
+  font-size: 24pt;
 }
 
 #contato form {
@@ -452,7 +453,7 @@ footer p {
   color      : #515151;
 }
 
-.preço {
+.preco {
   font-size: 22pt;
 }
 
@@ -465,4 +466,97 @@ footer p {
   display         : inline-block;
   padding         : 13px 28px;
   margin-top      : 50px;
+}
+
+/*--------------------------------------------------------
+     10. Plano Basico / Plano Mediano / Plano Avancado
+---------------------------------------------------------*/
+
+#descricaoPlanos {
+  padding: 100px 10vw 180px;
+}
+
+#descricaoPlanos h2 {
+  font-size: 24pt;
+  margin   : 0 0 60px;
+}
+
+.planosgeral {
+  font-size  : 20pt;
+  line-height: 33px;
+}
+
+#listaPlano p {
+  font-size  : 10pt;
+  line-height: 30px;
+  margin-top : 0 !important;
+}
+
+#listaPlano {
+  font-size    : 14pt;
+  margin       : auto;
+  line-height  : 28px;
+  width        : 600px;
+  border-color : black;
+  border-width : 2px;
+  border-style : solid;
+  padding-left : 30px;
+  padding-right: 30px;
+  padding-top  : 30px;
+}
+
+.planosprecos {
+  margin-top: 0 !important;
+  font-size : 14pt !important;
+}
+
+.precofinal {
+  font-size: 20pt !important;
+}
+
+.taxa {
+  font-size: 12pt !important;
+}
+
+#alignDados {
+  text-align: left;
+  margin    : auto;
+}
+
+.planosLayoutBTN {
+  background-color: black !important;
+  color           : white !important;
+}
+
+/*--------------------------------------------------------
+     10. Plano Basico
+---------------------------------------------------------*/
+.planoBasicoForm {
+  background-color: #AFD14A !important;
+}
+
+.planoBasicoLayoutInput {
+  border-color: black;
+}
+/*--------------------------------------------------------
+     10.  Plano Mediano
+---------------------------------------------------------*/
+
+.planoMedianoForm {
+  background-color: #5A7F90 !important;
+}
+
+.planoMedianoLayoutInput {
+  border-color: black;
+}
+/*--------------------------------------------------------
+     10. Plano Avancado
+---------------------------------------------------------*/
+
+.planoAvancadoForm {
+  background-color: #A0444B!important;
+}
+
+.planoAvancadoLayoutInput {
+  border-color: black;
 }

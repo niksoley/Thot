@@ -249,7 +249,7 @@ Agência Thot
   font-size : 16pt;
 }
 
-.preço {
+.preco {
   font-size: 24pt;
 }
 
@@ -257,4 +257,35 @@ Agência Thot
   font-size : 14pt;
   padding   : 18px 50px;
   margin-top: 50px;
+}
+
+/*--------------------------------------------------------
+     10. Plano Basico / Plano Mediano / Plano Avancado
+---------------------------------------------------------*/
+
+#descricaoPlanos {
+  padding: 80px 10vw;
+}
+
+#descricaoPlanos h2 {
+  font-size: 24pt;
+  margin   : 0 0 60px;
+}
+
+.planosgeral {
+  font-size: 25pt;
+}
+
+#listaPlano {
+  font-size: 12pt;
+}
+
+#listaPlano p {
+  font-size  : 12pt;
+  line-height: 30px;
+  margin-top : 30px;
+}
+
+#layouts h1 {
+  font-size: 25pt;
 }
