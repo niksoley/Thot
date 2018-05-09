@@ -690,7 +690,7 @@ footer p {
   color      : #515151;
 }
 
-.preço {
+.preco {
   font-size: 24pt;
 }
 
@@ -715,4 +715,122 @@ footer p {
 
 .carousel-control-next-icon {
   background-image: url("../img/Seta_preta.png") !important;
+}
+
+/*--------------------------------------------------------
+     10. Plano Basico / Plano Mediano / Plano Avancado
+---------------------------------------------------------*/
+
+#descricaoPlanos {
+  padding: 80px 0;
+}
+
+#descricaoPlanos h2 {
+  margin     : auto auto 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 20pt;
+  text-align : center;
+}
+
+.planosgeral {
+  font-family: "Montserrat", sans-serif;
+  font-size  : 12pt;
+  color      : white;
+  line-height: 33px;
+  margin     : auto;
+}
+
+.planosgeral li {
+  margin-top: 13px;
+}
+
+.planosprecos {
+  margin-top: 20px !important;
+  text-align: center;
+  align-self: flex-start;
+  font-size : 18pt !important;
+}
+
+.precofinal {
+  font-size: 25pt !important;
+}
+
+.taxa {
+  font-size : 18px !important;
+  margin-top: -5px;
+}
+
+#listaPlano {
+  font-size    : 14px;
+  border-color : black;
+  border-width : 2px;
+  border-style : solid;
+  padding-right: 10px;
+  padding-top  : 30px;
+  margin-right : 45px;
+  margin-left  : 45px;
+  margin-top   : 40px;
+  line-height  : 20px;
+}
+
+#listaPlano p {
+  font-size   : 16px;
+  font-weight : normal;
+  line-height : 23px;
+  margin-left : 30px;
+  margin-right: 30px;
+}
+
+#listaPlano li:last-child {
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------
+     10. Plano Basico
+---------------------------------------------------------*/
+
+#corTituloBasico {
+  color: #AFD14A;
+}
+
+.corListaBasico {
+  background-color: #AFD14A;
+}
+
+.planoBasicoLayout,
+.planoBasicoLayoutInput {
+  background-color: #AFD14A !important;
+}
+/*--------------------------------------------------------
+     10.  Plano Mediano
+---------------------------------------------------------*/
+
+#corTituloMediano {
+  color: #5A7F90;
+}
+
+.corListaMediano {
+  background-color: #5A7F90;
+}
+
+.planoMedianoLayout,
+.planoMedianoLayoutInput {
+  background-color: #5A7F90!important;
+}
+/*--------------------------------------------------------
+     10.  Plano Avancado
+---------------------------------------------------------*/
+
+#corTituloAvancado {
+  color: #A0444B;
+}
+
+.corListaAvancado {
+  background-color: #A0444B;
+}
+
+.planoAvancadoLayout,
+.planoAvancadoLayoutInput {
+  background-color: #A0444B !important;
 }

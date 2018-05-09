@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <!-- Extra small devices (portrait phones, less than 500px) -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Extra small devices (portrait phones, less than 768px) -->
+    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 768px)" href="css/mediaQ500-768.css"/>
+    <!-- Small devices (tablets, 768px and up) -->
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
+    <!-- (desktops, 992 and up) -->
+    <link rel="stylesheet" media="(min-width: 992px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
+    <!-- Large devices (large desktops, 1280px and up) -->
+    <link rel="stylesheet" media="(min-width: 1280px) and (max-width: 2000px)" href="css/mediaQ1280-2000.css"/>
+    <!-- Large devices (large desktops, 1920px and up) -->
+    <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
+
+    <title>Thot</title>
+    <link rel="icon" href="img/Thot-01.svg">
+
+  </head>
+  <body id="body">
+    <!-- Menu -->
+    <section id="menu">
+      <a href="index.html"><img src="img/Thot1.png" alt=""></a>
+      <a href="#contato" id="menuContato">contato</a>
+    </section>
+    <div id="menuSpacer"></div>
+    <!-- End of Menu -->
+    <!--Descrição do Plano -->
+    <section id="descricaoPlanos">
+      <h2 id="corTituloAvancado">Plano Avançado</h2>
+      <div class="planosgeral">
+        <div class="planosDivInferior planosprecos">
+          <p class="preco precofinal">Preço Sob Consulta</p>
+        </div>
+        <div id="listaPlano" class="corListaAvancado">
+          <ul>
+            <li>Site totalmente personalizado, de acordo com as demandas do cliente</li>
+            <li>Site Desenvolvido em HTML 5, CSS, PHP e Javascript</li>
+            <li>Registro do Domínio e envio do site ao servidor</li>
+            <li>Site Responsivo para Tablets e celulares</li>
+            <li>SEO (Otimização para Mecanismos de Busca)</li>
+            <li>Envio do Sitemap ao Google</li>
+            <li>Configurado para o Google Adwords e Analytics</li>
+            <li>Criação do Google My Business</li>
+            <li>Wordpress</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--End Descrição do Plano -->
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2 class="contatoTituloPlanos" id="corTituloAvancado">Dados</h2>
+      <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoAvancadoForm">
+        <!-- Hiden Imput -->
+        <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
+        <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
+        <!-- End of Hiden Imput -->
+        <div id="formplanoAvancado">
+          <div class="form-group form-text">
+            <input type="text" class="form-control planoAvancadoLayoutInput" name="nome" placeholder="Nome" required="required">
+          </div>
+          <div class="form-group form-text">
+            <input type="email" class="form-control planoAvancadoLayoutInput" name="email" aria-describedby="emailHelp" placeholder="e-mail" required="required">
+          </div>
+          <div class="form-group form-text">
+            <input type="text" class="form-control planoAvancadoLayoutInput" name="empresa" placeholder="Empresa">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control planoAvancadoLayoutInput" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
+          </div>
+        </div>
+        <div id="buttonBox">
+          <div>
+            <div id="check"></div>
+            <div id="loadIcon"></div>
+          </div>
+          <button type="submit" class="btn btn-primary planosLayoutBTN">
+            <p>enviar</p>
+          </button>
+        </div>
+      </form>
+    </section>
+    <!-- End of Contato -->
+    <!-- Sub Menu -->
+    <section id="subMenu">
+      <a href="index.html">
+        <h3>THOT</h3>
+      </a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="planos.html">Planos</a>
+      <a href="index.html#contato">Contato</a>
+    </section>
+    <!-- End of Sub Menu -->
+    <footer>
+      <img src="img/Thot_bottom2.png" alt="">
+      <p>© 2018 THOT. All rights reserved</p>
+
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Custom Java for Scrolling -->
+    <script src="js/scrolling-nav.js"></script>
+    <!--Custom Java for Scrolling -->
+    <script src="js/image-modal.js"></script>
+    <!--Custom Java for Layout -->
+    <script src="js/layout.js"></script>
+  </body>
+</html>
