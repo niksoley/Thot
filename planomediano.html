@@ -70,9 +70,33 @@
     <section id="layouts" class="planoMedianoLayout">
       <h2>Escolha seu Layout</h2>
       <div id="visualContainer">
-        <div class="innerSlide"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg"/></div>
+        <div class="innerSlide">
+          <div class="radioContainer">
+            <input type="radio" id="layout1" name="layout">
+            <label for="layout1" class="checkmark">
+              <div class="checkmarkSpan"></div>
+            </label>
+          </div>
+          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg"/>
+        </div>
+        <div class="innerSlide">
+          <div class="radioContainer">
+            <input type="radio" id="layout2" name="layout">
+            <label for="layout2" class="checkmark">
+              <div class="checkmarkSpan"></div>
+            </label>
+          </div>
+          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg"/>
+        </div>
+        <div class="innerSlide">
+          <div class="radioContainer">
+            <input type="radio" id="layout3" name="layout">
+            <label for="layout3" class="checkmark">
+              <div class="checkmarkSpan"></div>
+            </label>
+          </div>
+          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg"/>
+        </div>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">

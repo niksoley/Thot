@@ -23,7 +23,7 @@
     <!-- Large devices (large desktops, 1920px and up) -->
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
-    <title>Thot – Plano Básico</title>
+    <title>Thot – Plano Profissional</title>
     <link rel="icon" href="img/favicon.png">
 
   </head>
@@ -37,15 +37,15 @@
     <!-- End of Menu -->
     <!--Descrição do Plano -->
     <section id="descricaoPlanos">
-      <h2 id="corTituloBasico">Plano Básico</h2>
+      <h2 id="corTituloProfissional">Plano Profissional</h2>
       <div class="planosgeral">
         <div class="planosDivInferior planosprecos">
-          <p class="preco precofinal">R$ 490</p>
+          <p class="preco precofinal">R$ 1080</p>
           <p>+</p>
           <p>R$ 60 p/mês</p>
           <p class="taxa">*(taxa de manutenção)</p>
         </div>
-        <div id="listaPlano" class="corListaBasico">
+        <div id="listaPlano" class="corListaProfissional">
           <ul>
             <li>Inserção do seu conteúdo na estrutura do layout escolhido</li>
             <li>Site Desenvolvido em HTML 5, CSS, PHP e Javascript</li>
@@ -54,8 +54,11 @@
             <li>SEO (Otimização para Mecanismos de Busca)</li>
             <li>Envio do Sitemap ao Google</li>
             <li>Configurado para o Google Adwords e Analytics</li>
-            <li>Layout fixo - Sem alterações na estrutura</li>
-            <li>1 Modificação do site finalizado</li>
+            <li>Permite alterações no Layout escolhido</li>
+            <li>2 Modificação do site finalizado</li>
+            <li>Criação do Google My Business</li>
+            <li>Wordpress</li>
+            <li>Vitrine virtual - até 20 produtos (sem sistema de pagamento)</li>
             <li>Não há o envio do código do Website</li>
           </ul>
           <p>*o pagamento da taxa de manutenção é obrigatório para garantir que o site seja mantido no ar, o não pagamento da taxa resultará em remoção do website do servidor</p>
@@ -65,7 +68,7 @@
     <!--End Descrição do Plano -->
 
     <!-- Layout -->
-    <section id="layouts" class="planoBasicoLayout">
+    <section id="layouts" class="planoProfissionalLayout">
       <h2>Escolha seu Layout</h2>
       <div id="visualContainer">
         <div class="innerSlide">
@@ -98,6 +101,7 @@
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
+
         <div id="imgModalContainer">
           <span class="close">&times;</span>
           <img class="modal-content" id="imgModal"></div>
@@ -112,24 +116,24 @@
   <!-- End of Layout -->
   <!-- Contato -->
   <section id="contato">
-    <h2 class="contatoTituloPlanos" id="corTituloBasico">Dados</h2>
-    <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoBasicoForm">
+    <h2 class="contatoTituloPlanos" id="corTituloProfissional">Dados</h2>
+    <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoProfissionalForm">
       <!-- Hiden Imput -->
       <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
       <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
       <!-- End of Hiden Imput -->
-      <div id="formplanoBasico">
+      <div id="formplanoProfissional">
         <div class="form-group form-text">
-          <input type="text" class="form-control planoBasicoLayoutInput" name="nome" placeholder="Nome" required="required">
+          <input type="text" class="form-control planoProfissionalLayoutInput" name="nome" placeholder="Nome" required="required">
         </div>
         <div class="form-group form-text">
-          <input type="email" class="form-control planoBasicoLayoutInput" name="email" aria-describedby="emailHelp" placeholder="e-mail" required="required">
+          <input type="email" class="form-control planoProfissionalLayoutInput" name="email" aria-describedby="emailHelp" placeholder="e-mail" required="required">
         </div>
         <div class="form-group form-text">
-          <input type="text" class="form-control planoBasicoLayoutInput" name="empresa" placeholder="Empresa">
+          <input type="text" class="form-control planoProfissionalLayoutInput" name="empresa" placeholder="Empresa">
         </div>
         <div class="form-group">
-          <textarea class="form-control planoBasicoLayoutInput" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
+          <textarea class="form-control planoProfissionalLayoutInput" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
         </div>
       </div>
       <div id="buttonBox">
@@ -137,7 +141,7 @@
           <div id="check"></div>
           <div id="loadIcon"></div>
         </div>
-        <button type="submit" class="btn btn-primary btn-primary-Basico">
+        <button type="submit" class="btn btn-primary  btn-primary-Profissional">
           <p>enviar</p>
         </button>
       </div>

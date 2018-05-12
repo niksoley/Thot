@@ -1,33 +1,31 @@
-/* CSS Desenvolvido de 992px a 2000px */
-
+/* CSS Desenvolvido de 1280px a 2000px */
 /*--------------------------------------------------------------------------------------
 Agência Thot
-0. GLOBAL
-1. MENU
-2. BANNER
-3. SERVICOS
-4. TESTEMUNHOS
-5. CONTATO
-6. MAPA
-7. SOCIAL
-8. SUBMENU
-9. RODAPÉ
+0. GLOBAL***
+01. MENU
+02. BANNER
+03. SERVICOS
+04. LAYOUTS
+05. PLANOS
+06. TESTEMUNHOS
+07. CONTATO
+08. SUBMENU
+09. RODAPÉ
+10. PAGINA PLANOS
+11. PAGINAS PLANO BASICO / PLANO PROFISSIONAL / PLANO AVANCADO
+12. PAGINA PLANO BASICO
+13. PAGINA PLANO PROFISSIONAL
+14. PAGINA PLANO AVANCADO
  ----------------------------------------------------------------------------------------*/
-
-/*--------------------
-    0. GLOBAL
- ----------------------*/
-
 /*--------------------
       1. MENU
  ----------------------*/
-
 #menu {
-  padding         : 10px 100px;
+  padding: 10px 100px;
   background-color: white;
-  position        : fixed;
-  z-index         : 10;
-  box-shadow      : 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 2px 0 rgba(0, 0, 0, 0.09);
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 5px 2px 0 rgba(0, 0, 0, 0.09);
 }
 
 #menuContato,
@@ -41,18 +39,16 @@ Agência Thot
 
 #menuSpacer {
   display: block;
-  height : 70px;
+  height: 70px;
 }
-
 /*--------------------
       2. BANNER
  ----------------------*/
-
 #banner {
-  padding              : 30px 0 300px 100px;
-  background-image     : url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
+  padding: 30px 0 300px 100px;
+  background-image: url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
   background-attachment: fixed;
-  height               : 70vh;
+  height: 70vh;
 }
 
 #banner div {
@@ -66,33 +62,30 @@ Agência Thot
 #banner div p span {
   font-size: 22pt;
 }
-
 /*--------------------
      3. SERVICOS
 ----------------------*/
-
 #servicos {
-  padding        : 100px 70px;
-  flex-direction : row;
+  padding: 100px 70px;
+  flex-direction: row;
   justify-content: center;
-  height         : 70vh;
+  height: 70vh;
 }
 
 #servicos img {
-  width    : 30%;
+  width: 30%;
   max-width: 350px;
 }
 
 #card {
-  width      : 40%;
-  max-width  : 400px;
+  width: 40%;
+  max-width: 400px;
   align-items: flex-start;
   margin-left: 160px;
-
 }
 
 #textoServicos {
-  margin : 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -106,7 +99,7 @@ Agência Thot
 
 #servicos p {
   font-size: 14pt;
-  margin   : 40px 0 25px;
+  margin: 40px 0 25px;
 }
 
 #servicosCliqueAqui,
@@ -118,23 +111,21 @@ Agência Thot
 #servicosCliqueAqui,
 #servicosCliqueAqui:hover {
   font-size: 14pt;
-  padding  : 13px 28px;
+  padding: 13px 28px;
 }
-
 /*--------------------
      4. LAYOUTS
 ----------------------*/
-
 #layouts {
   padding: 90px 0 130px;
 }
 
 #layouts h2 {
-  font-size  : 24pt;
+  font-size: 24pt;
   font-weight: normal;
   line-height: 1.5;
-  padding    : 0 40px;
-  margin     : 0 0 70px;
+  padding: 0 40px;
+  margin: 0 0 70px;
 }
 
 #visualContainer {
@@ -143,7 +134,7 @@ Agência Thot
 
 .innerSlide {
   max-width: 22%;
-  padding  : 0 25px;
+  padding: 0 25px;
 }
 
 .slide-image {
@@ -155,18 +146,18 @@ Agência Thot
 }
 
 .modal-content {
-  width : 100%;
+  width: 100%;
   margin: auto;
 }
 
 .close {
-  margin   : 0 0 10px;
+  margin: 0 0 10px;
   font-size: 60px;
 }
-
 /*--------------------
      5. PLANOS
 ----------------------*/
+
 #planos {
   padding: 110px 70px 0;
 }
@@ -177,7 +168,7 @@ Agência Thot
 
 #planos h2 {
   font-size: 24pt;
-  margin   : 0 0 40px;
+  margin: 0 0 40px;
 }
 
 #planos h2 span {
@@ -186,41 +177,40 @@ Agência Thot
 
 #planos h3 {
   font-size: 14pt;
-  margin   : 0 30px 30px;
+  margin: 0 30px 30px;
 }
 
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-size    : 14pt;
-  padding      : 13px 28px;
+  font-size: 14pt;
+  padding: 13px 28px;
   margin-bottom: 80px;
 }
 
 #planos img {
-  width    : 35%;
+  width: 35%;
   max-width: 400px;
-  margin   : 0 0 -3vh;
+  margin: 0 0 -3vh;
 }
-
 /*--------------------
      6. TESTEMUNHOS
 ----------------------*/
-#testemunhos {
-  padding       : 105px 100px 145px;
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
 
+#testemunhos {
+  padding: 105px 100px 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #testemunhos h2 {
-  font-size    : 24pt;
+  font-size: 24pt;
   margin-bottom: 70px;
-  text-align   : center;
+  text-align: center;
 }
 
 .containerTestemunhos {
-  display    : flex;
+  display: flex;
   align-items: center;
 }
 
@@ -229,11 +219,11 @@ Agência Thot
 }
 
 .subTestemunhos {
-  max-width  : 350px;
-  text-align : center;
-  font-size  : 14pt;
+  max-width: 350px;
+  text-align: center;
+  font-size: 14pt;
   font-weight: normal;
-  margin     : 0 20px;
+  margin: 0 20px;
   line-height: 1.3;
 }
 
@@ -252,106 +242,98 @@ Agência Thot
 .emprego {
   font-size: 16pt;
 }
-
 /*--------------------
      7. Contato
 ----------------------*/
-
 #contato {
-  padding   : 140px 140px 200px;
+  padding: 140px 140px 200px;
   text-align: center;
 }
 
 #contato h2 {
-  margin   : 0 0 60px;
+  margin: 0 0 60px;
   font-size: 24pt;
 }
 
 #contato form {
   background-color: black;
-  min-width       : 550px;
-  max-width       : 700px;
-  padding         : 70px 120px 55px;
-  margin          : auto;
-  min-height      : auto;
-  box-shadow      : -10px 10px 10px 0 rgba(0, 0, 0, 0.5), -13px 13px 17px 0 rgba(0, 0, 0, 0.2);
+  min-width: 550px;
+  max-width: 700px;
+  padding: 70px 120px 55px;
+  margin: auto;
+  min-height: auto;
+  box-shadow: -10px 10px 10px 0 rgba(0, 0, 0, 0.5), -13px 13px 17px 0 rgba(0, 0, 0, 0.2);
 }
 
 .form-control {
-  font-size    : 10pt;
-  line-height  : 1.5;
-  border       : 5px solid white;
-  color        : white;
+  font-size: 10pt;
+  line-height: 1.5;
+  border: 5px solid white;
+  color: white;
   border-radius: 0;
 }
 
 .btn-primary {
-  font-size    : 14pt;
-  padding      : 5px 40px;
-  margin       : 0;
-  border-width : 1px;
+  font-size: 14pt;
+  padding: 5px 40px;
+  margin: 0;
+  border-width: 1px;
   border-radius: 0;
 }
-
 /*--------------------
      8. Sub Menu
 ----------------------*/
-
 #subMenu {
   background-color: #424242;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : flex-end;
-  padding         : 30px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 30px 100px;
 }
 
 #subMenu h3 {
-  font-family    : "Montserrat", sans-serif;
-  font-weight    : bold;
-  color          : #FFFFFF;
-  font-size      : 14pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 14pt;
   text-decoration: none;
-  margin         : 0;
+  margin: 0;
 }
 
 #subMenu a {
-  font-family    : "Montserrat", sans-serif;
-  font-weight    : normal;
-  color          : #FFFFFF;
-  font-size      : 12pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: #FFFFFF;
+  font-size: 12pt;
   text-decoration: none;
 }
 
 #subMenu h3 {
   line-height: 1.6;
 }
-
 /*--------------------
      9. RODAPÉ
 ----------------------*/
-
 footer {
-  padding        : 20px 100px;
-  display        : flex;
+  padding: 20px 100px;
+  display: flex;
   justify-content: space-between;
 }
 
 footer p {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  color      : #FFFFFF;
-  font-size  : 10pt;
-  margin     : 0;
+  color: #FFFFFF;
+  font-size: 10pt;
+  margin: 0;
   line-height: 2;
-  display    : inline;
+  display: inline;
 }
-
 /*--------------------
-     10. Planos
+     10. Pagina Planos
 ----------------------*/
-
 #planosDetalhado {
-  padding   : 150px 65px 80px;
+  padding: 150px 65px 80px;
   text-align: center;
 }
 
@@ -360,45 +342,44 @@ footer p {
 }
 
 #planosDetalhado h2 {
-  margin   : auto auto 60px;
+  margin: auto auto 60px;
   max-width: none;
   font-size: 24pt;
 }
 
 .sliderPlanos {
-  width   : 100%;
-  height  : 100%;
+  width: 100%;
+  height: 100%;
   overflow: auto;
 }
 
 .holder {
-  width          : 100%;
-  height         : 100%;
-  overflow-y     : auto;
-  display        : flex;
-  align-items    : stretch;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  align-items: stretch;
   justify-content: center;
 }
 
 .slide-wrapper {
-  width    : 22%;
+  width: 22%;
   max-width: 350px;
-  height   : 1000px;
-  float    : none;
-  position : static;
-  overflow : auto;
-
+  height: 1000px;
+  float: none;
+  position: static;
+  overflow: auto;
 }
 
 .planosContainer {
-  border-style   : solid;
-  border-width   : 3px;
-  border-color   : #5A7F90;
-  padding        : 50px 10px 35px;
-  width          : 90%;
-  height         : 1000px;
-  display        : flex;
-  flex-direction : column;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #5A7F90;
+  padding: 50px 10px 35px;
+  width: 90%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -407,9 +388,9 @@ footer p {
 }
 
 .planosContainer .planosCategoria {
-  font-family  : "Montserrat", sans-serif;
-  font-weight  : bold;
-  font-size    : 14pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 14pt;
   margin-bottom: 60px;
 }
 
@@ -417,9 +398,9 @@ footer p {
 #planosMedianoBasico,
 #planosMedianoProfissional,
 .planosDivSuperior {
-  font-size : 10pt;
+  font-size: 10pt;
   text-align: left;
-  padding   : 0 30px;
+  padding: 0 30px;
 }
 
 .planosDivSuperior {
@@ -431,8 +412,8 @@ footer p {
 #planosMedianoProfissional span {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
-  font-size  : 10pt;
-  color      : #AFD14A;
+  font-size: 10pt;
+  color: #AFD14A;
 }
 
 #planosMedianoAvancado span {
@@ -448,15 +429,15 @@ footer p {
 #planosMedianoProfissional li,
 .planosDivSuperior li {
   margin-bottom: 10px;
-  line-height  : 1.2;
+  line-height: 1.2;
 }
 
 .planosDivInferior {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size  : 12pt;
-  color      : #515151;
-  margin-top : 0;
+  font-size: 12pt;
+  color: #515151;
+  margin-top: 0;
 }
 
 .preco {
@@ -465,55 +446,56 @@ footer p {
 
 .planosDetalhadoCliqueAqui {
   background-color: black;
-  font-family     : "Montserrat", sans-serif;
-  font-weight     : normal;
-  font-size       : 12pt;
-  color           : white;
-  display         : inline-block;
-  padding         : 13px 28px;
-  margin-top      : 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  color: white;
+  display: inline-block;
+  padding: 13px 28px;
+  margin-top: 50px;
 }
-
 /*--------------------------------------------------------
-     10. Plano Basico / Plano Mediano / Plano Avancado
+     11. Pagina Plano Basico / Plano Profissional / Plano Avancado
 ---------------------------------------------------------*/
-
 #descricaoPlanos {
   padding: 100px 10vw 180px;
 }
 
 #descricaoPlanos h2 {
   font-size: 24pt;
-  margin   : 0 0 60px;
+  margin: 0 0 60px;
 }
 
 .planosgeral {
-  font-size  : 20pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20pt;
   line-height: 33px;
 }
 
 #listaPlano p {
-  font-size  : 10pt;
+  font-size: 10pt;
   line-height: 30px;
-  margin-top : 0 !important;
+  margin-top: 0 !important;
 }
 
 #listaPlano {
-  font-size    : 14pt;
-  margin       : auto;
-  line-height  : 28px;
-  width        : 600px;
-  border-color : black;
-  border-width : 2px;
-  border-style : solid;
-  padding-left : 30px;
+  font-size: 14pt;
+  margin-top: 0 !important;
+  line-height: 28px;
+  width: 600px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 30px;
   padding-right: 30px;
-  padding-top  : 30px;
+  padding-top: 30px;
 }
 
 .planosprecos {
   margin-top: 0 !important;
-  font-size : 14pt !important;
+  font-size: 14pt !important;
 }
 
 .precofinal {
@@ -526,17 +508,12 @@ footer p {
 
 #alignDados {
   text-align: left;
-  margin    : auto;
+  margin: auto;
 }
-
-.planosLayoutBTN {
-  background-color: black !important;
-  color           : white !important;
-}
-
 /*--------------------------------------------------------
-     10. Plano Basico
+     12. Pagina Plano Basico
 ---------------------------------------------------------*/
+
 .planoBasicoForm {
   background-color: #AFD14A !important;
 }
@@ -545,19 +522,22 @@ footer p {
   border-color: black;
 }
 /*--------------------------------------------------------
-     10.  Plano Mediano
+     13.  Pagina Plano Profissional
 ---------------------------------------------------------*/
-
-.planoMedianoForm {
+.planoProfissionalForm {
   background-color: #5A7F90 !important;
 }
 
-.planoMedianoLayoutInput {
+.planoProfissionalLayoutInput {
   border-color: black;
 }
 /*--------------------------------------------------------
-     10. Plano Avancado
+     14. Pagina Plano Avancado
 ---------------------------------------------------------*/
+
+.contatoAvancado {
+  padding-top: 2px !important;
+}
 
 .planoAvancadoForm {
   background-color: #A0444B!important;
@@ -565,4 +545,12 @@ footer p {
 
 .planoAvancadoLayoutInput {
   border-color: black;
+}
+
+.planosgeralAvancado {
+  display: block;
+}
+
+.corListaAvancado {
+  margin: auto !important;
 }
