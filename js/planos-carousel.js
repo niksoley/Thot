@@ -1,24 +1,6 @@
 var verticalScrollPosition = 0;
 var verticalScrolling = 0;
 var fingerMovementVertical = 0;
-var fingerHorzintalPosition = 0;
-var fingerHorizontalScrolling = 0;
-var fingerMovement = 0;
-var screenWidthChange = false;
-
-// document.getElementsByTagName("BODY")[0].onresize = function() {
-//   screenWidthChange = true;
-//   console.log(screenWidthChange);
-//   // setTimeout(function() {
-//   //   screenWidthChange = false;
-//   //   console.log(screenWidthChange);
-//   // }, 1000);
-// };
-
-
-
-//seta  somar index++
-
 
 
 if (screen.width < 992) {
@@ -52,19 +34,7 @@ if (screen.width < 992) {
 
 
       init: function() {
-        this.screenChange();
         this.bindUIEvents();
-      },
-
-      screenChange: function() {
-        document.getElementsByTagName("BODY")[0].onresize = function() {
-          screenWidthChange = true;
-          console.log(screenWidthChange);
-          // setTimeout(function() {
-          //   screenWidthChange = false;
-          //   console.log(screenWidthChange);
-          // }, 1000);
-        };
       },
 
 
@@ -87,13 +57,11 @@ if (screen.width < 992) {
 
       start: function(event) {
 
-        verticalScrollPosition = Math.floor(event.touches[0].clientY);
-
         // Test for flick.
-        this.longTouch = true;
+        this.longTouch = false;
         setTimeout(() => {
           this.longTouch = true;
-        }, 150);
+        }, 100);
 
         // Get the original touch position.
         this.touchstartx = event.originalEvent.touches[0].pageX;
@@ -103,9 +71,6 @@ if (screen.width < 992) {
       },
 
       move: function(event) {
-        var verticalScrolling = Math.floor(event.touches[0].clientY);
-        var fingerMovementVertical = Math.abs(verticalScrolling - verticalScrollPosition);
-        console.log("MovimentoV: " + fingerMovementVertical);
 
         // Continuously return touch position.
         this.touchmovex = event.originalEvent.touches[0].pageX;
@@ -119,7 +84,6 @@ if (screen.width < 992) {
         // if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
         //   this.el.imgSlide.css('transform', 'translate3d(-' + panx + 'px,0,0)');
         // }
-        console.log("MovimentoH: " + fingerMovement)
 
       },
 
@@ -142,16 +106,29 @@ if (screen.width < 992) {
         // this.el.imgSlide.addClass('animate').css('transform', 'translate3d(-' - this.index * 50 + 'px,0,0)');
 
       }
-
     };
+  };
+  slider.init();
+  document.getElementsByTagName("BODY")[0].onresize = function() {
+    slider.slideWidth = $('#sliderPlanos').width();
+    slider.el.holder.addClass('animate').css('transform', 'translate3d(-' + slider.index * slider.slideWidth + 'px,0,0)');
+  };
+};
 
-    slider.init();
-    document.getElementsByTagName("BODY")[0].onresize = function() {
-      slider.slideWidth = $('#sliderPlanos').width();
-      slider.el.holder.addClass('animate').css('transform', 'translate3d(-' + slider.index * slider.slideWidth + 'px,0,0)');
-    }
+function seta() {
+  if (slider.index == 0) {
+    $('#setaPlanosEsquerda').addClass('setaRemove');
   }
-}
+  if (slider.index == 1) {
+    $('#setaPlanosEsquerda').removeClass('setaRemove');
+    $('#setaPlanosDireita').removeClass('setaRemove');
+  }
+  if (slider.index == 2) {
+    $('#setaPlanosDireita').addClass('setaRemove');
+  }
+};
+
+seta();
 
 
 // bloquear scroll vertical durante scroll horizontal
@@ -173,7 +150,7 @@ if (screen.width < 992) {
   }, false);
 
   _overlay.addEventListener('touchmove', function(event) {
-    fingerHorizontalScrolling = Math.floor(event.touches[0].clientX);
+    var fingerHorizontalScrolling = Math.floor(event.touches[0].clientX);
     fingerMovement = Math.abs(fingerHorizontalScrolling - fingerHorzintalPosition);
     if (fingerMovement > 20 || fingerMovement < (-20)) {
       if (event.targetTouches.length === 1) {
@@ -190,14 +167,12 @@ if (screen.width < 992) {
 
     if (_overlay.scrollTop === 0 && clientY > 0) {
       // element is at the top of its scroll
-      // event.cancelable = true;
       event.preventDefault();
 
     }
 
     if (isOverlayTotallyScrolled() && clientY < 0) {
       //element is at the top of its scroll
-      // event.cancelable = true;
       event.preventDefault();
 
     }

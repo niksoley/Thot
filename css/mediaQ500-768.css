@@ -247,6 +247,25 @@ Agência Thot
   padding   : 18px 50px;
   margin-top: 50px;
 }
+
+#setaPlanosDireita {
+  position : absolute;
+  max-width: 5px;
+  top      : 100%;
+  right    : 30px;
+  cursor   : pointer;
+
+}
+
+#setaPlanosEsquerda {
+  transform: rotate(180deg);
+  max-width: 5px;
+  position : absolute;
+  top      : 100%;
+  left     : 30px;
+  cursor   : pointer;
+}
+
 /*--------------------------------------------------------
      11. Pagina Plano Basico / Plano Mediano / Plano Avancado
 ---------------------------------------------------------*/
