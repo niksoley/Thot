@@ -20,6 +20,7 @@ Agência Thot
 /*--------------------
       1. MENU
  ----------------------*/
+
 #menu {
   padding         : 20px 70px;
   background-color: white;
@@ -44,6 +45,7 @@ Agência Thot
 /*--------------------
       2. BANNER
  ----------------------*/
+
 #banner {
   padding         : 70px 0 300px 70px;
   background-image: url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
@@ -64,6 +66,7 @@ Agência Thot
 /*--------------------
      3. SERVICOS
 ----------------------*/
+
 #servicos {
   padding        : 100px 70px;
   flex-direction : row;
@@ -85,7 +88,7 @@ Agência Thot
   padding: 0;
 }
 
-#textoServicos h2 {
+#servicosH2 {
   font-size: 24pt;
 }
 
@@ -112,6 +115,7 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
+
 #layouts {
   padding: 90px 0 130px;
 }
@@ -153,7 +157,6 @@ Agência Thot
 /*--------------------
      5. PLANOS
 ----------------------*/
-
 #planos {
   padding: 110px 70px 0;
 }
@@ -190,9 +193,8 @@ Agência Thot
 /*--------------------
      6. TESTEMUNHOS
 ----------------------*/
-
 #testemunhos {
-  padding         : 105px 55px 145px;
+  padding         : 105px 55px 125px;
   background-color: rgb(90,127,144);
 }
 
@@ -223,7 +225,8 @@ Agência Thot
 }
 
 .descricaoTestemunho {
-  margin-top: auto;
+  margin-top   : auto;
+  margin-bottom: 10px;
 }
 
 .nomeTestemunho {
@@ -249,6 +252,7 @@ Agência Thot
 /*--------------------
      7. Contato
 ----------------------*/
+
 #contato {
   padding   : 140px;
   text-align: center;
@@ -295,6 +299,7 @@ Agência Thot
 /*--------------------
      8. Sub Menu
 ----------------------*/
+
 #subMenu {
   background-color: #424242;
   display         : flex;
@@ -322,6 +327,7 @@ Agência Thot
 /*--------------------
      9. RODAPÉ
 ----------------------*/
+
 footer {
   padding        : 30px 150px;
   display        : flex;
@@ -340,6 +346,7 @@ footer p {
 /*--------------------
      10. Pagiana Planos
 ----------------------*/
+
 #planosDetalhado {
   padding   : 150px 65px;
   text-align: center;
@@ -468,10 +475,10 @@ footer p {
 #setaPlanosEsquerda {
   display: none;
 }
-
 /*--------------------------------------------------------
      11. Pagina Plano Basico / Plano Profissional / Plano Avancado
 ---------------------------------------------------------*/
+
 #descricaoPlanos {
   padding: 100px 10vw 180px;
 }
@@ -530,7 +537,6 @@ footer p {
 /*--------------------------------------------------------
      12. Pagina Plano Basico
 ---------------------------------------------------------*/
-
 .planoBasicoForm {
   background-color: #AFD14A !important;
 }
@@ -541,6 +547,7 @@ footer p {
 /*--------------------------------------------------------
      13.  Pagina Plano Profissional
 ---------------------------------------------------------*/
+
 .planoProfissionalForm {
   background-color: #5A7F90 !important;
 }
@@ -551,6 +558,7 @@ footer p {
 /*--------------------------------------------------------
      14. Pagina Plano Avancado
 ---------------------------------------------------------*/
+
 .contatoAvancado {
   padding-top: 2px !important;
 }
@@ -570,3 +578,7 @@ footer p {
 .corListaAvancado {
   margin: auto !important;
 }
+
+/*--------------------------------------------------------
+     15.  Pagina de Agradecimento
+---------------------------------------------------------*/

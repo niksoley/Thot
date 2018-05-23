@@ -20,7 +20,6 @@ Agência Thot
 /*--------------------
       1. MENU
  ----------------------*/
-
 #menu {
   padding: 15px 70px;
 }
@@ -36,7 +35,6 @@ Agência Thot
 /*--------------------
       2. BANNER
  ----------------------*/
-
 #banner {
   padding: 100px 70px 240px;
 }
@@ -55,7 +53,6 @@ Agência Thot
 /*--------------------
      3. SERVICOS
 ----------------------*/
-
 #servicos {
   padding: 70px 110px;
 }
@@ -70,7 +67,7 @@ Agência Thot
   max-width: 770px;
 }
 
-#textoServicos h2 {
+#servicosH2 {
   font-size: 26pt;
 }
 
@@ -90,7 +87,6 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
-
 #visualContainer {
   padding: 0 60px;
 }
@@ -114,6 +110,7 @@ Agência Thot
 /*--------------------
      5. PLANOS
 ----------------------*/
+
 #planos {
   padding: 90px 70px 0;
 }
@@ -150,6 +147,7 @@ Agência Thot
 /*--------------------
      6. TESTEMUNHOS
 ----------------------*/
+
 #testemunhos {
   padding: 60px 55px;
 }
@@ -182,7 +180,6 @@ Agência Thot
 /*--------------------
      7. Contato
 ----------------------*/
-
 #contato {
   padding: 90px 60px 150px;
 }
@@ -223,7 +220,6 @@ Agência Thot
 /*--------------------
      10. Pagina Planos
 ----------------------*/
-
 #planosDetalhado {
   padding: 100px 0 0;
   text-align: center;
@@ -285,10 +281,22 @@ Agência Thot
   padding: 18px 50px;
   margin-top: 50px;
 }
+
+#setaPlanosDireita {
+  padding: 15px 50px;
+}
+
+#setaPlanosEsquerda {
+  padding: 15px 0 0 50px;
+}
+
+#setaPlanosDireita img,
+#setaPlanosEsquerda img {
+  width: 35px;
+}
 /*--------------------------------------------------------
      11. Paginas Plano Basico / Plano Profissional / Plano Avancado
 ---------------------------------------------------------*/
-
 #descricaoPlanos {
   padding: 100px 10vw 130px;
 }

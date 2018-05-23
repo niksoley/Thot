@@ -24,7 +24,6 @@ Agência Thot
 /*--------------------
      1. MENU
 ----------------------*/
-
 #menu {
   width          : 100%;
   padding        : 20px 15px;
@@ -64,7 +63,6 @@ Agência Thot
 /*--------------------
      2. BANNER
 ----------------------*/
-
 #banner {
   width              : 100%;
   padding            : 70px 30px 100px;
@@ -96,7 +94,6 @@ Agência Thot
 /*--------------------
      3. SERVICOS
 ----------------------*/
-
 #servicos {
   padding       : 60px 30px;
   display       : flex;
@@ -119,7 +116,7 @@ Agência Thot
   padding: 0;
 }
 
-#textoServicos h2 {
+#servicosH2 {
   display    : inline;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
@@ -161,6 +158,7 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
+
 #layouts {
   text-align      : center;
   background-color: black;
@@ -187,7 +185,7 @@ Agência Thot
   -moz-overflow-scrolling   : touch;
   -o-overflow-scrolling     : touch;
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling        : touch;
+  -overflow-scrolling       : touch;
   -ms-overflow-style        : -ms-autohiding-scrollbar;
 }
 
@@ -240,7 +238,7 @@ Agência Thot
   -moz-overflow-scrolling   : touch;
   -o-overflow-scrolling     : touch;
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling        : touch;
+  -overflow-scrolling       : touch;
   flex-direction            : column;
   align-items               : center;
 }
@@ -272,6 +270,7 @@ Agência Thot
   }
 }
 /* The Close Button */
+
 .close {
   position   : relative;
   margin     : 0 0 5px;
@@ -290,6 +289,7 @@ Agência Thot
 /*--------------------
      5. PLANOS
 ----------------------*/
+
 #planos {
   padding        : 90px 30px 0;
   text-align     : center;
@@ -342,35 +342,44 @@ Agência Thot
   width : 100%;
   margin: 0 0 -30px;
 }
-
 /*--------------------
      6. TESTEMUNHOS
 ----------------------*/
+
 #testemunhos {
-  padding             : 60px;
-  background-color    : rgb(90,127,144);
-  color               : #FFFFFF;
-  animation-name      : testemunhosFadeIn;
-  animation-delay     : 0s;
-  animation-duration  : 5s;
-  animation-direction : normal;
-  animation-fill-mode : forwards;
-  animation-play-state: paused;
+  padding                          : 60px;
+  background-color                 : rgba(90,127,144,1);
+  color                            : #FFFFFF;
+  animation-name                   : testemunhosFadeIn;
+  -webkit-animation-name           : testemunhosFadeIn;
+  animation-delay                  : 0.1s;
+  -webkit-animation-delay          : 0.1s;
+  animation-duration               : 5s;
+  -webkit-animation-duration       : 5s;
+  animation-direction              : normal;
+  -webkit-animation-direction      : normal;
+  animation-fill-mode              : forwards;
+  -webkit-animation-fill-mode      : forwards;
+  animation-play-state             : paused;
+  -webkit-animation-play-state     : paused;
+  -webkit-animation-timing-function: linear;
+  animation-iteration-count        : 1;
+  -webkit-animation-iteration-count: 1;
 }
 @keyframes testemunhosFadeIn {
-  0 {
+  /* 0 {
     background-color: rgba(90,127,144,0);
-  }
-
+    opacity         : 0;
+  } */
   100% {
     background-color: rgba(90,127,144,1);
+    /* opacity: 1; */
   }
 }
 @-webkit-keyframes testemunhosFadeIn {
-  0 {
+  /* 0 {
     background-color: rgba(90,127,144,0);
-  }
-
+  } */
   100% {
     background-color: rgba(90,127,144,1);
   }
@@ -448,7 +457,6 @@ Agência Thot
 /*--------------------
      7. Contato
 ----------------------*/
-
 #contato {
   padding   : 60px 30px 100px;
   text-align: center;
@@ -469,22 +477,27 @@ Agência Thot
   line-height     : 1.5;
 }
 /* WebKit, Blink, Edge */
+
 .form-control::-webkit-input-placeholder {
   color: white;
 }
 /* Mozilla Firefox 4 to 18 */
+
 .form-control:-moz-placeholder {
   color: white;
 }
 /* Mozilla Firefox 19+ */
+
 .form-control::-moz-placeholder {
   color: white;
 }
 /* Internet Explorer 10-11 */
+
 .form-control:-ms-input-placeholder {
   color: white;
 }
 /* Microsoft Edge */
+
 .form-control::-ms-input-placeholder {
   color: white;
 }
@@ -522,13 +535,13 @@ Agência Thot
 /*--------------------
      8. Sub Menu
 ----------------------*/
-
 #subMenu {
   display: none;
 }
 /*--------------------
      9. Rodapé
 ----------------------*/
+
 footer {
   background-color: black;
   text-align      : center;
@@ -541,7 +554,6 @@ footer p {
 /*--------------------
      10. Pagina Planos
 ----------------------*/
-
 #planosDetalhado {
   padding   : 80px 0 0;
   text-align: center;
@@ -568,6 +580,7 @@ footer p {
 
 .slider-wrap {
   margin-bottom: 80px;
+  position     : relative;
 }
 
 .sliderPlanos {
@@ -709,31 +722,33 @@ footer p {
 
 #setaPlanosDireita {
   position: absolute;
-  width   : 2px;
-  top     : 100%;
-  right   : 30px;
+  padding : 15px 7px;
+  top     : 40%;
+  right   : 0;
   z-index : 2;
   cursor  : pointer;
 }
 
 #setaPlanosEsquerda {
-  transform: rotate(180deg);
-  width    : 2px;
-  position : absolute;
-  top      : 100%;
-  left     : 30px;
-  z-index  : 2;
-  cursor   : pointer;
+  position: absolute;
+  padding : 15px 0 0 7px;
+  top     : 40%;
+  left    : 0;
+  z-index : 2;
+  cursor  : pointer;
+}
+
+#setaPlanosDireita img,
+#setaPlanosEsquerda img {
+  width: 20px;
 }
 
 .setaRemove {
   display: none;
 }
-
 /*--------------------------------------------------------
      11. Plano Basico / Plano Profissional / Plano Avancado
 ---------------------------------------------------------*/
-
 #descricaoPlanos {
   padding: 80px 0;
 }
@@ -798,17 +813,16 @@ footer p {
 #listaPlano li:last-child {
   font-weight: bold;
 }
-
 /*--------------------
      11-1. Radio
 ----------------------*/
 /* Hide the browser's default radio button */
-
 .innerSlide input {
   opacity: 0;
   cursor : pointer;
 }
 /* Create a custom radio button */
+
 .innerSlide label {
   display            : flex;
   align-items        : center;
@@ -839,13 +853,15 @@ footer p {
   border-radius: 50%;
 }
 /* On mouse-over, add a grey background color */
+
 .checkmarkSpan:hover {
   background-color: white;
   width           : 15px;
   height          : 15px;
 }
 /* When the radio button is checked, add a blue background */
-.radioContainer input:checked + label div {
+
+.radioContainer input:checked + label span {
   background-color: white;
   width           : 15px;
   height          : 15px;
@@ -853,6 +869,7 @@ footer p {
 /*--------------------------------------------------------
      12. Plano Basico
 ---------------------------------------------------------*/
+
 #corTituloBasico {
   color: #AFD14A;
 }
@@ -866,11 +883,17 @@ footer p {
   background-color: #AFD14A !important;
   color           : white;
 }
+
+.planoBasicoLayoutInput,
+.planoBasicoLayoutInput::placeholder,
+.planoBasicoLayoutInput:focus,
+.planoBasicoLayoutInput:hover {
+  color: black;
+}
 /*--------------------------------------------------------
      13.  Plano Profissional
 ---------------------------------------------------------*/
-
-#corTituloProfissional {
+.corTituloProfissional {
   color: #5A7F90;
 }
 
@@ -886,7 +909,8 @@ footer p {
 /*--------------------------------------------------------
      14.  Plano Avancado
 ---------------------------------------------------------*/
-#corTituloAvancado {
+
+.corTituloAvancado {
   color: #A0444B;
 }
 
@@ -898,4 +922,49 @@ footer p {
 .planoAvancadoLayoutInput:hover {
   background-color: #A0444B !important;
   color           : white;
+}
+
+/*--------------------------------------------------------
+     15.  Pagina de Agradecimento
+---------------------------------------------------------*/
+
+.bodyThanksPage {
+  min-height: 100vh;
+  position  : relative;
+}
+
+.thanksPage {
+  margin   : auto;
+  position : absolute;
+  top      : 50%;
+  transform: translateY(-50%);
+  left     : 0;
+  bottom   : 0;
+  right    : 0;
+  padding  : 70px 40px !important;
+}
+
+#thanksPageSpacer {
+  height: 500px;
+}
+
+#textoAgradecimento {
+  color           : white;
+  background-color: black;
+  max-width       : 600px;
+  padding         : 70px 100px 55px;
+  margin          : auto;
+  box-shadow      : -10px 10px 10px 0 rgba(0, 0, 0, 0.5), -13px 13px 17px 0 rgba(0, 0, 0, 0.2);
+  height          : 100%;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+}
+
+#tpFooter {
+  position: absolute;
+  right   : 0;
+  left    : 0;
+  bottom  : 0;
+
 }

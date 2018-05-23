@@ -1,5 +1,9 @@
 var bodyHeight = ((document.getElementById('body').offsetHeight) / 30);
 
+
+// $("#testemunhos").css("animation-play-state", "running");
+
+
 //get offsets for all your div's.  Now. you can access the number of pixels from the top of the document
 //each object is by using one.top, two.top, or whatever you name your variables
 
@@ -16,9 +20,15 @@ $(document).ready(function() {
     if ((screenPosition + bodyHeight + 1000) >= one.top) {
       $("#testemunhos").css("background-color", "white");
 
+
     }
     if ((screenPosition + bodyHeight + 250) >= one.top) {
-      $("#testemunhos").css("animation-play-state", "initial");
+
+
+      setTimeout(function() {
+        $("#testemunhos").css("animation-play-state", "initial");
+        $("#testemunhos").css("-webkit-animation-play-state", "initial");
+      }, 100);
 
     }
   });

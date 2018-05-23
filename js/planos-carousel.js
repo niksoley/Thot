@@ -3,74 +3,117 @@ var verticalScrolling = 0;
 var fingerMovementVertical = 0;
 
 
-if (screen.width < 992) {
-
-  if (navigator.msMaxTouchPoints) {
-
-    $('#sliderPlanos').addClass('ms-touch');
-
-    $('#sliderPlanos').on('scroll', function() {
-      $('.slidePlanos').css('transform', 'translate3d(-' + (100 - $(this).scrollLeft() / 6) + 'px,0,0)');
-    });
-
-  } else {
-
-    var slider = {
-
-      el: {
-        slider: $("#sliderPlanos"),
-        holder: $(".holder")
-        // imgSlide: $(".slidePlanos")
-      },
-
-      slideWidth: $('#sliderPlanos').width(),
-      touchstartx: undefined,
-      touchmovex: undefined,
-      movex: undefined,
-      index: 0,
-      longTouch: undefined,
-      screenWidthChange: false,
 
 
+if (navigator.msMaxTouchPoints) {
 
-      init: function() {
+  $('#sliderPlanos').addClass('ms-touch');
+
+  $('#sliderPlanos').on('scroll', function() {
+    $('.slidePlanos').css('transform', 'translate3d(-' + (100 - $(this).scrollLeft() / 6) + 'px,0,0)');
+  });
+
+} else {
+
+  var slider = {
+
+    el: {
+      slider: $("#sliderPlanos"),
+      holder: $(".holder")
+      // imgSlide: $(".slidePlanos")
+    },
+
+    slideWidth: $('#sliderPlanos').width(),
+    touchstartx: undefined,
+    touchmovex: undefined,
+    movex: undefined,
+    index: 0,
+    longTouch: undefined,
+    screenWidthChange: false,
+
+
+
+    init: function() {
+
+      // on first load, this.init.isRunning is undefined,
+      //     so (!this.init.isRunning) returns true.
+      if (!this.init.isRunning) {
         this.bindUIEvents();
-      },
+        this.seta();
+        // define this.init.isRunning and assign true
+        this.init.isRunning = true;
+      } else {
+        /* animation already initialized */
+      }
+    },
 
+    seta: function() {
+      if (this.index == 0) {
+        $('#setaPlanosEsquerda').addClass('setaRemove');
+        $('#setaPlanosDireita').removeClass('setaRemove');
+      }
+      if (this.index == 1) {
+        $('#setaPlanosEsquerda').removeClass('setaRemove');
+        $('#setaPlanosDireita').removeClass('setaRemove');
+      }
+      if (this.index == 2) {
+        $('#setaPlanosDireita').addClass('setaRemove');
+     }
+    },
 
-      bindUIEvents: function() {
+    setaDireitaClick: function() {
+      if (this.index < 2) {
+        this.index++;
+        this.seta();
+        this.movex = undefined;
+      }
+      this.end();
+    },
 
-        this.el.holder.on("touchstart", function(event) {
-          slider.start(event);
-        });
+    setaEsquerdaClick: function() {
+      if (this.index > 0) {
+        this.index--;
+        this.seta();
+        this.movex = undefined;
+      }
+      this.end();
+    },
 
-        this.el.holder.on("touchmove", function(event) {
-          slider.move(event);
-        });
+    bindUIEvents: function() {
 
-        this.el.holder.on("touchend", function(event) {
-          slider.end(event);
+      this.el.holder.on("touchstart", function(event) {
+        slider.start(event);
+      });
 
-        });
+      this.el.holder.on("touchmove", function(event) {
+        slider.move(event);
+      });
 
-      },
+      this.el.holder.on("touchend", function(event) {
+        slider.end(event);
 
-      start: function(event) {
+      });
 
-        // Test for flick.
-        this.longTouch = false;
-        setTimeout(() => {
-          this.longTouch = true;
-        }, 100);
+    },
 
-        // Get the original touch position.
-        this.touchstartx = event.originalEvent.touches[0].pageX;
+    start: function(event) {
 
-        // The movement gets all janky if there's a transition on the elements.
-        $('.animate').removeClass('animate');
-      },
+      // Test for flick.
+      this.longTouch = false;
+      setTimeout(() => {
+        this.longTouch = true;
+      }, 100);
 
-      move: function(event) {
+      // Get the original touch position.
+      this.touchstartx = event.originalEvent.touches[0].pageX;
+
+      // The movement gets all janky if there's a transition on the elements.
+      $('.animate').removeClass('animate');
+
+    },
+
+    move: function(event) {
+      if (screen.width < 992) {
 
         // Continuously return touch position.
         this.touchmovex = event.originalEvent.touches[0].pageX;
@@ -84,10 +127,11 @@ if (screen.width < 992) {
         // if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
         //   this.el.imgSlide.css('transform', 'translate3d(-' + panx + 'px,0,0)');
         // }
+      } else {}
+    },
 
-      },
-
-      end: function(event) {
+    end: function(event) {
+      if (screen.width < 992) {
         // Calculate the distance swiped.
         var absMove = Math.abs(this.index * this.slideWidth - this.movex);
         // Calculate the index. All other calculations are based on the index.
@@ -95,40 +139,42 @@ if (screen.width < 992) {
         if ((absMove > this.slideWidth / 7) && (this.longTouch === true)) {
           if (this.movex > this.index * this.slideWidth && this.index < 2) {
             this.index++;
+            this.seta();
           } else if (this.movex < this.index * this.slideWidth && this.index > 0) {
             this.index--;
+            this.seta();
           }
-        }
-        // };
+        };
         // Move and animate the elements.
 
         this.el.holder.addClass('animate').css('transform', 'translate3d(-' + this.index * this.slideWidth + 'px,0,0)');
         // this.el.imgSlide.addClass('animate').css('transform', 'translate3d(-' - this.index * 50 + 'px,0,0)');
+      } else {}
+    }
+  }
+};
 
-      }
-    };
-  };
+if (screen.width < 992) {
   slider.init();
-  document.getElementsByTagName("BODY")[0].onresize = function() {
+}
+
+$(window).resize(function() {
+
+  if (screen.width < 992) {
+    slider.init();
+    slider.seta();
     slider.slideWidth = $('#sliderPlanos').width();
     slider.el.holder.addClass('animate').css('transform', 'translate3d(-' + slider.index * slider.slideWidth + 'px,0,0)');
-  };
-};
+  }
+  if (screen.width > 992) {
+    slider.slideWidth = $('#sliderPlanos').width();
+    slider.index = 0;
+    slider.el.holder.addClass('animate').css('transform', 'translate3d(-' + slider.index * slider.slideWidth + 'px,0,0)');
 
-function seta() {
-  if (slider.index == 0) {
-    $('#setaPlanosEsquerda').addClass('setaRemove');
   }
-  if (slider.index == 1) {
-    $('#setaPlanosEsquerda').removeClass('setaRemove');
-    $('#setaPlanosDireita').removeClass('setaRemove');
-  }
-  if (slider.index == 2) {
-    $('#setaPlanosDireita').addClass('setaRemove');
-  }
-};
+});
 
-seta();
+
 
 
 // bloquear scroll vertical durante scroll horizontal

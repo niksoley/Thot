@@ -27,32 +27,35 @@
     <link rel="icon" href="img/favicon.png">
 
   </head>
+
   <body id="body">
     <!-- Menu -->
 
     <section id="menu">
       <a href="#menuSpacer"><img src="img/Thot1.png" alt=""></a>
       <a href="#contato" id="menuContato">contato</a>
+      <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
     <!-- Banner -->
-    <section id="banner">
+    <section id="banner" title="crie seu website">
       <div>
         <p>crie o seu
           <span>website</span>
           designs sofisticados preços que cabem no seu bolso ...</p>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
       </div>
     </section>
     <!-- End of Banner -->
     <!-- Servicos -->
     <section id="servicos">
-      <img src="img/Imagem Website1.png" alt="">
+      <img src="img/website.png" alt="website">
       <div id="card">
         <div id="textoServicos">
-          <h2>Crie seu
+          <div id="servicosH2">Crie seu
             <h1>Website</h1>
-          </h2>
+          </div>
           <p>Criamos o seu website de acordo com as melhores práticas de SEO, e totalmente responsivo para Tablets e Smartphones.</p>
         </div>
         <a href="planos.html" id="servicosCliqueAqui">clique aqui</a>
@@ -61,18 +64,17 @@
     <!-- End of Servicos -->
     <!-- Layout -->
     <section id="layouts">
-      <h2>Exemplos de Layout</h2>
+      <h2>Exemplos de Temas</h2>
       <div id="visualContainer">
-        <div class="innerSlide"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg"/></div>
+        <div class="innerSlide"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg" alt="tema cabeleireiro"/></div>
+        <div class="innerSlide"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg" alt="tema cervejaria"/></div>
+        <div class="innerSlide"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg" alt="tema servicos"/></div>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
-
         <div id="imgModalContainer">
           <span class="close">&times;</span>
-          <img class="modal-content" id="imgModal"></div>
+          <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
       </div>
     </section>
     <!-- End of Layout -->
@@ -84,7 +86,7 @@
         <h3>Projetos de sites a partir de 490 reais</h3>
       </div>
       <a href="planos.html" id="planosCliqueAqui">clique aqui</a>
-      <img src="img/Sites_mod.png" alt="">
+      <img src="img/Sites_mod.png" alt="planos">
     </section>
     <!-- End of Planos -->
     <!-- Testemunhos -->
@@ -138,16 +140,16 @@
     <section id="contato">
       <h2>Contato</h2>
       <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form">
-        <!-- Hiden Imput -->
+        <!-- Hiden Input -->
         <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
         <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
-        <!-- End of Hiden Imput -->
+        <!-- End of Hiden Input -->
         <div>
           <div class="form-group form-text">
             <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
           </div>
           <div class="form-group form-text">
-            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="e-mail" required="required">
+            <input type="email" class="form-control" name="email" placeholder="e-mail" required="required">
           </div>
           <div class="form-group">
             <textarea class="form-control" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
@@ -159,7 +161,7 @@
             <div id="loadIcon"></div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <p>enviar</p>
+            <span>enviar</span>
           </button>
         </div>
       </form>
@@ -167,7 +169,7 @@
     <footer>
       <img src="img/Thot_bottom2.png" alt="">
       <p>© 2018 THOT. All rights reserved</p>
-      <div w3-include-html="h1.html"></div>
+      <div></div>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -175,12 +177,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <!--Custom Java for Scrolling Position -->
+    <script src="js/screen-position.js"></script>
     <!--Custom Java for Image Modal -->
     <script src="js/image-modal.js"></script>
     <!--Custom Java for Finger Swipe Testemunos -->
     <script src="js/finger-swipe-testemuhos.js"></script>
-    <!--Custom Java for Scrolling Position -->
-    <script src="js/screen-position.js"></script>
     <!--Custom Java for Scrolling -->
     <script src="js/scrolling-nav.js"></script>
     <!--Custom Java for Layout -->

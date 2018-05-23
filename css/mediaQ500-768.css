@@ -20,6 +20,7 @@ Agência Thot
 /*--------------------
       1. MENU
  ----------------------*/
+
 #menu {
   padding: 15px 70px;
 }
@@ -31,6 +32,7 @@ Agência Thot
 /*--------------------
       2. BANNER
  ----------------------*/
+
 #banner {
   padding: 120px 70px 200px;
 }
@@ -45,6 +47,7 @@ Agência Thot
 /*--------------------
      3. SERVICOS
 ----------------------*/
+
 #servicos {
   padding: 70px 80px;
 }
@@ -58,7 +61,7 @@ Agência Thot
   padding: 0;
 }
 
-#textoServicos h2 {
+#servicosH2 {
   font-size: 24pt;
 }
 
@@ -78,6 +81,7 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
+
 #visualContainer {
   padding: 0 50px;
 }
@@ -94,7 +98,6 @@ Agência Thot
 /*--------------------
      5. PLANOS
 ----------------------*/
-
 #planos {
   padding: 90px 70px 0;
 }
@@ -131,7 +134,6 @@ Agência Thot
 /*--------------------
      6. TESTEMUNHOS
 ----------------------*/
-
 #testemunhos {
   padding: 60px 55px;
 }
@@ -164,6 +166,7 @@ Agência Thot
 /*--------------------
      7. Contato
 ----------------------*/
+
 #contato {
   padding: 90px 60px 150px;
 }
@@ -186,6 +189,7 @@ Agência Thot
 /*--------------------
      10. Pagina Planos
 ----------------------*/
+
 #planosDetalhado {
   padding   : 80px 0 0;
   text-align: center;
@@ -249,26 +253,21 @@ Agência Thot
 }
 
 #setaPlanosDireita {
-  position : absolute;
-  max-width: 5px;
-  top      : 100%;
-  right    : 30px;
-  cursor   : pointer;
-
+  padding: 15px 25px;
 }
 
 #setaPlanosEsquerda {
-  transform: rotate(180deg);
-  max-width: 5px;
-  position : absolute;
-  top      : 100%;
-  left     : 30px;
-  cursor   : pointer;
+  padding: 15px 0 0 25px;
 }
 
+#setaPlanosDireita img,
+#setaPlanosEsquerda img {
+  width: 30px;
+}
 /*--------------------------------------------------------
      11. Pagina Plano Basico / Plano Mediano / Plano Avancado
 ---------------------------------------------------------*/
+
 #descricaoPlanos {
   padding: 80px 10vw;
 }
@@ -294,4 +293,12 @@ Agência Thot
 
 #layouts h1 {
   font-size: 25pt;
+}
+
+/*--------------------------------------------------------
+     15.  Pagina de Agradecimento
+---------------------------------------------------------*/
+
+.thanksPage {
+  padding: 80px 80px !important;
 }

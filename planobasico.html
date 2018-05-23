@@ -37,24 +37,24 @@
     <!-- End of Menu -->
     <!--Descrição do Plano -->
     <section id="descricaoPlanos">
-      <h2 id="corTituloBasico">Plano Básico</h2>
+      <h2 class="corTituloBasico">Plano Básico</h2>
       <div class="planosgeral">
         <div class="planosDivInferior planosprecos">
           <p class="preco precofinal">R$ 490</p>
           <p>+</p>
-          <p>R$ 60 p/mês</p>
-          <p class="taxa">*(taxa de manutenção)</p>
+          <p>R&#36; 60 p&#47;m&#234;s</p>
+          <p class="taxa">&#42;&#40;taxa de manuten&#231;&#227;o&#41;</p>
         </div>
         <div id="listaPlano" class="corListaBasico">
           <ul>
-            <li>Inserção do seu conteúdo na estrutura do layout escolhido</li>
+            <li>Inserção do seu conteúdo na estrutura do tema escolhido</li>
             <li>Site Desenvolvido em HTML 5, CSS, PHP e Javascript</li>
             <li>Registro do Domínio e envio do site ao servidor</li>
             <li>Site Responsivo para Tablets e celulares</li>
             <li>SEO (Otimização para Mecanismos de Busca)</li>
             <li>Envio do Sitemap ao Google</li>
             <li>Configurado para o Google Adwords e Analytics</li>
-            <li>Layout fixo - Sem alterações na estrutura</li>
+            <li>Tema fixo - Sem alterações na estrutura</li>
             <li>1 Modificação do site finalizado</li>
             <li>Não há o envio do código do Website</li>
           </ul>
@@ -66,109 +66,103 @@
 
     <!-- Layout -->
     <section id="layouts" class="planoBasicoLayout">
-      <h2>Escolha seu Layout</h2>
+      <h2>Escolha seu Tema</h2>
       <div id="visualContainer">
         <div class="innerSlide">
           <div class="radioContainer">
             <input type="radio" id="layout1" name="layout">
             <label for="layout1" class="checkmark">
-              <div class="checkmarkSpan"></div>
+              <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg"/>
+          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg" alt="tema cabeleireiro"/>
         </div>
         <div class="innerSlide">
           <div class="radioContainer">
             <input type="radio" id="layout2" name="layout">
             <label for="layout2" class="checkmark">
-              <div class="checkmarkSpan"></div>
+              <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg"/>
+          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg" alt="tema cervejaria"/>
         </div>
         <div class="innerSlide">
           <div class="radioContainer">
             <input type="radio" id="layout3" name="layout">
             <label for="layout3" class="checkmark">
-              <div class="checkmarkSpan"></div>
+              <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg"/>
+          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg" alt="tema servicos"/>
         </div>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
         <div id="imgModalContainer">
           <span class="close">&times;</span>
-          <img class="modal-content" id="imgModal"></div>
+          <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
       </div>
     </section>
     <!-- End of Layout -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="imgModal">
-    </div>
-  </section>
-  <!-- End of Layout -->
-  <!-- Contato -->
-  <section id="contato">
-    <h2 class="contatoTituloPlanos" id="corTituloBasico">Dados</h2>
-    <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoBasicoForm">
-      <!-- Hiden Imput -->
-      <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
-      <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
-      <!-- End of Hiden Imput -->
-      <div id="formplanoBasico">
-        <div class="form-group form-text">
-          <input type="text" class="form-control planoBasicoLayoutInput" name="nome" placeholder="Nome" required="required">
+    <!-- Contato -->
+    <section id="contato">
+      <h2 class="contatoTituloPlanos corTituloBasico">Dados</h2>
+      <form action="http://www.noisehbom.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoBasicoForm">
+        <!-- Hiden Input -->
+        <input type="hidden" name="recipient" value="comercial@noisehbom.com.br">
+        <input type="hidden" name="subject" value="E-Mail Nois eh Bom">
+        <!-- End of Hiden Input -->
+        <div id="formplanoBasico">
+          <div class="form-group form-text">
+            <input type="text" class="form-control planoBasicoLayoutInput" name="nome" placeholder="Nome" required="required">
+          </div>
+          <div class="form-group form-text">
+            <input type="email" class="form-control planoBasicoLayoutInput" name="email" placeholder="e-mail" required="required">
+          </div>
+          <div class="form-group form-text">
+            <input type="text" class="form-control planoBasicoLayoutInput" name="empresa" placeholder="Empresa">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control planoBasicoLayoutInput" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
+          </div>
         </div>
-        <div class="form-group form-text">
-          <input type="email" class="form-control planoBasicoLayoutInput" name="email" aria-describedby="emailHelp" placeholder="e-mail" required="required">
+        <div id="buttonBox">
+          <div>
+            <div id="check"></div>
+            <div id="loadIcon"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-primary-Basico">
+            <span>enviar</span>
+          </button>
         </div>
-        <div class="form-group form-text">
-          <input type="text" class="form-control planoBasicoLayoutInput" name="empresa" placeholder="Empresa">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control planoBasicoLayoutInput" name="conteudo" rows="8" placeholder="Mensagem..." required="required"></textarea>
-        </div>
-      </div>
-      <div id="buttonBox">
-        <div>
-          <div id="check"></div>
-          <div id="loadIcon"></div>
-        </div>
-        <button type="submit" class="btn btn-primary btn-primary-Basico">
-          <p>enviar</p>
-        </button>
-      </div>
-    </form>
-  </section>
-  <!-- End of Contato -->
-  <!-- Sub Menu -->
-  <section id="subMenu">
-    <a href="index.html">
-      <h3>THOT</h3>
-    </a>
-    <a href="index.html#servicos">Serviços</a>
-    <a href="planos.html">Planos</a>
-    <a href="index.html#contato">Contato</a>
-  </section>
-  <!-- End of Sub Menu -->
-  <footer>
-    <img src="img/Thot_bottom2.png" alt="">
-    <p>© 2018 THOT. All rights reserved</p>
+      </form>
+    </section>
+    <!-- End of Contato -->
+    <!-- Sub Menu -->
+    <section id="subMenu">
+      <a href="index.html">
+        <h3>THOT</h3>
+      </a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="planos.html">Planos</a>
+      <a href="index.html#contato">Contato</a>
+    </section>
+    <!-- End of Sub Menu -->
+    <footer>
+      <img src="img/Thot_bottom2.png" alt="">
+      <p>© 2018 THOT. All rights reserved</p>
+      <div></div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  </footer>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <!--Custom Java for Scrolling -->
-  <script src="js/scrolling-nav.js"></script>
-  <!--Custom Java for Scrolling -->
-  <script src="js/image-modal.js"></script>
-  <!--Custom Java for Layout -->
-  <script src="js/layout.js"></script>
-</body>
+    <!--Custom Java for Scrolling -->
+    <script src="js/scrolling-nav.js"></script>
+    <!--Custom Java for Scrolling -->
+    <script src="js/image-modal.js"></script>
+    <!--Custom Java for Layout -->
+    <script src="js/layout.js"></script>
+  </body>
 </html>
