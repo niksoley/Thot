@@ -74,23 +74,62 @@ Agência Thot
   align-items        : center;
   max-height         : 90vh;
   text-align         : left;
+
 }
 
-#banner div p {
+#banner span {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-size  : 20pt;
   line-height: 150%;
   color      : #FFFFFF;
-  margin     : 30px 0 0;
 }
 
-#banner div p span {
+#banner p {
+  margin : 0;
+  display: inline-block;
+}
+
+#banner div #bannerWebsite {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size  : 18pt;
   color      : #AFD14A;
 }
+
+#typewriter {
+  /* max-width : 420px; */
+  min-height: 180px;
+}
+
+#typewriter::after {
+  content          : "|";
+  font-size        : 19pt;
+  font-weight      : bold;
+  color            : orange;
+  -webkit-animation: blink 500ms linear infinite alternate;
+  animation        : blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 /*--------------------
      3. SERVICOS
 ----------------------*/
@@ -367,19 +406,19 @@ Agência Thot
   -webkit-animation-iteration-count: 1;
 }
 @keyframes testemunhosFadeIn {
-  /* 0 {
+  0 {
     background-color: rgba(90,127,144,0);
-    opacity         : 0;
-  } */
+  }
+
   100% {
     background-color: rgba(90,127,144,1);
-    /* opacity: 1; */
   }
 }
 @-webkit-keyframes testemunhosFadeIn {
-  /* 0 {
+  0 {
     background-color: rgba(90,127,144,0);
-  } */
+  }
+
   100% {
     background-color: rgba(90,127,144,1);
   }

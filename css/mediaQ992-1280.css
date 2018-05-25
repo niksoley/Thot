@@ -47,21 +47,31 @@ Agência Thot
  ----------------------*/
 
 #banner {
-  padding         : 70px 0 300px 70px;
-  background-image: url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
-  /* background-attachment: fixed; */
+  padding              : 70px 0 300px 70px;
+  background-image     : url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
+  background-attachment: fixed;
 }
 
 #banner div {
   width: 450px;
 }
 
-#banner div p {
+#banner div span {
   font-size: 24pt;
 }
 
-#banner div p span {
+#banner div #bannerWebsite {
   font-size: 22pt;
+}
+
+#typewriter {
+  /* max-width : 420px; */
+  min-height: 180px;
+}
+
+#typewriter::after {
+  content  : "|";
+  font-size: 23pt;
 }
 /*--------------------
      3. SERVICOS
