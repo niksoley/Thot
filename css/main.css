@@ -386,7 +386,7 @@ Agência Thot
 ----------------------*/
 
 #testemunhos {
-  padding                          : 60px;
+  padding                          : 60px 0;
   background-color                 : rgba(90,127,144,1);
   color                            : #FFFFFF;
   animation-name                   : testemunhosFadeIn;
@@ -404,6 +404,7 @@ Agência Thot
   -webkit-animation-timing-function: linear;
   animation-iteration-count        : 1;
   -webkit-animation-iteration-count: 1;
+  height                           : 600px;
 }
 @keyframes testemunhosFadeIn {
   0 {
@@ -437,16 +438,21 @@ Agência Thot
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-size  : 14pt;
-  margin     : 0 0 100px;
+  margin     : 0 0 260px;
 }
 
 .descricaoTestemunho {
-  margin-bottom: 70px;
+  margin: 0 60px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top     : 410px;
 }
 
 .nomeTestemunho {
   position    : absolute;
-  bottom      : 0;
+  top         : 300px;
   margin-left : auto;
   margin-right: auto;
   left        : 0;

@@ -159,12 +159,22 @@ Agência Thot
 ----------------------*/
 
 #testemunhos {
-  padding: 60px 55px;
+  padding: 60px 0;
 }
 
 #testemunhos h2 {
   font-size    : 26pt;
   margin-bottom: 70px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top     : 260px;
+}
+
+.nomeTestemunho {
+  position: absolute;
+  top     : 150px;
 }
 
 .openQuote {
