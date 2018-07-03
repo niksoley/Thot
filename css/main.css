@@ -858,6 +858,147 @@ footer p {
 #listaPlano li:last-child {
   font-weight: bold;
 }
+
+#mySiteModal {
+  padding : 0;
+  overflow: hidden;
+}
+
+#siteModalContainer {
+  width   : 100%;
+  overflow: hidden;
+}
+
+#siteModalBar {
+  position        : relative;
+  width           : 100%;
+  text-align      : center;
+  background-color: black;
+}
+
+.siteModalMenu {
+  width : 55%;
+  margin: 0 auto;
+}
+
+.siteModalMenu ul {
+  padding  : 0;
+  margin   : 20px 0;
+  font-size: 0;
+}
+
+.siteModalMenu ul li {
+  display   : inline;
+  text-align: center;
+  display   : inline-block;
+  padding   : 0;
+  margin    : 0;
+  font-size : 0;
+  width     : 33.333%;
+}
+
+.siteModalMenu p {
+  font-family    : "Montserrat", sans-serif;
+  font-weight    : normal;
+  font-size      : 10pt;
+  display        : inline-block;
+  width          : 100%;
+  padding        : 0.25rem 0;
+  margin         : 0;
+  text-decoration: none;
+  color          : white;
+  cursor         : pointer;
+  transition     : 0.3s;
+}
+
+.siteModalMenu p:hover {
+  color: #bbb;
+}
+
+#tablet:hover ~ hr {
+  margin-left: 33.33%;
+}
+
+#desktop:hover ~ hr {
+  margin-left: 66.66%;
+}
+
+hr {
+  height    : 0.09rem;
+  width     : 33.33%;
+  margin    : 0;
+  padding   : 0;
+  background: #bbb;
+  border    : none;
+  transition: 0.3s ease-in-out;
+}
+
+.siteClose {
+  position   : absolute;
+  top        : 0;
+  right      : 15px;
+  z-index    : 5;
+  margin     : 0;
+  color      : #f1f1f1;
+  font-size  : 40px;
+  font-weight: bold;
+  transition : 0.3s;
+  float      : right;
+}
+
+.siteClose:focus,
+.siteClose:hover {
+  color          : #bbb;
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+#iframeContainer {
+  width  : 100%;
+  height : 80vh;
+  padding: 0;
+  margin : 0;
+}
+
+#guiaDispositivo {
+  width           : 200px;
+  margin          : auto;
+  background-color: none;
+  text-align      : left;
+  height          : 100%;
+  display         : flex;
+  align-items     : center;
+}
+
+#guiaDispositivo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size  : 11pt;
+}
+
+#guiaDispositivo p {
+  font-family  : "Montserrat", sans-serif;
+  font-weight  : normal;
+  font-size    : 10pt;
+  line-height  : 1.7;
+  margin-bottom: 100px;
+}
+
+#siteModal {
+  display                 : none;
+  height                  : 100vh;
+  overflow                : scroll;
+  -webkit-overflow-       : scroll;
+  white-space             : nowrap;
+  -ms-zoom                : 0.0;
+  -moz-transform          : scale(0.17);
+  -moz-transform-origin   : 0 0;
+  -o-transform            : scale(0.17);
+  -o-transform-origin     : 0 0;
+  -webkit-transform       : scale(0.17);
+  -webkit-transform-origin: 0 0;
+}
+
 /*--------------------
      11-1. Radio
 ----------------------*/
@@ -900,7 +1041,7 @@ footer p {
 /* On mouse-over, add a grey background color */
 
 .checkmarkSpan:hover {
-  background-color: white;
+  background-color: rgba(255,255,255,0.5);
   width           : 15px;
   height          : 15px;
 }
