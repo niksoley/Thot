@@ -37,7 +37,7 @@ Agência Thot
 }
 
 #menu img {
-  height: 60px;
+  height: 55px;
 }
 
 #menuContato,
@@ -99,7 +99,7 @@ Agência Thot
 
 #typewriter {
   /* max-width : 420px; */
-  min-height: 180px;
+  min-height: 205px;
 }
 
 #typewriter::after {
@@ -593,6 +593,10 @@ footer {
   padding         : 20px;
 }
 
+footer img {
+  height: 30px;
+}
+
 footer p {
   display: none;
 }
@@ -954,10 +958,12 @@ hr {
 }
 
 #iframeContainer {
-  width  : 100%;
-  height : 80vh;
-  padding: 0;
-  margin : 0;
+  width   : 100%;
+  height  : 80vh;
+  padding : 0;
+  margin  : 0;
+  overflow: hidden;
+  position: relative;
 }
 
 #guiaDispositivo {
@@ -987,6 +993,7 @@ hr {
 #siteModal {
   display                 : none;
   height                  : 100vh;
+  margin-bottom           : 400px;
   overflow                : scroll;
   -webkit-overflow-       : scroll;
   white-space             : nowrap;
@@ -997,6 +1004,7 @@ hr {
   -o-transform-origin     : 0 0;
   -webkit-transform       : scale(0.17);
   -webkit-transform-origin: 0 0;
+  position                : relative;
 }
 
 /*--------------------

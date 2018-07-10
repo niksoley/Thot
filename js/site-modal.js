@@ -56,6 +56,7 @@ function buttonActive() {
   }
 }
 
+
 $(document).ready(function() {
   $("#smartphone").click(function() {
     $("#smartphone").children().css("color", "#bbb");
