@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Disallow: /cgi-bin/
+Disallow: /thanks-page.html
+Noindex: /thanks-page.html
+Sitemap: http://agenciaceos.com.br/sitemap.xml
