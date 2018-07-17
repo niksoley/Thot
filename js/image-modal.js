@@ -21,6 +21,7 @@ function reply_click(clicked_id) {
     var result = srcString.splice((srcString.length - 4), 0, "full2");
   }
 
+
   modalImg.src = result;
 
 }

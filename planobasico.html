@@ -70,12 +70,21 @@
       <div id="visualContainer">
         <div class="innerSlide">
           <div class="radioContainer">
+            <input type="radio" id="layout4" name="layout" value="Plano Basico - Layout4">
+            <label for="layout4" class="checkmark">
+              <span class="checkmarkSpan"></span>
+            </label>
+          </div>
+          <img class="slide-image slide-imagePlanos" id="myImg4" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="tema servicos"/>
+        </div>
+        <div class="innerSlide">
+          <div class="radioContainer">
             <input type="radio" id="layout1" name="layout" value="Plano Basico - Layout1">
             <label for="layout1" class="checkmark">
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg" alt="tema cabeleireiro"/>
+          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="tema cabeleireiro"/>
         </div>
         <div class="innerSlide">
           <div class="radioContainer">
@@ -84,7 +93,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg" alt="tema cervejaria"/>
+          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="tema cervejaria"/>
         </div>
         <div class="innerSlide">
           <div class="radioContainer">
@@ -93,19 +102,49 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg" alt="tema servicos"/>
+          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="tema servicos"/>
         </div>
+        <div class="innerSlide">
+          <div class="radioContainer">
+            <input type="radio" id="layout5" name="layout" value="Não Encontrei um Layout">
+            <label for="layout4" class="checkmark">
+              <span class="checkmarkSpan"></span>
+            </label>
+          </div>
+          <img class="slide-image slide-imagePlanos" id="myImg5" onclick="reply_click(this.id)" src="img/template4/template5.jpg" alt="tema servicos"/>
+        </div>
+
       </div>
       <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <div id="imgModalContainer">
-          <span class="close">&times;</span>
-          <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
-      </div>
 
-      <!-- <div id="mySiteModal" class="modal"> <div id="siteModalBar"> <div class="siteModalMenu"> <ul> <li id="smartphone" onclick="frameSize(this.id)"> <p>celular</p> </li> <li id="tablet" onclick="frameSize(this.id)"> <p>tablet</p> </li> <li
-      id="desktop" onclick="frameSize(this.id)"> <p>desktop</p> </li><hr/></ul> </div> <div class="siteClose">&times;</div> </div> <div id="iframeContainer"> <div id="guiaDispositivo"> <div> <h3>Selecione um Dispositivo</h3> <p>Ao selecionar, será
-      apresentada a visualização correspondente ao tamanho da tela do dispositivo.</p> </div> </div> <object rel="import" id="siteModal" data="http://192.168.0.110:49695"> Error: Embedded data could not be displayed. </object> </div> </div> -->
+      <div id="mySiteModal" class="modal">
+        <div id="siteModalBar">
+          <div class="siteModalMenu">
+            <ul>
+              <li id="smartphone" onclick="frameSize(this.id)">
+                <p>celular</p>
+              </li>
+              <li id="tablet" onclick="frameSize(this.id)">
+                <p>tablet</p>
+              </li>
+              <li id="desktop" onclick="frameSize(this.id)">
+                <p>desktop</p>
+              </li><hr/></ul>
+          </div>
+          <div class="siteClose">&times;</div>
+        </div>
+        <div id="iframeContainer">
+          <div id="guiaDispositivo">
+            <div>
+              <h3>Selecione um Dispositivo</h3>
+              <p>Ao selecionar, será apresentada a visualização correspondente ao tamanho da tela do dispositivo.</p>
+            </div>
+          </div>
+          <!-- <object rel="import" id="siteModal" data="http://192.168.0.110:49695"> Error: Embedded data could not be displayed. </object> -->
+
+          <img class="modal-content" src="" id="siteImgModal" alt="Visualização do tema em tela cheia">
+        </div>
+      </div>
     </section>
     <!-- End of Layout -->
     <!-- Contato -->
@@ -168,8 +207,7 @@
     <!--Custom Java for Scrolling -->
     <script src="js/scrolling-nav.js"></script>
     <!--Custom Java for Scrolling -->
-    <!-- <script src="js/site-modal.js"></script> -->
-    <script src="js/image-modal.js"></script>
+    <script src="js/site-modal.js"></script>
     <!--Custom Java for Layout -->
     <script src="js/layout.js"></script>
     <!--Custom Java for Screen Size Variations -->
