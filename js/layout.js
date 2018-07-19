@@ -9,10 +9,12 @@ function scrollSize() {
   return myDiv.get(0).scrollWidth;
 };
 
+
 // função tamanho do scroll menos viewport
 function scrollViewPortSize() {
   return scrollSize() - myDiv.innerWidth()
 };
+
 
 // verificar se numero de slides é par
 function isEven() {
@@ -22,11 +24,12 @@ function isEven() {
 // função ponto médio do scroll
 function midScroll() {
   if (isEven() == true) {
-    return myDiv.offset().left + (scrollViewPortSize() / 3);
+    return myDiv.offset().left + ((scrollViewPortSize() / 2) - (innerSlideWidth() / 2));
   } else {
     return myDiv.offset().left + (scrollViewPortSize() / 2);
   }
 };
+
 
 // função alinhamento do layout
 function layoutAlign() {
@@ -42,19 +45,64 @@ document.getElementsByTagName("BODY")[0].onresize = function() {
   layoutAlign()
 };
 
-// pegar posicao do scroll
-
-// $(document).ready(function() {
-//   $("#visualContainer").scroll(function() {
-//     var horizontalPosition = $("#visualContainer").scrollLeft();
-//     console.log(horizontalPosition);
-//   });
-// });
-
 // função tamanho total do slide com margin
 function innerSlideWidth() {
   return $('.innerSlide').outerWidth(true);
 };
+
+// função para pegar posição do scroll horizontal
+function horizontalPosition() {
+  return myDiv.scrollLeft();
+};
+
+// função para pegar padding do container
+function containerPadding() {
+  return (myDiv.innerWidth() - myDiv.width());
+};
+
+// função para pegar dimensoes além do padding que possam interferir no tamanho do scroll
+function containerDimensions() {
+  return (scrollSize() - ((innerSlideWidth() * slideNumbers) + containerPadding()));
+};
+
+// função para pegar dimensoes paddin e dimensoes extras na esquerda do scroll
+function containerLeftDimensions() {
+  return (containerDimensions() / 2) + (containerPadding() / 2);
+};
+
+// função para definir os pontos de viagem do viewport para que seu centro, esteja centralizado com o do layout
+function slidePoints(layoutPoint) {
+  var slidePoints = [];
+  slidePoints[0] = 0;
+  var secondPoint = (containerLeftDimensions() + (innerSlideWidth() + (innerSlideWidth() / 2))) - (myDiv.innerWidth() / 2);
+  slidePoints[1] = secondPoint;
+  var slidePointCache = secondPoint;
+  for (i = 2; i < slideNumbers; i++) {
+    slidePointCache += innerSlideWidth();
+    slidePoints[slidePoints.length] = slidePointCache;
+  };
+  return slidePoints[layoutPoint];
+};
+
+
+
+// função para definir os pontos médios do viewport para cada slide
+function slideViewportPoints() {
+  ((midScroll() - (innerSlideWidth() * slideNumbers)) / 2)
+
+  return;
+};
+
+console.log((containerLeftDimensions() + (innerSlideWidth() + (innerSlideWidth() / 2))))
+console.log(slideNumbers)
+console.log(innerSlideWidth() * slideNumbers)
+console.log(slidePoints(4))
+console.log(midScroll())
+console.log(scrollSize())
+console.log(innerSlideWidth())
+console.log(scrollViewPortSize())
+console.log(containerPadding())
+console.log(containerDimensions())
 
 // roda função alinhamento ao termino do touch
 document.getElementById("visualContainer").addEventListener("touchend", cardAlign);
@@ -75,11 +123,13 @@ function cardAlign() {
     myDiv.css("-webkit-overflow-scrolling", "auto");
     myDiv.stop();
 
-    var horizontalPosition = myDiv.scrollLeft();
-    console.log(horizontalPosition);
+
+    console.log(horizontalPosition());
 
 
-
+    myDiv.animate({
+      scrollLeft: slidePoints(1)
+    });
 
 
     // if ((horizontalPosition > (midScroll() - (midScroll() / 3))) && (horizontalPosition < (midScroll() + (midScroll() / 3)))) {
