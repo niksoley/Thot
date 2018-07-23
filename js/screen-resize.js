@@ -48,6 +48,7 @@
 
       } else if (screenWidth >= 992 && screenWidth < 2000) {
 
+
         // Contato
         document.getElementById("menuContato").innerHTML = "Entre em contato";
 

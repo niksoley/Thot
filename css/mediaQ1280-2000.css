@@ -137,7 +137,7 @@ Agência Thot
 }
 
 #visualContainer {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .innerSlide {
