@@ -203,6 +203,7 @@ Agência Thot
   background-color: black;
   padding         : 25px 0 60px;
   color           : white;
+  position        : relative;
 }
 
 #layouts h2 {
@@ -226,6 +227,7 @@ Agência Thot
   -webkit-overflow-scrolling: touch;
   -overflow-scrolling       : touch;
   -ms-overflow-style        : -ms-autohiding-scrollbar;
+
 }
 
 #visualContainer::-webkit-scrollbar {
@@ -327,13 +329,26 @@ Agência Thot
 }
 
 #coringaContainer {
-  display        : inline-block;
-  background     : #1D1F20;
-  position       : relative;
-  background     : linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  animation      : animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
-  margin         : auto;
+  display            : inline-block;
+  background         : #1D1F20;
+  position           : relative;
+  background         : linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  animation          : animatedgradient 10s ease alternate infinite;
+  background-size    : 300% 300%;
+  margin             : auto;
+
+  -webkit-perspective: 1000;
+  -moz-perspective   : 1000;
+  -o-perspective     : 1000;
+  perspective        : 1000;
+}
+
+#coringaContainer.hover #flipper,
+#coringaContainer:hover #flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform   : rotateY(180deg);
+  -o-transform     : rotateY(180deg);
+  transform        : rotateY(180deg);
 }
 
 @keyframes animatedgradient {
@@ -350,10 +365,53 @@ Agência Thot
   }
 }
 
-#coringa {
+#flipper {
+  position               : relative;
+
+  -webkit-transition     : 0.9s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition        : 0.9s;
+  -moz-transform-style   : preserve-3d;
+
+  -o-transition          : 0.9s;
+  -o-transform-style     : preserve-3d;
+
+  transition             : 0.9s;
+  transform-style        : preserve-3d;
+}
+
+/* #coringa {
   opacity     : 1;
   border-color: rgba(255,255,255,0);
-  position    : relative;
+
+} */
+
+#coringaBack,
+#coringaFront {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility   : hidden;
+  -o-backface-visibility     : hidden;
+  backface-visibility        : hidden;
+  border-color               : rgba(255,255,255,0);
+
+}
+
+#coringaBack {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+}
+
+#coringaFront {
+  z-index: 2;
+}
+
+#coringaBack {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform   : rotateY(180deg);
+  -o-transform     : rotateY(180deg);
+  transform        : rotateY(180deg);
 }
 
 /*--------------------
@@ -892,6 +950,14 @@ footer p {
 
 #listaPlano li:last-child {
   font-weight: bold;
+}
+
+#setaDireita {
+  display: none;
+}
+
+#setaEsquerda {
+  display: none;
 }
 
 /*--------------------

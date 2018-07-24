@@ -17,9 +17,6 @@ function reply_click(clicked_id) {
   return clicketTemplate
 };
 
-
-
-
 //menu
 
 $(document).ready(function() {

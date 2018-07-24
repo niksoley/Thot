@@ -541,6 +541,37 @@ footer p {
   margin    : auto;
 }
 
+.planoBasicoLayout {
+  padding: 90px 200px 130px !important;
+}
+
+.planoProfissionalLayout {
+  padding: 90px 200px 130px !important;
+}
+
+.innerSlideSelection {
+  max-width: 25% !important;
+  padding  : 0 5px !important;
+}
+
+#setaDireita {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  right   : 5%;
+  cursor  : pointer;
+  z-index : 5;
+}
+
+#setaEsquerda {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  left    : 5%;
+  cursor  : pointer;
+  z-index : 5;
+}
+
 /*--------------------
     Site Modal
 ----------------------*/
@@ -548,6 +579,10 @@ footer p {
 #iframeContainer {
   width     : 80%;
   margin-top: 50px;
+}
+
+.siteClose {
+  right: 10%;
 }
 
 /*--------------------------------------------------------

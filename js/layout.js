@@ -10,12 +10,10 @@ function scrollSize() {
   return myDiv.get(0).scrollWidth;
 };
 
-
 // função tamanho do scroll menos viewport
 function scrollViewPortSize() {
   return scrollSize() - myDiv.innerWidth()
 };
-
 
 // verificar se numero de slides é par
 function isEven() {
@@ -31,13 +29,28 @@ function midScroll() {
   }
 };
 
+// função ponto médio para 4 layouts simultaneos
+function midScroll4() {
+  var midPoint = ((innerSlideWidth() * 4) / 2) + containerLeftDimensions();
+  return midPoint - (myDiv.innerWidth() / 2) - 1;
+}
+
 
 // função alinhamento do layout
 function layoutAlign() {
+  myDiv.stop();
   if (cancelAnimation == true) {
-    myDiv.animate({
-      scrollLeft: midScroll()
-    });
+    if (window.innerWidth < 992) {
+      myDiv.animate({
+        scrollLeft: midScroll()
+      });
+    }
+    if (window.innerWidth > 992) {
+      myDiv.animate({
+        scrollLeft: midScroll4()
+      });
+      $('#setaEsquerda').css("display", "none")
+    }
   }
 };
 
@@ -87,8 +100,6 @@ function slidePoints(layoutPoint) {
   return slidePoints[layoutPoint];
 };
 
-
-
 // console.log((containerLeftDimensions() + (innerSlideWidth() + (innerSlideWidth() / 2))))
 // console.log(slideNumbers)
 // console.log(innerSlideWidth() * slideNumbers)
@@ -106,25 +117,11 @@ document.getElementById("visualContainer").addEventListener("touchend", cardAlig
 document.getElementById("visualContainer").addEventListener("touchstart", stopAnimation);
 document.getElementById("visualContainer").addEventListener("touchmove", stopAnimation);
 
-// var dragging = false;
-// $("body").on("touchmove", function() {
-//   dragging = true;
-//   console.log(dragging)
-// });
-//
-// $("body").on("touchstart", function() {
-//   dragging = false;
-//   console.log(dragging)
-// });
-
-
-
 // função para interromper animação
 function stopAnimation() {
   myDiv.stop();
   return cancelAnimation = false;
 }
-
 
 // função para interromper animação durante scroll, e reativar quando terminado scroll
 myDiv.scroll(function() {
@@ -138,48 +135,102 @@ myDiv.scroll(function() {
   }, 250));
 });
 
-
 //função de alinhamento dos layouts
 function cardAlign() {
-  setTimeout(function() {
-    if (cancelAnimation == true) {
+  if (screen.width < 992) {
+    setTimeout(function() {
+      if (cancelAnimation == true) {
 
-      myDiv.css("-ms-overflow-scrolling", "auto");
-      myDiv.css("overflow-scrolling", "auto");
-      myDiv.css("-moz-overflow-scrolling", "auto");
-      myDiv.css("-o-overflow-scrolling", "auto");
-      myDiv.css("-webkit-overflow-scrolling", "auto");
-      myDiv.stop();
+        myDiv.css("-ms-overflow-scrolling", "auto");
+        myDiv.css("overflow-scrolling", "auto");
+        myDiv.css("-moz-overflow-scrolling", "auto");
+        myDiv.css("-o-overflow-scrolling", "auto");
+        myDiv.css("-webkit-overflow-scrolling", "auto");
+        myDiv.stop();
 
-      var firstPoint = slidePoints(1) - (innerSlideWidth() / 2);
-      if (horizontalPosition() < firstPoint) {
-        myDiv.animate({
-          scrollLeft: 0
-        });
+        var firstPoint = slidePoints(1) - (innerSlideWidth() / 2);
+        if (horizontalPosition() < firstPoint) {
+          myDiv.animate({
+            scrollLeft: 0
+          });
 
-      } else {
-        for (b = 1; b < slideNumbers; b++) {
-          var arrayPoint = Math.abs(horizontalPosition() - slidePoints(b));
-          var x = innerSlideWidth() / 2;
+        } else {
+          for (b = 1; b < slideNumbers; b++) {
+            var arrayPoint = Math.abs(horizontalPosition() - slidePoints(b));
+            var x = innerSlideWidth() / 2;
 
-          if (arrayPoint < x) {
-            myDiv.animate({
-              scrollLeft: slidePoints(b)
-            });
-            b += slideNumbers;
-          }
+            if (arrayPoint < x) {
+              myDiv.animate({
+                scrollLeft: slidePoints(b)
+              });
+              b += slideNumbers;
+            }
+          };
         };
-      };
 
-      myDiv.css("-ms-overflow-scrolling", "touch");
-      myDiv.css("overflow-scrolling", "touch");
-      myDiv.css("-moz-overflow-scrolling", "touch");
-      myDiv.css("-o-overflow-scrolling", "touch");
-      myDiv.css("-webkit-overflow-scrolling", "touch");
-    }
-    // cancelAnimation = false;
-  }, 300);
+        myDiv.css("-ms-overflow-scrolling", "touch");
+        myDiv.css("overflow-scrolling", "touch");
+        myDiv.css("-moz-overflow-scrolling", "touch");
+        myDiv.css("-o-overflow-scrolling", "touch");
+        myDiv.css("-webkit-overflow-scrolling", "touch");
+      }
+      // cancelAnimation = false;
+    }, 300);
+  }
 };
+
+
+//função para setas (centralizando por slide)
+// function setaDireitaLayout() {
+//   var setaDireita = horizontalPosition() + innerSlideWidth();
+//   for (b = 1; b < slideNumbers; b++) {
+//     var arrayPoint = Math.abs(setaDireita - slidePoints(b));
+//     var x = innerSlideWidth() / 2;
+//
+//     if (arrayPoint < x) {
+//       myDiv.animate({
+//         scrollLeft: slidePoints(b)
+//       });
+//       b += slideNumbers;
+//     }
+//   };
+// }
+//
+// function setaEsquerdaLayout() {
+//   var setaEsquerda = horizontalPosition() - innerSlideWidth();
+//   for (b = 0; b < slideNumbers; b++) {
+//     var arrayPoint = Math.abs(setaEsquerda - slidePoints(b));
+//     var x = innerSlideWidth() / 2;
+//
+//     if (arrayPoint < x) {
+//       myDiv.animate({
+//         scrollLeft: slidePoints(b)
+//       });
+//       b += slideNumbers;
+//     }
+//   };
+// }
+
+//função para setas (4 slides por vez)
+function setaDireitaLayout() {
+  var setaActionDireita = horizontalPosition() + innerSlideWidth() + 5;
+  myDiv.animate({
+    scrollLeft: setaActionDireita
+  });
+  $('#setaEsquerda').css("display", "block")
+  $('#setaDireita').css("display", "none")
+
+}
+
+function setaEsquerdaLayout() {
+  var setaActionEsquerda = horizontalPosition() - innerSlideWidth() - 5;
+  myDiv.animate({
+    scrollLeft: setaActionEsquerda
+  });
+  $('#setaDireita').css("display", "block")
+  $('#setaEsquerda').css("display", "none")
+}
+
 
 
 //função para icone de loading

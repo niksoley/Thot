@@ -547,8 +547,36 @@ footer p {
   margin    : auto;
 }
 
-.slide-imagePlanos {
-  float: left;
+.planoBasicoLayout {
+  padding: 90px 50px 130px !important;
+}
+
+.planoProfissionalLayout {
+  padding: 90px 50px 130px !important;
+}
+
+.innerSlideSelection {
+  max-width: 25% !important;
+  padding  : 0 !important;
+  margin   : 0 8px;
+}
+
+#setaDireita {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  right   : 1%;
+  cursor  : pointer;
+  z-index : 5;
+}
+
+#setaEsquerda {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  left    : 1%;
+  cursor  : pointer;
+  z-index : 5;
 }
 
 /*--------------------
@@ -558,6 +586,10 @@ footer p {
 #iframeContainer {
   width     : 80%;
   margin-top: 50px;
+}
+
+.siteClose {
+  right: 10%;
 }
 
 /*--------------------------------------------------------
