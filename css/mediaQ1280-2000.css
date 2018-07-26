@@ -53,7 +53,7 @@ Agência Thot
   height               : 70vh;
 }
 
-#banner div {
+#typewriter {
   width: 335px;
 }
 
@@ -72,6 +72,17 @@ Agência Thot
 #typewriter::after {
   content  : "|";
   font-size: 23pt;
+}
+
+#particles-js {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  bottom  : 0;
+  right   : 0;
+  width   : 100%;
+  height  : 100%;
+  padding : 0 !important;
 }
 /*--------------------
      3. SERVICOS
@@ -138,6 +149,7 @@ Agência Thot
 
 #visualContainer {
   /* overflow-x: hidden; */
+  padding: 10px 40px;
 }
 
 .innerSlide {
@@ -187,11 +199,14 @@ Agência Thot
   margin   : 0 30px 30px;
 }
 
+#planosContainer {
+  margin: 0 0 80px;
+}
+
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-size    : 14pt;
-  padding      : 13px 28px;
-  margin-bottom: 80px;
+  font-size: 14pt;
+  padding  : 13px 28px;
 }
 
 #planos img {

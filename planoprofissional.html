@@ -91,7 +91,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="tema cabeleireiro"/></div>
+          <div><img class="slide-image slide-imagePlanos" id="myImg1" data-tilt="data-tilt" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="tema cabeleireiro"/></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -100,7 +100,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="tema cervejaria"/></div>
+          <div><img class="slide-image slide-imagePlanos" id="myImg2" data-tilt="data-tilt" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="tema cervejaria"/></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -109,7 +109,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="tema servicos"/></div>
+          <div><img class="slide-image slide-imagePlanos" id="myImg3" data-tilt="data-tilt" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="tema servicos"/></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -118,7 +118,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg4" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="tema servicos"/></div>
+          <div><img class="slide-image slide-imagePlanos" id="myImg4" data-tilt="data-tilt" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="tema servicos"/></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer ">
@@ -127,7 +127,7 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div id="coringaContainer" ontouchstart="this.id.toggle('hover');">
+          <div id="coringaContainer">
             <div id="flipper">
               <img class="slide-image slide-imagePlanos" id="coringaFront" src="img/coringaFront.png" alt="tema servicos"/>
               <img class="slide-image slide-imagePlanos" id="coringaBack" src="img/coringaBack.png" alt="tema servicos"/>
@@ -232,5 +232,7 @@
     <script src="js/layout.js"></script>
     <!--Custom Java for Screen Size Variations -->
     <script src="js/screen-resize.js"></script>
+    <!--Library for 3D Perspective -->
+    <script type="text/javascript" src="js/vanilla-tilt.babel.js"></script>
   </body>
 </html>

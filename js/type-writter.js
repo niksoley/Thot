@@ -1,4 +1,6 @@
 function setupTypewriter(t) {
+  $('#typewriter').css('opacity', '1');
+
   var HTML = t.innerHTML;
 
   t.innerHTML = "";
@@ -66,4 +68,6 @@ var typer = document.getElementById('typewriter');
 
 typewriter = setupTypewriter(typewriter);
 
-typewriter.type();
+$(window).on("load", function() {
+  typewriter.type();
+});

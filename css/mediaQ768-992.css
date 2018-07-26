@@ -143,16 +143,19 @@ Agência Thot
   margin   : 0 30px 60px;
 }
 
+#planosContainer {
+  margin: 0 0 130px;
+}
+
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
   font-size: 16pt;
   padding  : 20px 45px;
-  margin   : 0 0 130px;
 }
 
 #planos img {
   width : 70%;
-  margin: 0 0 -30px;
+  margin: 0 0 -50px;
 }
 /*--------------------
      6. TESTEMUNHOS
