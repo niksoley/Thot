@@ -18,11 +18,8 @@ function reply_click(clicked_id) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
   };
 
-  if (screen.width < 2000) {
-    var result = srcString.splice((srcString.length - 4), 0, "full");
-  } else {
-    var result = srcString.splice((srcString.length - 4), 0, "full2");
-  }
+  var result = srcString.splice((srcString.length - 4), 0, "full");
+
 
   modalImg.src = result;
 
