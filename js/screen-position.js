@@ -22,15 +22,12 @@ $(document).ready(function() {
     // get the bottom of the screen position
     var screenPositionBottom = screenPosition + screenHeight();
 
-    console.log(screenPosition);
-    console.log(screenPositionBottom);
 
     //each object is by using one.top, two.top, or whatever you name your variables
     var one = $("#card").offset();
     var two = $("#planosContainer").offset();
     var three = $("#testemunhos").offset();
 
-    console.log(one.top);
 
     if ((screenPositionBottom - 100) < one.top) {
       $("#card").css('transition', 'initial');

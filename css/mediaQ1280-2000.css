@@ -319,10 +319,16 @@ Agência Thot
 
 #subMenu {
   background-color: #424242;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : flex-end;
+  display         : block;
   padding         : 30px 100px;
+}
+
+#subMenuContainer {
+  display       : flex;
+  flex-direction: column;
+  align-items   : flex-end;
+  width         : 100%;
+  margin        : auto;
 }
 
 #subMenu h3 {
@@ -350,9 +356,14 @@ Agência Thot
 ----------------------*/
 
 footer {
-  padding        : 20px 100px;
+  padding: 20px 100px;
+}
+
+#footerContainer {
   display        : flex;
   justify-content: space-between;
+  max-width      : 2300px;
+  margin         : auto;
 }
 
 footer p {

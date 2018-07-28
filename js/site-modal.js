@@ -80,6 +80,8 @@ $(document).ready(function() {
 //resize frame
 
 function frameSize(deviceValue) {
+  $('#loader').css('display', 'block');
+  $('#siteImgModal').css('display', 'none');
 
   var srcString = String(document.getElementById(clicketTemplate).src);
 
@@ -88,32 +90,27 @@ function frameSize(deviceValue) {
   };
 
 
-
   var deviceSetting = String(deviceValue);
-  console.log(deviceValue)
-  if (screen.width < 2000) {
-    if (deviceSetting == "smartphone") {
-      var imgAdress = srcString.splice((srcString.length - 4), 0, "smartphone");
-    }
-    if (deviceValue == "tablet") {
-      var imgAdress = srcString.splice((srcString.length - 4), 0, "tablet");
-    }
-    if (deviceValue == "desktop") {
-      var imgAdress = srcString.splice((srcString.length - 4), 0, "full");
-    }
 
-    console.log(imgAdress);
-    modalImg.src = imgAdress;
-    console.log(modalImg)
-
+  if (deviceSetting == "smartphone") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "smartphone");
   }
-  // else {
-  //
-  //   // var device = {
-  //   //   smartphone: 500,
-  //   //   tablet: 900,
-  //   //   desktop: 1920
-  //   // }
+  if (deviceValue == "tablet") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "tablet");
+  }
+  if (deviceValue == "desktop") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "full");
+  }
+
+
+  modalImg.src = imgAdress;
+
+  $.get(imgAdress, {}, function() {
+    $('#siteImgModal').css('display', 'flex');
+    $('#loader').css('display', 'none');
+  });
+
+
   //
   //
   //

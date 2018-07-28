@@ -40,8 +40,11 @@
   <body id="body">
     <!-- Menu -->
     <section id="menu">
-      <a href="/"><img src="img/Thot1.png" alt=""></a>
-      <a href="index.html#contato" id="menuContato">contato</a>
+      <div id="menuContainer">
+        <a href="/"><img src="img/Thot1.png" alt=""></a>
+        <a href="#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
@@ -182,18 +185,22 @@
     <!-- End of Planos -->
     <!-- Sub Menu -->
     <section id="subMenu">
-      <a href="/">
-        <h3>CÉOS</h3>
-      </a>
-      <a href="index.html#servicos">Serviços</a>
-      <a href="#planosDetalhado">Planos</a>
-      <a href="index.html#contato">Contato</a>
+      <div id="subMenuContainer">
+        <a href="/">
+          <h3>CÉOS</h3>
+        </a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="planos.html">Planos</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
     </section>
     <!-- End of Sub Menu -->
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Thot_bottom2.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -325,10 +325,16 @@ Agência Thot
 
 #subMenu {
   background-color: #424242;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : flex-end;
+  display         : block;
   padding         : 30px 70px;
+}
+
+#subMenuContainer {
+  display       : flex;
+  flex-direction: column;
+  align-items   : flex-end;
+  width         : 100%;
+  margin        : auto;
 }
 
 #subMenu h3 {
@@ -352,9 +358,14 @@ Agência Thot
 ----------------------*/
 
 footer {
-  padding        : 30px 150px;
+  padding: 30px 150px;
+}
+
+#footerContainer {
   display        : flex;
   justify-content: space-between;
+  max-width      : 2300px;
+  margin         : auto;
 }
 
 footer p {
@@ -507,24 +518,24 @@ footer p {
 }
 
 #descricaoPlanos h2 {
-  font-size: 24pt;
+  font-size: 28pt;
   margin   : 0 0 60px;
 }
 
 .planosgeral {
-  font-size  : 20pt;
+  font-size  : 24pt;
   line-height: 33px;
   display    : flex;
 }
 
 #listaPlano p {
-  font-size  : 10pt;
+  font-size  : 14pt;
   line-height: 30px;
   margin-top : 0 !important;
 }
 
 #listaPlano {
-  font-size    : 14pt;
+  font-size    : 18pt;
   margin       : auto;
   line-height  : 28px;
   width        : 600px;
@@ -538,15 +549,15 @@ footer p {
 
 .planosprecos {
   margin-top: 0 !important;
-  font-size : 14pt !important;
+  font-size : 18pt !important;
 }
 
 .precofinal {
-  font-size: 20pt !important;
+  font-size: 24pt !important;
 }
 
 .taxa {
-  font-size: 12pt !important;
+  font-size: 16pt !important;
 }
 
 #alignDados {

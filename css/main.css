@@ -41,6 +41,15 @@ Agência Thot
   z-index        : 5;
 }
 
+#menuContainer {
+  display         : flex;
+  justify-content : space-between;
+  background-color: white;
+  z-index         : 10;
+  width           : 100%;
+  margin          : auto;
+}
+
 #menu img {
   height: 55px;
 }
@@ -306,6 +315,10 @@ Agência Thot
   width: 90%;
 }
 
+#imgModal {
+  display: none;
+}
+
 .imgModal {
   margin            : auto;
   display           : block;
@@ -319,6 +332,7 @@ Agência Thot
   position          : relative;
   z-index           : 16;
 }
+
 @keyframes zoom {
   from {
     transform: scale(0);
@@ -328,6 +342,86 @@ Agência Thot
     transform: scale(1);
   }
 }
+
+/* Loader */
+#loader-wrapper {
+  z-index: 20;
+}
+
+#loader {
+  display          : none;
+  position         : absolute;
+  top              : 50%;
+  left             : 50%;
+  width            : 100px;
+  height           : 100px;
+  margin           : -75px 0 0 -50px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #A0444B;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:before {
+  content          : "";
+  position         : absolute;
+  top              : 5px;
+  left             : 5px;
+  right            : 5px;
+  bottom           : 5px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #5A7F90;
+  -webkit-animation: myanim 1.5s infinite;
+  animation        : myanim 1.5s infinite;
+}
+
+#loader:after {
+  content          : "";
+  position         : absolute;
+  top              : 15px;
+  left             : 15px;
+  right            : 15px;
+  bottom           : 15px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #AFD14A;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+@keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+
 /* The Close Button */
 
 .close {
@@ -399,12 +493,6 @@ Agência Thot
   transform-style        : preserve-3d;
 }
 
-/* #coringa {
-  opacity     : 1;
-  border-color: rgba(255,255,255,0);
-
-} */
-
 #coringaBack,
 #coringaFront {
   -webkit-backface-visibility: hidden;
@@ -412,7 +500,6 @@ Agência Thot
   -o-backface-visibility     : hidden;
   backface-visibility        : hidden;
   border-color               : rgba(255,255,255,0);
-
 }
 
 #coringaBack {

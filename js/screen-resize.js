@@ -15,6 +15,8 @@
       $("div.subTestemunhos").removeClass("carousel-item");
 
     } else if (screenWidth >= 2000) {
+      $("div.containerTestemunhos").removeClass("carousel-inner");
+      $("div.subTestemunhos").removeClass("carousel-item");
 
     }
   };
@@ -57,6 +59,9 @@
         $("div.subTestemunhos").removeClass("carousel-item");
 
       } else if (screenWidth >= 2000) {
+        // Testemunhos
+        $("div.containerTestemunhos").removeClass("carousel-inner");
+        $("div.subTestemunhos").removeClass("carousel-item");
 
       }
     };

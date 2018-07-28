@@ -41,28 +41,31 @@
 
   <body id="body">
     <!-- Menu -->
-
     <section id="menu">
-      <a href="#menuSpacer"><img src="img/Thot1.png" alt=""></a>
-      <a href="#contato" id="menuContato">contato</a>
-      <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      <div id="menuContainer">
+        <a href="#menuSpacer"><img src="img/Thot1.png" alt=""></a>
+        <a href="#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
     <!-- Banner -->
     <section id="banner">
       <div id="particles-js"></div>
-      <div id="typewriter">
-        <span>tenha o seu</span>
-        <p id="bannerWebsite">website</p>
-        <br/>
-        <br/>
-        <span>designs sofisticados</span>
-        <span>preços</span>
-        <span>que cabem</span>
-        <span>no seu bolso</span>
-        <span>...</span>
-        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      <div id="bannerContaier">
+        <div id="typewriter">
+          <span>tenha o seu</span>
+          <p id="bannerWebsite">website</p>
+          <br/>
+          <br/>
+          <span>designs sofisticados</span>
+          <span>preços</span>
+          <span>que cabem</span>
+          <span>no seu bolso</span>
+          <span>...</span>
+          <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+        </div>
       </div>
     </section>
     <!-- End of Banner -->
@@ -93,6 +96,9 @@
       <div id="myModal" class="modal">
         <div id="imgModalContainer">
           <span class="close">&times;</span>
+          <div id="loader-wrapper">
+            <div id="loader"></div>
+          </div>
           <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
       </div>
     </section>
@@ -188,9 +194,11 @@
       </form>
     </section>
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Thot_bottom2.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
