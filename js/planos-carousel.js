@@ -58,7 +58,7 @@ if (navigator.msMaxTouchPoints) {
       }
       if (this.index == 2) {
         $('#setaPlanosDireita').addClass('setaRemove');
-     }
+      }
     },
 
     setaDireitaClick: function() {
@@ -100,9 +100,11 @@ if (navigator.msMaxTouchPoints) {
 
       // Test for flick.
       this.longTouch = false;
-      setTimeout(() => {
-        this.longTouch = true;
+
+      setTimeout(function() {
+        slider.longTouch = true;
       }, 100);
+
 
       // Get the original touch position.
       this.touchstartx = event.originalEvent.touches[0].pageX;
@@ -127,7 +129,7 @@ if (navigator.msMaxTouchPoints) {
         // if (panx < 100) { // Corrects an edge-case problem where the background image moves without the container moving.
         //   this.el.imgSlide.css('transform', 'translate3d(-' + panx + 'px,0,0)');
         // }
-      } else {}
+      }
     },
 
     end: function(event) {
@@ -149,7 +151,7 @@ if (navigator.msMaxTouchPoints) {
 
         this.el.holder.addClass('animate').css('transform', 'translate3d(-' + this.index * this.slideWidth + 'px,0,0)');
         // this.el.imgSlide.addClass('animate').css('transform', 'translate3d(-' - this.index * 50 + 'px,0,0)');
-      } else {}
+      }
     }
   }
 };
@@ -173,8 +175,6 @@ $(window).resize(function() {
 
   }
 });
-
-
 
 
 // bloquear scroll vertical durante scroll horizontal
@@ -214,13 +214,11 @@ $(window).resize(function() {
     if (_overlay.scrollTop === 0 && clientY > 0) {
       // element is at the top of its scroll
       event.preventDefault();
-
     }
 
     if (isOverlayTotallyScrolled() && clientY < 0) {
       //element is at the top of its scroll
       event.preventDefault();
-
     }
   }
 

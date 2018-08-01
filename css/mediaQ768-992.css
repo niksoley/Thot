@@ -39,10 +39,6 @@ Agência Thot
   padding: 100px 70px 240px;
 }
 
-#banner div {
-  padding: 0 300px 100px 0;
-}
-
 #banner div span {
   font-size: 24pt;
 }
@@ -52,7 +48,7 @@ Agência Thot
 }
 
 #typewriter {
-  /* max-width : 420px; */
+  max-width : 420px;
   min-height: 300px;
 }
 
