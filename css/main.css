@@ -26,6 +26,41 @@ Agência Thot
   opacity: 0 !important;
 }
 
+.tooltip {
+  position: relative;
+  display : block;
+  opacity : 1;
+  cursor  : help;
+  z-index : auto;
+}
+
+.tooltip .tooltiptext {
+  opacity         : 0;
+  font-family     : "Montserrat", sans-serif;
+  font-size       : 10pt;
+  line-height     : 1.5;
+  color           : black;
+  text-align      : left;
+  background-color: white;
+  width           : 200px;
+  padding         : 8px;
+  border          : 1px solid black;
+  z-index         : 9999 !important;
+  display         : none;
+
+  /* Position the tooltip */
+  position        : absolute;
+
+}
+
+.tooltip:hover .tooltiptext {
+  opacity   : 1;
+  position  : fixed;
+  overflow  : hidden;
+  transition: opacity 0.6s;
+
+}
+
 /*--------------------
      1. MENU
 ----------------------*/
@@ -80,7 +115,7 @@ Agência Thot
 #banner {
   width              : 100%;
   padding            : 80px 28px 180px;
-  background-image   : url("../img/Banner_mobile1.jpg");
+  background-image   : url("../img/banner-desenvolvimento-sites.jpg");
   background-repeat  : no-repeat;
   background-position: center;
   background-size    : cover;

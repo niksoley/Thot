@@ -17,6 +17,18 @@ Agência Thot
 13. PAGINA PLANO PROFISSIONAL
 14. PAGINA PLANO AVANCADO
  ----------------------------------------------------------------------------------------*/
+
+/*--------------------
+      0. GLOBAL
+   ----------------------*/
+.tooltip .tooltiptext {
+  display: block;
+}
+
+#body {
+  overflow-x: hidden;
+}
+
 /*--------------------
       1. MENU
  ----------------------*/
@@ -52,7 +64,7 @@ Agência Thot
 
 #banner {
   padding              : 30px 100px 300px;
-  background-image     : url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
+  background-image     : url("../img/Filtro_Banner.png") , url("../img/banner-desenvolvimento-sites.jpg");
   background-attachment: fixed;
   height               : 70vh;
 }
