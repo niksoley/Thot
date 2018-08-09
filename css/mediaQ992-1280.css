@@ -669,3 +669,8 @@ footer p {
 /*--------------------------------------------------------
      15.  Pagina de Agradecimento
 ---------------------------------------------------------*/
+
+#tpFooter {
+  display        : flex;
+  justify-content: space-between;
+}
