@@ -43,6 +43,17 @@ Agência Thot
   border-radius: 50%;
 }
 
+#setasContainer1,
+#setasContainer2,
+#setasContainer3 {
+  width        : 60px;
+  height       : 60px;
+  border-radius: 50%;
+  position     : absolute;
+  top          : 0;
+  left         : 0;
+}
+
 #setaPlano1,
 #setaPlano2,
 #setaVoltar {
@@ -87,6 +98,22 @@ Agência Thot
   transition-delay: 0.7s;
 }
 
+.setaPlano1Profissional {
+  background-color: #A0444B!important;
+}
+
+.setaPlano2Profissional {
+  background-color: #AFD14A !important;
+}
+
+.setaPlano1Avancado {
+  background-color: #AFD14A!important;
+}
+
+.setaPlano2Avancado {
+  background-color: #5A7F90 !important;
+}
+
 .setaData {
   position        : absolute;
   top             : 80%;
@@ -112,6 +139,14 @@ Agência Thot
   height                    : 180px;
   border-radius             : 0;
   border-bottom-right-radius: 50%;
+}
+
+#setasContainer:hover > #setasContainer2 {
+  transform: translateX(100px);
+}
+
+#setasContainer:hover > #setasContainer3 {
+  transform: translateY(100px);
 }
 
 #setasContainer:hover ~ #setaPlano1 {

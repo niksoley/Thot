@@ -39,17 +39,19 @@
 
   </head>
   <body id="body" scroll="no">
+
+    <!-- Setas -->
     <div id="setasContainer">
-      <div></div>
-      <div></div>
-      <div></div>
+      <a href="planos.html" id="setasContainer1"></a>
+      <a href="planoprofissional.html" id="setasContainer2"></a>
+      <a href="planoavancado.html" id="setasContainer3"></a>
     </div>
-    <a href="#contato" id="setaVoltar"><img src="../img/arrow.png" alt="">
-      <span class="setaData">Voltar</span></a>
-    <a href="#contato" id="setaPlano1"><img src="../img/arrow.png" alt="">
-      <span class="setaData">Profissional</span></a>
-    <a href="#contato" id="setaPlano2"><img src="../img/arrow.png" alt="">
-      <span class="setaData">Avançado</span></a>
+    <div id="setaVoltar"><img src="../img/arrow.png" alt="">
+      <span class="setaData">Voltar</span></div>
+    <div id="setaPlano1"><img src="../img/arrow.png" alt="">
+      <span class="setaData">Profissional</span></div>
+    <div id="setaPlano2"><img src="../img/arrow.png" alt="">
+      <span class="setaData">Avançado</span></div>
 
     <!-- Menu -->
     <section id="menu">
@@ -212,10 +214,10 @@
     <!-- Contato -->
     <section id="contato">
       <h2 class="contatoTituloPlanos corTituloBasico">Dados</h2>
-      <form target="_blank" action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoBasicoForm">
+      <form target="" action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoBasicoForm">
         <!-- Hiden Input -->
         <input type="hidden" name="recipient" value="comercial@agenciaceos.com.br">
-        <input type="hidden" name="subject" value="E-Mail Agência Ceos">
+        <input id="assunto" type="hidden" name="subject" value="E-Mail Agência Ceos">
         <!-- End of Hiden Input -->
         <div id="formplanoBasico">
           <div class="form-group form-text">
@@ -279,8 +281,6 @@
     <script src="js/tooltip-movement.js"></script>
     <!--Custom Java for Screen Size Variations -->
     <script src="js/screen-resize.js"></script>
-    <!--Custom Java for Seta Animation -->
-    <script src="js/seta-animation.js"></script>
     <!--Library for 3D Perspective -->
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
   </body>
