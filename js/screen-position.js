@@ -26,7 +26,7 @@ $(document).ready(function() {
     //each object is by using one.top, two.top, or whatever you name your variables
     var one = $("#card").offset();
     var two = $("#planosContainer").offset();
-    var three = $("#testemunhos").offset();
+    var three = $("#testemunhosH2").offset();
 
 
     if ((screenPositionBottom - 100) < one.top) {
@@ -51,12 +51,21 @@ $(document).ready(function() {
     }
     if (screen.width > 1280) {
       if (screenPositionBottom < three.top) {
-        $("#testemunhos").css('transition', 'initial');
-        $("#testemunhos").addClass("opacity");
+        $("#testemunhosH2").css('transition', 'initial');
+        $("#testemunhosH2").addClass("opacity");
+        $("#testemunhosH2").css('transform', 'translateY(20px)');
+        $(".subTestemunhos").css('transition', 'initial');
+        $(".subTestemunhos").addClass("opacity");
       }
       if (screenPositionBottom >= three.top) {
-        $("#testemunhos").css('transition', 'opacity 0.5s ease-in');
-        $("#testemunhos").removeClass("opacity");
+        $("#testemunhosH2").css('transition', 'opacity 0.7s ease-in , transform 0.5s linear');
+        $("#testemunhosH2").removeClass("opacity");
+        $("#testemunhosH2").css('transform', 'translateY(0px)');
+
+        setTimeout(function() {
+          $(".subTestemunhos").css('transition', 'opacity 0.7s ease-in , transform 0.5s linear');
+          $(".subTestemunhos").removeClass("opacity");
+        }, 1000);
       }
     }
   });

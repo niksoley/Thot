@@ -27,17 +27,19 @@ Agência Thot
 }
 
 .tooltip {
-  position: relative;
-  display : block;
-  opacity : 1;
-  cursor  : help;
-  z-index : auto;
+  position   : inherit;
+  display    : block;
+  opacity    : 1;
+  cursor     : help;
+  z-index    : inherit;
+  font-family: "Montserrat", sans-serif;
+  font-size  : 12pt;
 }
 
 .tooltip .tooltiptext {
   opacity         : 0;
   font-family     : "Montserrat", sans-serif;
-  font-size       : 10pt;
+  font-size       : 9pt;
   line-height     : 1.5;
   color           : black;
   text-align      : left;
@@ -73,7 +75,7 @@ Agência Thot
   z-index        : 10;
   box-shadow     : 0 10px 8px -1px rgba(0, 0, 0, 0.3), 0 15px 12px -12px rgba(0, 0, 0, 0.6);
   position       : relative;
-  z-index        : 5;
+  z-index        : 90;
 }
 
 #menuContainer {
@@ -86,7 +88,7 @@ Agência Thot
 }
 
 #menu img {
-  height: 55px;
+  height: 60px;
 }
 
 #menuContato,
@@ -299,7 +301,7 @@ Agência Thot
   width    : 80%;
   margin   : 0 5px;
   max-width: 350px;
-  z-index  : 15;
+  z-index  : 5;
 }
 
 .slide-image {
@@ -538,9 +540,12 @@ Agência Thot
 }
 
 #coringaBack {
-  position: absolute;
-  top     : 0;
-  left    : 0;
+  position        : absolute;
+  top             : 2%;
+  left            : 2%;
+  width           : 96%;
+  height          : 96%;
+  background-color: black;
 }
 
 #coringaFront {
@@ -822,11 +827,11 @@ Agência Thot
 footer {
   background-color: black;
   text-align      : center;
-  padding         : 20px;
+  padding         : 15px;
 }
 
 footer img {
-  height: 30px;
+  height: 50px;
 }
 
 footer p {
@@ -1071,7 +1076,7 @@ footer p {
 }
 
 #listaPlano {
-  font-size    : 14px;
+  font-size    : 12pt;
   border-color : black;
   border-width : 2px;
   border-style : solid;

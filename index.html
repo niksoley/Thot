@@ -24,9 +24,9 @@
     <!-- Extra small devices (portrait phones, less than 500px) -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Extra small devices (portrait phones, less than 768px) -->
-    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 768px)" href="css/mediaQ500-768.css"/>
+    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 767px)" href="css/mediaQ500-768.css"/>
     <!-- Small devices (tablets, 768px and up) -->
-    <link rel="stylesheet" media="(min-width: 769px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
     <!-- (desktops, 992 and up) -->
     <link rel="stylesheet" media="(min-width: 993px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
     <!-- Large devices (large desktops, 1280px and up) -->
@@ -71,7 +71,7 @@
     <!-- End of Banner -->
     <!-- Servicos -->
     <section id="servicos">
-      <img src="img/tenha-seu-website.png" class="rellax" data-rellax-speed="1" alt="Tenha seu Website">
+      <img id="imgServicos" src="img/tenha-seu-website.png" class="rellax" data-rellax-speed="1" alt="Tenha seu Website">
       <div id="card">
         <div id="textoServicos">
           <div id="servicosH2">Tenha seu
@@ -87,10 +87,10 @@
     <section id="layouts">
       <h2>Exemplos de Temas</h2>
       <div id="visualContainer">
-        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="tema cabeleireiro"/></div>
-        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="tema cervejaria"/></div>
-        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="tema servicos"/></div>
-        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg4" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="tema servicos"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="Tema Cabeleireiros"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="Tema Cervejaria"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="Tema Negócios"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg4" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="Tema Serviços"/></div>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
@@ -113,12 +113,12 @@
         </div>
         <a href="planos.html" id="planosCliqueAqui">clique aqui</a>
       </div>
-      <img src="img/Planos.png" class="rellax" data-rellax-speed="0.5" alt="planos">
+      <img id="imgPlanos" src="img/Planos.png" class="rellax" data-rellax-speed="0.5" alt="planos">
     </section>
     <!-- End of Planos -->
     <!-- Testemunhos -->
     <section id="testemunhos">
-      <h2>Testemunhos</h2>
+      <h2 id="testemunhosH2">Testemunhos</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -229,9 +229,9 @@
       var rellax = new Rellax('.rellax', {center: true});
     </script>
     <!--Library for Particles -->
-    <script type="text/javascript" src="js/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!--Library for 3D Perspective -->
-    <script type="text/javascript" src="js/vanilla-tilt.babel.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
   </body>
 </html>

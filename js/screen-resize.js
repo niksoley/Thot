@@ -14,9 +14,21 @@
       $("div.containerTestemunhos").removeClass("carousel-inner");
       $("div.subTestemunhos").removeClass("carousel-item");
 
+      // Imagem Parallax
+      setTimeout(function() {
+        rellax.destroy()
+      }, 1000);
+
+
+
     } else if (screenWidth >= 2000) {
       $("div.containerTestemunhos").removeClass("carousel-inner");
       $("div.subTestemunhos").removeClass("carousel-item");
+
+      // Imagem Parallax
+      setTimeout(function() {
+        rellax.destroy()
+      }, 1000)
 
     }
   };
@@ -35,6 +47,9 @@
         $("carouselTestemunho").addClass("carousel-inner"); //<div> Class cardTestemunhos
         $("div.subTestemunhos").addClass("carousel-item"); //<div< Class SubTestemunhos
 
+        // Imagem Parallax
+        rellax.refresh();
+
         carouselNormalization()
 
       } else if (screenWidth >= 768 && screenWidth < 992) {
@@ -46,10 +61,13 @@
         $("div.containerTestemunhos").addClass("carousel-inner"); //<div> Class cardTestemunhos
         $("div.subTestemunhos").addClass("carousel-item"); //<div< Class SubTestemunhos
 
+        // Imagem Parallax
+        rellax.refresh();
+
+
         carouselNormalization()
 
       } else if (screenWidth >= 992 && screenWidth < 2000) {
-
 
         // Contato
         document.getElementById("menuContato").innerHTML = "Entre em contato";
@@ -58,10 +76,17 @@
         $("div.containerTestemunhos").removeClass("carousel-inner");
         $("div.subTestemunhos").removeClass("carousel-item");
 
+        // Imagem Parallax
+        rellax.destroy();
+
+
       } else if (screenWidth >= 2000) {
         // Testemunhos
         $("div.containerTestemunhos").removeClass("carousel-inner");
         $("div.subTestemunhos").removeClass("carousel-item");
+
+        // Imagem Parallax
+        rellax.destroy();
 
       }
     };

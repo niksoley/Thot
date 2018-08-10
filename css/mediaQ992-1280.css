@@ -80,11 +80,11 @@ Agência Thot
 }
 
 #banner div span {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #banner div #bannerWebsite {
-  font-size: 22pt;
+  font-size: 20pt;
 }
 
 #typewriter {
@@ -122,15 +122,15 @@ Agência Thot
 }
 
 #servicosH2 {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #textoServicos h1 {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #servicos p {
-  font-size: 16pt;
+  font-size: 14pt;
   margin   : 50px 0 20px;
 }
 
@@ -154,7 +154,7 @@ Agência Thot
 }
 
 #layouts h2 {
-  font-size  : 24pt;
+  font-size  : 22pt;
   font-weight: normal;
   line-height: 1.5;
   padding    : 0 40px;
@@ -162,12 +162,12 @@ Agência Thot
 }
 
 #visualContainer {
-  padding: 10px 40px;
+  padding: 10px 0;
 }
 
 .innerSlide {
   display  : inline-block;
-  width    : 22%;
+  width    : 23%;
   /* margin   : 0 20px; */
   max-width: 500px;
 }
@@ -197,16 +197,16 @@ Agência Thot
 }
 
 #planos h2 {
-  font-size: 24pt;
+  font-size: 22pt;
   margin   : 0 0 40px;
 }
 
 #planos h2 span {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #planos h3 {
-  font-size: 16pt;
+  font-size: 14pt;
   margin   : 0 30px 30px;
 }
 
@@ -216,7 +216,7 @@ Agência Thot
 
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-size: 16pt;
+  font-size: 14pt;
   padding  : 13px 28px;
 }
 
@@ -234,7 +234,7 @@ Agência Thot
 }
 
 #testemunhos h2 {
-  font-size    : 24pt;
+  font-size    : 22pt;
   margin-bottom: 70px;
   text-align   : center;
 }
@@ -251,7 +251,7 @@ Agência Thot
 .subTestemunhos {
   text-align    : center;
   max-width     : 350px;
-  font-size     : 16pt;
+  font-size     : 14pt;
   font-weight   : normal;
   margin        : 0 20px;
   line-height   : 1.3;
@@ -294,7 +294,7 @@ Agência Thot
 
 #contato h2 {
   margin   : 0 0 60px;
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #contato form {
@@ -326,7 +326,7 @@ Agência Thot
 }
 
 .btn-primary {
-  font-size: 16pt;
+  font-size: 14pt;
   padding  : 5px 40px;
   margin   : 0;
 }
@@ -369,12 +369,13 @@ Agência Thot
 ----------------------*/
 
 footer {
-  padding: 30px 150px;
+  padding: 25px 150px;
 }
 
 #footerContainer {
   display        : flex;
   justify-content: space-between;
+  align-items    : center;
   max-width      : 2300px;
   margin         : auto;
 }
@@ -386,7 +387,7 @@ footer p {
   font-size  : 10pt;
   margin     : 0;
   line-height: 2;
-  display    : inline;
+  display    : inline-block;
 }
 /*--------------------
      10. Pagiana Planos
@@ -398,13 +399,13 @@ footer p {
 }
 
 #planosDetalhado span {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #planosDetalhado h2 {
   margin   : auto auto 60px;
   max-width: none;
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 .sliderPlanos {
@@ -529,24 +530,24 @@ footer p {
 }
 
 #descricaoPlanos h2 {
-  font-size: 28pt;
+  font-size: 26pt;
   margin   : 0 0 60px;
 }
 
 .planosgeral {
-  font-size  : 24pt;
+  font-size  : 22pt;
   line-height: 33px;
   display    : flex;
 }
 
 #listaPlano p {
-  font-size  : 14pt;
+  font-size  : 11pt;
   line-height: 30px;
   margin-top : 0 !important;
 }
 
 #listaPlano {
-  font-size    : 18pt;
+  font-size    : 12pt;
   margin       : auto;
   line-height  : 28px;
   width        : 600px;
@@ -564,11 +565,11 @@ footer p {
 }
 
 .precofinal {
-  font-size: 24pt !important;
+  font-size: 22pt !important;
 }
 
 .taxa {
-  font-size: 16pt !important;
+  font-size: 14pt !important;
 }
 
 #alignDados {

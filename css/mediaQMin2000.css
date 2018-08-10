@@ -64,7 +64,7 @@ Agência Thot
 
 #banner {
   padding              : 30px 100px 300px;
-  background-image     : url("../img/Filtro_Banner.png") , url("../img/banner-desenvolvimento-sites.jpg");
+  background-image     : url("../img/Filtro_Banner.png") , url("../img/banner-desenvolvimento-sites_desktop.jpg");
   background-attachment: fixed;
   height               : 70vh;
 }

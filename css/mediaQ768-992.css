@@ -17,6 +17,17 @@ Agência Thot
 13. PAGINA PLANO PROFISSIONAL***
 14. PAGINA PLANO AVANCADO***
  ----------------------------------------------------------------------------------------*/
+
+.tooltip {
+  position   : relative;
+  display    : block;
+  opacity    : 1;
+  cursor     : help;
+  z-index    : auto;
+  font-family: "Montserrat", sans-serif;
+  font-size  : 14pt;
+}
+
 /*--------------------
       1. MENU
  ----------------------*/
@@ -93,6 +104,10 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
+#layouts {
+  padding: 50px 0 90px;
+}
+
 #visualContainer {
   padding: 0 60px;
 }
@@ -104,7 +119,7 @@ Agência Thot
 
 .innerSlide {
   display  : inline-block;
-  width    : 60%;
+  width    : 45%;
   margin   : 0 20px;
   max-width: 500px;
 }
@@ -159,6 +174,7 @@ Agência Thot
 
 #testemunhos {
   padding: 60px 0;
+  height : inherit;
 }
 
 #testemunhos h2 {
@@ -255,8 +271,8 @@ Agência Thot
 }
 
 .planosContainer {
-  padding: 30px;
-  width  : 60%;
+  padding: 30px 20px;
+  width  : 50%;
 }
 
 .planosContainer .planosCategoria {
@@ -268,14 +284,14 @@ Agência Thot
 #planosMedianoBasico,
 #planosMedianoProfissional,
 .planosDivSuperior {
-  font-size: 14pt;
+  font-size: 12pt;
   padding  : 0 30px;
 }
 
 #planosMedianoAvancado span,
 #planosMedianoBasico span,
 #planosMedianoProfissional span {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 #planosMedianoAvancado li,
@@ -288,11 +304,16 @@ Agência Thot
 
 .planosDivInferior {
   margin-top: 90px;
-  font-size : 16pt;
+  font-size : 14pt;
 }
 
 .preco {
-  font-size: 26pt;
+  font-size: 23pt;
+}
+
+.setupUnico {
+  font-size    : 11pt;
+  margin-bottom: 0;
 }
 
 .planosDetalhadoCliqueAqui {
@@ -342,6 +363,10 @@ Agência Thot
 
 #layouts h1 {
   font-size: 25pt;
+}
+
+.precofinal {
+  font-size: 23pt !important;
 }
 
 /*--------------------

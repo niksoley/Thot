@@ -1,4 +1,4 @@
-var tooltips = document.querySelectorAll('.tooltip span');
+var tooltips = document.querySelectorAll('.tooltiptext');
 
 window.onmousemove = function(e) {
   var x = (e.clientX + 20) + 'px',
