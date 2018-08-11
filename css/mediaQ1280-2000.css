@@ -34,6 +34,7 @@ Agência Thot
 /*--- Setas ---*/
 
 #setasContainer {
+  display      : block;
   z-index      : 50;
   width        : 60px;
   height       : 60px;
@@ -57,6 +58,7 @@ Agência Thot
 #setaPlano1,
 #setaPlano2,
 #setaVoltar {
+  display         : block;
   position        : fixed;
   top             : 25%;
   left            : 5%;

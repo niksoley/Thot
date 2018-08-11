@@ -29,6 +29,163 @@ Agência Thot
   overflow-x: hidden;
 }
 
+/*--- Setas ---*/
+
+#setasContainer {
+  z-index      : 50;
+  width        : 60px;
+  height       : 60px;
+  position     : fixed;
+  top          : 25%;
+  left         : 5%;
+  border-radius: 50%;
+}
+
+#setasContainer1,
+#setasContainer2,
+#setasContainer3 {
+  width        : 60px;
+  height       : 60px;
+  border-radius: 50%;
+  position     : absolute;
+  top          : 0;
+  left         : 0;
+}
+
+#setaPlano1,
+#setaPlano2,
+#setaVoltar {
+  position        : fixed;
+  top             : 25%;
+  left            : 5%;
+  z-index         : 48;
+  border-radius   : 50%;
+  box-shadow      : 0 3px 8px #aaa, inset 0 2px 3px #fff;
+  transition      : transform 0.5s ease-in;
+  transition-delay: 0.7s;
+}
+
+#setaVoltar {
+  z-index: 49;
+}
+
+#setaPlano1 img,
+#setaPlano2 img,
+#setaVoltar img {
+  width        : 60px;
+  border-radius: 50%;
+  padding      : 14px;
+}
+
+#setaVoltar img {
+  background-color: black;
+  transform       : rotate(180deg);
+}
+
+#setaPlano1 img {
+  background-color: #5A7F90;
+  transform       : rotate(180deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.7s;
+}
+
+#setaPlano2 img {
+  background-color: #A0444B;
+  transform       : rotate(180deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.7s;
+}
+
+.setaPlano1Profissional {
+  background-color: #A0444B!important;
+}
+
+.setaPlano2Profissional {
+  background-color: #AFD14A !important;
+}
+
+.setaPlano1Avancado {
+  background-color: #AFD14A!important;
+}
+
+.setaPlano2Avancado {
+  background-color: #5A7F90 !important;
+}
+
+.setaData {
+  position        : absolute;
+  top             : 80%;
+  left            : 50%;
+  transform       : translateX(-50%);
+  font-family     : "Montserrat", sans-serif;
+  font-weight     : normal;
+  font-size       : 8pt;
+  color           : black;
+  opacity         : 0;
+  /* -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition   : opacity 1s ease-in-out;
+  -ms-transition    : opacity 1s ease-in-out;
+  -o-transition     : opacity 1s ease-in-out; */
+  transition      : opacity 0.5s, top 0.7s;
+  transition-delay: 0.5s;
+}
+
+/*--- Animações Setas ---*/
+
+#setasContainer:hover {
+  width                     : 180px;
+  height                    : 180px;
+  border-radius             : 0;
+  border-bottom-right-radius: 50%;
+}
+
+#setasContainer:hover > #setasContainer2 {
+  transform: translateX(100px);
+}
+
+#setasContainer:hover > #setasContainer3 {
+  transform: translateY(100px);
+}
+
+#setasContainer:hover ~ #setaPlano1 {
+  transform       : translateX(100px);
+  transition      : transform 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano2 {
+  transform       : translateY(100px);
+  transition      : transform 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano1 img {
+  transform       : rotate(00deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano2 img {
+  transform       : rotate(450deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaVoltar span {
+  top    : 110%;
+  opacity: 1;
+}
+
+#setasContainer:hover ~ #setaPlano1 span {
+  top    : 110%;
+  opacity: 1;
+}
+
+#setasContainer:hover ~ #setaPlano2 span {
+  top    : 110%;
+  opacity: 1;
+}
+
 /*--------------------
       1. MENU
  ----------------------*/

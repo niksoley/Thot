@@ -63,6 +63,15 @@ Agência Thot
 
 }
 
+/*--- Setas ---*/
+
+#setaPlano1,
+#setaPlano2,
+#setaVoltar,
+#setasContainer {
+  display: none;
+}
+
 /*--------------------
      1. MENU
 ----------------------*/
@@ -541,11 +550,28 @@ Agência Thot
 
 #coringaBack {
   position        : absolute;
-  top             : 2%;
-  left            : 2%;
-  width           : 96%;
-  height          : 96%;
-  background-color: black;
+  top             : 1.5%;
+  left            : 1.5%;
+  width           : 97%;
+  height          : 97%;
+  background-color: #1D1F20;
+}
+
+#coringaBack span {
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%,-50%);
+  width    : 90%;
+}
+
+#coringaBack p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 10pt;
+  white-space: normal;
+  text-align : center;
+  margin     : 30px 0 20px;
 }
 
 #coringaFront {
