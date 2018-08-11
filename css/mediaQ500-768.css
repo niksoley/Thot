@@ -107,6 +107,15 @@ Agência Thot
   font-weight: normal;
   font-size  : 24pt;
 }
+
+#coringaBack span {
+  width: 80%;
+}
+
+#coringaBack p {
+  font-size: 15pt;
+}
+
 /*--------------------
      5. PLANOS
 ----------------------*/

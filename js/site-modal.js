@@ -12,6 +12,12 @@ function reply_click(clicked_id) {
 
   modal.style.display = "flex";
   $("body").addClass("modal-open"); //block body scroll
+  $("#setaPlano1").css("display", "none");
+  $("#setaPlano2").css("display", "none");
+  $("#setaVoltar").css("display", "none");
+  $("#setasContainer").css("display", "none");
+  $(".tooltiptext").css("display", "none");
+
   clicketTemplate = clicked_id;
 
   return clicketTemplate
@@ -137,7 +143,14 @@ modalImg.onclick = function() {
   $("body").removeClass("modal-open"); //remove blocked scroll from body
   $("#siteModal").css("display", "none");
   $("#guiaDispositivo").css("display", "flex");
-  $("#siteImgModal").css("display", "none");
+  if (screen.width >= 992) {
+    $("#siteImgModal").css("display", "none");
+    $("#setaPlano1").css("display", "block");
+    $("#setaPlano2").css("display", "block");
+    $("#setaVoltar").css("display", "block");
+    $("#setasContainer").css("display", "block");
+    $(".tooltiptext").css("display", "inline");
+  }
 }
 
 // Get the <span> element that closes the modal
@@ -149,7 +162,16 @@ span.onclick = function() {
   $("body").removeClass("modal-open"); //remove blocked scroll from body
   $("#siteModal").css("display", "none");
   $("#guiaDispositivo").css("display", "flex");
-  $("#siteImgModal").css("display", "none");
+
+  if (screen.width >= 992) {
+    $("#siteImgModal").css("display", "none");
+    $("#siteImgModal").css("display", "none");
+    $("#setaPlano1").css("display", "block");
+    $("#setaPlano2").css("display", "block");
+    $("#setaVoltar").css("display", "block");
+    $("#setasContainer").css("display", "block");
+    $(".tooltiptext").css("display", "inline");
+  }
 };
 
 // block background when modal is open

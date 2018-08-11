@@ -765,11 +765,11 @@ footer p {
 }
 
 .planoBasicoLayout {
-  padding: 90px 15% 130px !important;
+  padding: 90px 15% 0 !important;
 }
 
 .planoProfissionalLayout {
-  padding: 90px 15% 130px !important;
+  padding: 90px 15% 0 !important;
 }
 
 .innerSlideSelection {

@@ -65,7 +65,7 @@ $(document).ready(function() {
         setTimeout(function() {
           $(".subTestemunhos").css('transition', 'opacity 0.7s ease-in , transform 0.5s linear');
           $(".subTestemunhos").removeClass("opacity");
-        }, 1000);
+        }, 300);
       }
     }
   });

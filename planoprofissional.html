@@ -137,7 +137,8 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg1" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="Tema Cabeleireiros"/></div>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg1" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="Tema Cabeleireiros"/>
+            <span class="tooltiptext2">Indicado para sites das áreas de Beleza e Moda (salões, estilistas, e outras áreas com apelo mais visual)</span></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -146,7 +147,8 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg2" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="Tema Cervejaria"/></div>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg2" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="Tema Cervejaria"/>
+            <span class="tooltiptext2">Ideal para Cervejarias, Barbearias, Estúdios de Tatuagem</span></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -155,7 +157,8 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg3" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="Tema Negócios"/></div>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg3" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="Tema Negócios"/>
+            <span class="tooltiptext2">Indicado para sites na área de Negócios (Assessorias, Consultorias, Profissionais Autônomos, Administradores, Empresas da área de Finanças e Investimentos</span></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
@@ -164,7 +167,8 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div><img class="slide-image slide-imagePlanos" id="myImg4" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="Tema Serviços"/></div>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg4" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="Tema Serviços"/>
+            <span class="tooltiptext2">Recomendado para Empresas da área de Serviços em geral</span></div>
         </div>
         <div class="innerSlide innerSlideSelection">
           <div class="radioContainer ">
@@ -173,15 +177,24 @@
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <div id="coringaContainer">
-            <div id="flipper">
-              <img class="slide-image slide-imagePlanos" id="coringaFront" src="img/coringaFront.png" alt="tema servicos"/>
-              <img class="slide-image slide-imagePlanos" id="coringaBack" src="img/coringaBack.png" alt="tema servicos"/>
+          <div class="tooltip">
+            <div id="coringaContainer">
+              <div id="flipper">
+                <img class="slide-image slide-imagePlanos" id="coringaFront" src="img/coringaFront.png" alt="tema servicos"/>
+                <!-- <img class="slide-image slide-imagePlanos" id="coringaBack" src="img/coringaBack.png" alt="tema servicos"/> -->
+                <div class="slide-image slide-imagePlanos" id="coringaBack">
+                  <span>
+                    <p>Não encontrou um tema do seu agrado?</p>
+                    <p>Clique Aqui</p>
+                  </span>
+                </div>
+              </div>
             </div>
+            <span class="tooltiptext2">Recomendado para Empresas da área de Serviços em geral</span>
           </div>
         </div>
-
       </div>
+
       <!-- The Modal -->
 
       <div id="mySiteModal" class="modal">
@@ -220,7 +233,7 @@
     <!-- Contato -->
     <section id="contato">
       <h2 class="contatoTituloPlanos corTituloProfissional">Dados</h2>
-      <form action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoProfissionalForm">
+      <form target="" action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoProfissionalForm">
         <!-- Hiden Input -->
         <input type="hidden" name="recipient" value="comercial@agenciaceos.com.br">
         <input id="assunto" type="hidden" name="subject" value="E-Mail Agência Ceos">
