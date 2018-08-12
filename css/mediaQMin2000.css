@@ -32,12 +32,13 @@ Agência Thot
 /*--- Setas ---*/
 
 #setasContainer {
+  display      : block;
   z-index      : 50;
   width        : 60px;
   height       : 60px;
   position     : fixed;
-  top          : 25%;
-  left         : 5%;
+  top          : 15%;
+  left         : 15%;
   border-radius: 50%;
 }
 
@@ -55,9 +56,10 @@ Agência Thot
 #setaPlano1,
 #setaPlano2,
 #setaVoltar {
+  display         : block;
   position        : fixed;
-  top             : 25%;
-  left            : 5%;
+  top             : 15%;
+  left            : 15%;
   z-index         : 48;
   border-radius   : 50%;
   box-shadow      : 0 3px 8px #aaa, inset 0 2px 3px #fff;
@@ -334,7 +336,7 @@ Agência Thot
 }
 
 .innerSlide {
-  max-width: 22%;
+  max-width: 15%;
   padding  : 0 25px;
 }
 
@@ -765,15 +767,15 @@ footer p {
 }
 
 .planoBasicoLayout {
-  padding: 90px 15% 0 !important;
+  padding: 90px 15% 130px !important;
 }
 
 .planoProfissionalLayout {
-  padding: 90px 15% 0 !important;
+  padding: 90px 15% 130px !important;
 }
 
 .innerSlideSelection {
-  max-width: 25% !important;
+  max-width: 15% !important;
   padding  : 0 5px !important;
 }
 
@@ -783,19 +785,19 @@ footer p {
 }
 
 #setaDireita {
-  display : block;
+  display : none;
   position: absolute;
   top     : 50%;
-  right   : 10%;
+  right   : 15%;
   cursor  : pointer;
   z-index : 5;
 }
 
 #setaEsquerda {
-  display : block;
+  display : none;
   position: absolute;
   top     : 50%;
-  left    : 10%;
+  left    : 15%;
   cursor  : pointer;
   z-index : 5;
 }

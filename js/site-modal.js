@@ -140,6 +140,7 @@ function frameSize(deviceValue) {
 // When the user clicks on modalImg, close the modal
 modalImg.onclick = function() {
   modal.style.display = "none";
+  $("#siteImgModal").css('display', 'none');
   $("body").removeClass("modal-open"); //remove blocked scroll from body
   $("#siteModal").css("display", "none");
   $("#guiaDispositivo").css("display", "flex");
@@ -158,6 +159,7 @@ var span = document.getElementsByClassName("siteClose")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+  $("#siteImgModal").css('display', 'none');
   modal.style.display = "none";
   $("body").removeClass("modal-open"); //remove blocked scroll from body
   $("#siteModal").css("display", "none");

@@ -6,3 +6,7 @@ $(document).ready(function() {
     }
   });
 });
+
+$("#coringaBack").on("click", function() {
+  $("#layout5").trigger("click");
+});
