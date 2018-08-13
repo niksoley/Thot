@@ -22,6 +22,9 @@
 
 
     } else if (screenWidth >= 2000) {
+      // Contato
+      document.getElementById("menuContato").innerHTML = "Entre em contato";
+
       $("div.containerTestemunhos").removeClass("carousel-inner");
       $("div.subTestemunhos").removeClass("carousel-item");
 
@@ -81,6 +84,9 @@
 
 
       } else if (screenWidth >= 2000) {
+        // Contato
+        document.getElementById("menuContato").innerHTML = "Entre em contato";
+
         // Testemunhos
         $("div.containerTestemunhos").removeClass("carousel-inner");
         $("div.subTestemunhos").removeClass("carousel-item");
