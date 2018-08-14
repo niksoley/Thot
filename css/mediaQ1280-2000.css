@@ -233,7 +233,8 @@ Agência Thot
 }
 
 #banner div span {
-  font-size: 22pt;
+  font-size  : 22pt;
+  line-height: 150%;
 }
 
 #banner div #bannerWebsite {
@@ -878,6 +879,12 @@ footer p {
 
 .corListaAvancado {
   margin: auto !important;
+}
+
+.precofinalAvancado {
+  max-width : none;
+  margin    : 0 auto 1rem;
+  text-align: center;
 }
 
 /*--------------------------------------------------------

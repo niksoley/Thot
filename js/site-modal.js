@@ -5,8 +5,6 @@ var modalImg = document.getElementById("siteImgModal");
 // Global variable for getting id from clicked layout
 var clicketTemplate;
 
-
-
 // Funcion to open modal and store id from clicked layout
 function reply_click(clicked_id) {
 
@@ -27,7 +25,7 @@ function reply_click(clicked_id) {
 
 $(document).ready(function() {
   $("#smartphone").click(function() {
-    $("#siteImgModal").css("display", "flex");
+    $("#siteImgModal").css("display", "none");
     $("#iframeContainer").css("max-width", "500px");
     $("#smartphone").children().css("color", "#bbb");
     $("#tablet").children().css("color", "white");
@@ -39,7 +37,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#tablet").click(function() {
-    $("#siteImgModal").css("display", "flex");
+    $("#siteImgModal").css("display", "none");
     $("#iframeContainer").css("max-width", "800px");
     $("#smartphone").children().css("color", "white");
     $("#tablet").children().css("color", "#bbb");
@@ -51,7 +49,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#desktop").click(function() {
-    $("#siteImgModal").css("display", "flex");
+    $("#siteImgModal").css("display", "none");
     $("#iframeContainer").css("max-width", "none");
     $("#smartphone").children().css("color", "white");
     $("#tablet").children().css("color", "white");
@@ -82,7 +80,6 @@ $(document).ready(function() {
   });
 });
 
-
 //resize frame
 
 function frameSize(deviceValue) {
@@ -94,7 +91,6 @@ function frameSize(deviceValue) {
   String.prototype.splice = function(idx, rem, str) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
   };
-
 
   var deviceSetting = String(deviceValue);
 
@@ -108,7 +104,6 @@ function frameSize(deviceValue) {
     var imgAdress = srcString.splice((srcString.length - 4), 0, "full");
   }
 
-
   modalImg.src = imgAdress;
 
   $.get(imgAdress, {}, function() {
@@ -116,14 +111,13 @@ function frameSize(deviceValue) {
     $('#loader').css('display', 'none');
   });
 
-
   //
   //
   //
   //   var proportion = document.getElementById("iframeContainer").offsetWidth / device[deviceSetting];
   //
   //
-  //   // $("#" + deviceSetting).children().css("color", "#bbb");
+  //    $("#" + deviceSetting).children().css("color", "#bbb");
   //   $("#siteModal").css("display", "block");
   //   $("#siteModal").css("width", device[deviceSetting]);
   //   $("#siteModal").css("-webkit-transform", "scale(" + proportion + ")");

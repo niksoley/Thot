@@ -853,6 +853,12 @@ footer p {
   margin: auto !important;
 }
 
+.precofinalAvancado {
+  max-width : none;
+  margin    : 0 auto 1rem;
+  text-align: center;
+}
+
 /*--------------------------------------------------------
      15.  Pagina de Agradecimento
 ---------------------------------------------------------*/
