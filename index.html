@@ -2,7 +2,7 @@
 <html lang="pt">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-119525551-1"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121900319-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -10,7 +10,7 @@
       }
       gtag('js', new Date());
 
-      gtag('config', 'UA-119525551-1');
+      gtag('config', 'UA-121900319-1');
     </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -24,9 +24,9 @@
     <!-- Extra small devices (portrait phones, less than 500px) -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Extra small devices (portrait phones, less than 768px) -->
-    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 768px)" href="css/mediaQ500-768.css"/>
+    <link rel="stylesheet" media="(min-width: 500px) and (max-width: 767px)" href="css/mediaQ500-768.css"/>
     <!-- Small devices (tablets, 768px and up) -->
-    <link rel="stylesheet" media="(min-width: 769px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
+    <link rel="stylesheet" media="(min-width: 768px) and (max-width: 992px)" href="css/mediaQ768-992.css"/>
     <!-- (desktops, 992 and up) -->
     <link rel="stylesheet" media="(min-width: 993px) and (max-width: 1280px)" href="css/mediaQ992-1280.css"/>
     <!-- Large devices (large desktops, 1280px and up) -->
@@ -35,42 +35,46 @@
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
     <title>Céos - Agência Digital</title>
-    <link rel="shortcut icon" href="img/Favicon.png">
+    <link rel="shortcut icon" href="img/Favicon_CEOS.png">
 
   </head>
 
   <body id="body">
     <!-- Menu -->
-
     <section id="menu">
-      <a href="#menuSpacer"><img src="img/Thot1.png" alt=""></a>
-      <a href="#contato" id="menuContato">contato</a>
-      <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      <div id="menuContainer">
+        <a href="#menuSpacer"><img src="img/agencia-ceos.png" alt="Agência Céos"></a>
+        <a href="#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
     <!-- Banner -->
-    <section id="banner" title="crie seu website">
-      <div id="typewriter">
-        <span>tenha o seu</span>
-        <p id="bannerWebsite">website</p>
-        <br/>
-        <br/>
-        <span>designs sofisticados</span>
-        <span>preços</span>
-        <span>que cabem</span>
-        <span>no seu bolso</span>
-        <span>...</span>
-        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+    <section id="banner">
+      <div id="particles-js"></div>
+      <div id="bannerContaier">
+        <div id="typewriter">
+          <span>tenha o seu</span>
+          <p id="bannerWebsite">website</p>
+          <br/>
+          <br/>
+          <span>designs sofisticados</span>
+          <span>preços</span>
+          <span>que cabem</span>
+          <span>no seu bolso</span>
+          <span>...</span>
+          <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+        </div>
       </div>
     </section>
     <!-- End of Banner -->
     <!-- Servicos -->
     <section id="servicos">
-      <img src="img/website.png" alt="website">
+      <img id="imgServicos" src="img/tenha-seu-website.png" class="rellax" data-rellax-speed="1" alt="Tenha seu Website">
       <div id="card">
         <div id="textoServicos">
-          <div id="servicosH2">Crie seu
+          <div id="servicosH2">Tenha seu
             <h1>Website</h1>
           </div>
           <p>Criamos o seu website de acordo com as melhores práticas de SEO, e totalmente responsivo para Tablets e Smartphones.</p>
@@ -83,32 +87,38 @@
     <section id="layouts">
       <h2>Exemplos de Temas</h2>
       <div id="visualContainer">
-        <div class="innerSlide"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg" alt="tema cabeleireiro"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg" alt="tema cervejaria"/></div>
-        <div class="innerSlide"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg" alt="tema servicos"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg1" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="Tema Cabeleireiros"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg2" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="Tema Cervejaria"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg3" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="Tema Negócios"/></div>
+        <div class="innerSlide" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20"><img class="slide-image" id="myImg4" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="Tema Serviços"/></div>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
         <div id="imgModalContainer">
           <span class="close">&times;</span>
+          <div id="loader-wrapper">
+            <div id="loader"></div>
+          </div>
           <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
       </div>
     </section>
     <!-- End of Layout -->
     <!-- Planos -->
     <section id="planos">
-      <div>
-        <h2>Conheça nossos
-          <span>Planos</span></h2>
-        <h3>Projetos de sites a partir de 490 reais</h3>
+      <div id="planosContainer">
+        <div>
+          <h2>Conheça nossos
+            <span>Planos</span></h2>
+          <h3>Projetos de sites a partir de 490 reais</h3>
+        </div>
+        <a href="planos.html" id="planosCliqueAqui">clique aqui</a>
       </div>
-      <a href="planos.html" id="planosCliqueAqui">clique aqui</a>
-      <img src="img/Sites_mod.png" alt="planos">
+      <img id="imgPlanos" src="img/Planos.png" class="rellax" data-rellax-speed="0.5" alt="planos">
     </section>
     <!-- End of Planos -->
     <!-- Testemunhos -->
     <section id="testemunhos">
-      <h2>Testemunhos</h2>
+      <h2 id="testemunhosH2">Testemunhos</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -177,25 +187,25 @@
             <div id="check"></div>
             <div id="loadIcon"></div>
           </div>
-          <button type="submit" class="btn btn-primary" formaction="/thanks-page.html">
+          <button type="submit" class="btn btn-primary">
             <span>enviar</span>
           </button>
         </div>
+        <input type="hidden" name="redirect" value="http://agenciaceos.com.br/thanks-page.html">
       </form>
     </section>
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Ceos_bottom.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <!--Custom Java for Contatos Popup -->
-    <script src="js/contatos-popup.js"></script>
     <!--Custom Java for Type Writter -->
     <script src="js/type-writter.js"></script>
     <!--Custom Java for Scrolling Position -->
@@ -212,5 +222,16 @@
     <script src="js/screen-resize.js"></script>
     <!--Custom Java for Testemunhos Carousel -->
     <script src="js/carousel-testemunhos.js"></script>
+    <!--Custom Java for Image Parallax -->
+    <script src="js/rellax.js"></script>
+    <script>
+      // Center all the things!
+      var rellax = new Rellax('.rellax', {center: true});
+    </script>
+    <!--Library for Particles -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <!--Library for 3D Perspective -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
   </body>
 </html>

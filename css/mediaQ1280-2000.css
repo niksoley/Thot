@@ -17,6 +17,179 @@ Agência Thot
 13. PAGINA PLANO PROFISSIONAL
 14. PAGINA PLANO AVANCADO
  ----------------------------------------------------------------------------------------*/
+
+/*--------------------
+     0. GLOBAL
+  ----------------------*/
+
+.tooltip .tooltiptext {
+  display: block;
+}
+
+#body {
+  overflow-x: hidden;
+  position  : relative;
+}
+
+/*--- Setas ---*/
+
+#setasContainer {
+  display      : block;
+  z-index      : 50;
+  width        : 60px;
+  height       : 60px;
+  position     : fixed;
+  top          : 25%;
+  left         : 5%;
+  border-radius: 50%;
+}
+
+#setasContainer1,
+#setasContainer2,
+#setasContainer3 {
+  width        : 60px;
+  height       : 60px;
+  border-radius: 50%;
+  position     : absolute;
+  top          : 0;
+  left         : 0;
+}
+
+#setaPlano1,
+#setaPlano2,
+#setaVoltar {
+  display         : block;
+  position        : fixed;
+  top             : 25%;
+  left            : 5%;
+  z-index         : 48;
+  border-radius   : 50%;
+  box-shadow      : 0 3px 8px #aaa, inset 0 2px 3px #fff;
+  transition      : transform 0.5s ease-in;
+  transition-delay: 0.7s;
+}
+
+#setaVoltar {
+  z-index: 49;
+}
+
+#setaPlano1 img,
+#setaPlano2 img,
+#setaVoltar img {
+  width        : 60px;
+  border-radius: 50%;
+  padding      : 14px;
+}
+
+#setaVoltar img {
+  background-color: black;
+  transform       : rotate(180deg);
+}
+
+#setaPlano1 img {
+  background-color: #5A7F90;
+  transform       : rotate(180deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.7s;
+}
+
+#setaPlano2 img {
+  background-color: #A0444B;
+  transform       : rotate(180deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.7s;
+}
+
+.setaPlano1Profissional {
+  background-color: #A0444B!important;
+}
+
+.setaPlano2Profissional {
+  background-color: #AFD14A !important;
+}
+
+.setaPlano1Avancado {
+  background-color: #AFD14A!important;
+}
+
+.setaPlano2Avancado {
+  background-color: #5A7F90 !important;
+}
+
+.setaData {
+  position        : absolute;
+  top             : 80%;
+  left            : 50%;
+  transform       : translateX(-50%);
+  font-family     : "Montserrat", sans-serif;
+  font-weight     : normal;
+  font-size       : 8pt;
+  color           : black;
+  opacity         : 0;
+  /* -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition   : opacity 1s ease-in-out;
+  -ms-transition    : opacity 1s ease-in-out;
+  -o-transition     : opacity 1s ease-in-out; */
+  transition      : opacity 0.5s, top 0.7s;
+  transition-delay: 0.5s;
+}
+
+/*--- Animações Setas ---*/
+
+#setasContainer:hover {
+  width                     : 180px;
+  height                    : 180px;
+  border-radius             : 0;
+  border-bottom-right-radius: 50%;
+}
+
+#setasContainer:hover > #setasContainer2 {
+  transform: translateX(100px);
+}
+
+#setasContainer:hover > #setasContainer3 {
+  transform: translateY(100px);
+}
+
+#setasContainer:hover ~ #setaPlano1 {
+  transform       : translateX(100px);
+  transition      : transform 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano2 {
+  transform       : translateY(100px);
+  transition      : transform 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano1 img {
+  transform       : rotate(00deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaPlano2 img {
+  transform       : rotate(450deg);
+  transition      : transform 0.6s;
+  transition-delay: 0.2s;
+}
+
+#setasContainer:hover ~ #setaVoltar span {
+  top    : 110%;
+  opacity: 1;
+}
+
+#setasContainer:hover ~ #setaPlano1 span {
+  top    : 110%;
+  opacity: 1;
+}
+
+#setasContainer:hover ~ #setaPlano2 span {
+  top    : 110%;
+  opacity: 1;
+}
+
 /*--------------------
       1. MENU
  ----------------------*/
@@ -32,37 +205,40 @@ Agência Thot
 #menuContato,
 #menuContato:hover {
   font-size: 12pt;
+  margin   : 5px 0;
 }
 
 #menu img {
-  height: 50px;
+  height: 60px;
 }
 
 #menuSpacer {
   display: block;
-  height : 70px;
+  height : 80px;
 }
+
 /*--------------------
       2. BANNER
  ----------------------*/
 
 #banner {
   padding              : 30px 0 300px 100px;
-  background-image     : url("../img/Filtro_Banner.png") , url("../img/Banner_desktop.jpg");
+  background-image     : url("../img/Filtro_Banner.png") , url("../img/banner-desenvolvimento-sites_desktop.jpg");
   background-attachment: fixed;
   height               : 70vh;
 }
 
-#banner div {
+#typewriter {
   width: 335px;
 }
 
 #banner div span {
-  font-size: 24pt;
+  font-size  : 22pt;
+  line-height: 150%;
 }
 
 #banner div #bannerWebsite {
-  font-size: 22pt;
+  font-size: 20pt;
 }
 
 #typewriter {
@@ -72,6 +248,17 @@ Agência Thot
 #typewriter::after {
   content  : "|";
   font-size: 23pt;
+}
+
+#particles-js {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  bottom  : 0;
+  right   : 0;
+  width   : 100%;
+  height  : 100%;
+  padding : 0 !important;
 }
 /*--------------------
      3. SERVICOS
@@ -85,7 +272,7 @@ Agência Thot
 }
 
 #servicos img {
-  width    : 30%;
+  width    : 27%;
   max-width: 350px;
 }
 
@@ -102,11 +289,11 @@ Agência Thot
 }
 
 #servicosH2 {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #textoServicos h1 {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #servicos p {
@@ -129,7 +316,7 @@ Agência Thot
 }
 
 #layouts h2 {
-  font-size  : 24pt;
+  font-size  : 22pt;
   font-weight: normal;
   line-height: 1.5;
   padding    : 0 40px;
@@ -137,7 +324,7 @@ Agência Thot
 }
 
 #visualContainer {
-  overflow-x: hidden;
+  padding: 10px 40px 0;
 }
 
 .innerSlide {
@@ -174,28 +361,31 @@ Agência Thot
 }
 
 #planos h2 {
-  font-size: 24pt;
+  font-size: 22pt;
   margin   : 0 0 40px;
 }
 
 #planos h2 span {
-  font-size: 24pt;
+  font-size: 22pt;
 }
 
 #planos h3 {
   font-size: 14pt;
-  margin   : 0 30px 30px;
+  margin   : 0 30px 40px;
+}
+
+#planosContainer {
+  margin: 0 0 95px;
 }
 
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
-  font-size    : 14pt;
-  padding      : 13px 28px;
-  margin-bottom: 80px;
+  font-size: 14pt;
+  padding  : 13px 28px;
 }
 
 #planos img {
-  width    : 35%;
+  width    : 32%;
   max-width: 400px;
   margin   : 0 0 -3vh;
 }
@@ -210,7 +400,7 @@ Agência Thot
 }
 
 #testemunhos h2 {
-  font-size    : 24pt;
+  font-size    : 22pt;
   margin-bottom: 40px;
   text-align   : center;
 }
@@ -304,10 +494,16 @@ Agência Thot
 
 #subMenu {
   background-color: #424242;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : flex-end;
+  display         : block;
   padding         : 30px 100px;
+}
+
+#subMenuContainer {
+  display       : flex;
+  flex-direction: column;
+  align-items   : flex-end;
+  width         : 100%;
+  margin        : auto;
 }
 
 #subMenu h3 {
@@ -335,9 +531,15 @@ Agência Thot
 ----------------------*/
 
 footer {
-  padding        : 20px 100px;
+  padding: 20px 100px;
+}
+
+#footerContainer {
   display        : flex;
   justify-content: space-between;
+  align-items    : center;
+  max-width      : 2300px;
+  margin         : auto;
 }
 
 footer p {
@@ -349,6 +551,7 @@ footer p {
   line-height: 2;
   display    : inline;
 }
+
 /*--------------------
      10. Pagina Planos
 ----------------------*/
@@ -461,6 +664,11 @@ footer p {
   margin-top : 0;
 }
 
+.setupUnico {
+  font-size    : 9pt;
+  margin-bottom: 0;
+}
+
 .preco {
   font-size: 18pt;
 }
@@ -492,7 +700,7 @@ footer p {
 }
 
 #descricaoPlanos h2 {
-  font-size: 24pt;
+  font-size: 22pt;
   margin   : 0 0 60px;
 }
 
@@ -504,6 +712,10 @@ footer p {
   line-height    : 33px;
 }
 
+.planosgeral li {
+  margin-top: 4px;
+}
+
 #listaPlano p {
   font-size  : 10pt;
   line-height: 30px;
@@ -511,16 +723,27 @@ footer p {
 }
 
 #listaPlano {
-  font-size    : 14pt;
-  margin-top   : 0 !important;
+
+  font-family  : "Montserrat", sans-serif;
+  font-size    : 11pt;
   line-height  : 28px;
-  width        : 600px;
+
+  margin-top   : 0 !important;
+  margin-left  : 70px;
+  width        : 500px;
   border-color : black;
   border-width : 2px;
   border-style : solid;
   padding-left : 30px;
   padding-right: 30px;
   padding-top  : 30px;
+
+}
+
+#listaPlano ul li div {
+  font-family: "Montserrat", sans-serif;
+  font-size  : 11pt;
+  line-height: 28px;
 }
 
 .planosprecos {
@@ -540,6 +763,80 @@ footer p {
   text-align: left;
   margin    : auto;
 }
+
+.planoBasicoLayout {
+  padding: 90px 200px 0 !important;
+}
+
+.planoProfissionalLayout {
+  padding: 90px 200px 0 !important;
+}
+
+.innerSlideSelection {
+  max-width: 25% !important;
+  padding  : 0 5px !important;
+  position : relative;
+}
+
+#setaDireita {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  right   : 8%;
+  cursor  : pointer;
+  z-index : 5;
+}
+
+#setaEsquerda {
+  display : block;
+  position: absolute;
+  top     : 50%;
+  left    : 8%;
+  cursor  : pointer;
+  z-index : 5;
+}
+
+.tooltip .tooltiptext2 {
+  font-family     : "Montserrat", sans-serif;
+  font-size       : 8pt;
+  line-height     : 1.5;
+  color           : black;
+  text-align      : left;
+  display         : inline-flex;
+  width           : 100%;
+  height          : 70px;
+  background-color: white;
+  margin          : 15px 0 20px;
+  padding         : 4px 8px;
+  opacity         : 0;
+  transition      : opacity 0.9s;
+}
+
+.tooltip:hover .tooltiptext2 {
+  opacity: 1;
+}
+
+.tooltip:hover .tooltipCoringa {
+  opacity: 0 !important;
+}
+
+/*--------------------
+    Site Modal
+----------------------*/
+
+#iframeContainer {
+  width     : 80%;
+  margin-top: 50px;
+}
+
+.siteModalMenu {
+  width: 35%;
+}
+
+.siteClose {
+  right: 10%;
+}
+
 /*--------------------------------------------------------
      12. Pagina Plano Basico
 ---------------------------------------------------------*/
@@ -584,6 +881,17 @@ footer p {
   margin: auto !important;
 }
 
+.precofinalAvancado {
+  max-width : none;
+  margin    : 0 auto 1rem;
+  text-align: center;
+}
+
 /*--------------------------------------------------------
      15.  Pagina de Agradecimento
 ---------------------------------------------------------*/
+
+#tpFooter {
+  display        : flex;
+  justify-content: space-between;
+}

@@ -107,6 +107,15 @@ Agência Thot
   font-weight: normal;
   font-size  : 24pt;
 }
+
+#coringaBack div {
+  width: 80%;
+}
+
+#coringaBack p {
+  font-size: 15pt;
+}
+
 /*--------------------
      5. PLANOS
 ----------------------*/
@@ -132,11 +141,14 @@ Agência Thot
   margin   : 0 30px 60px;
 }
 
+#planosContainer {
+  margin: 0 0 130px;
+}
+
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
   font-size: 15pt;
   padding  : 20px 45px;
-  margin   : 0 0 130px;
 }
 
 #planos img {

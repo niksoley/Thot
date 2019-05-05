@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="pt">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121900319-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121900319-1');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="description" content="Escolha o seu Plano! Websites de acordo com as melhores práticas de SEO, totalmente responsivo para Tablets e Smartphone, Design sofisticado e planos que cabem no seu bolso!">
@@ -24,14 +35,31 @@
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
     <title>Céos – Plano Avançado</title>
-    <link rel="shortcut icon" href="img/Favicon.png">
+    <link rel="shortcut icon" href="img/Favicon_CEOS.png">
 
   </head>
   <body id="body">
+
+    <!-- Setas -->
+    <div id="setasContainer">
+      <a href="planos.html" id="setasContainer1"></a>
+      <a href="planobasico.html" id="setasContainer2"></a>
+      <a href="planoprofissional.html" id="setasContainer3"></a>
+    </div>
+    <div id="setaVoltar"><img src="../img/arrow.png" alt="">
+      <span class="setaData">Planos</span></div>
+    <div id="setaPlano1"><img class="setaPlano1Avancado" src="../img/arrow.png" alt="">
+      <span class="setaData">Básico</span></div>
+    <div id="setaPlano2"><img class="setaPlano2Avancado" src="../img/arrow.png" alt="">
+      <span class="setaData">Profissional</span></div>
+
     <!-- Menu -->
     <section id="menu">
-      <a href="/"><img src="img/Thot1.png" alt=""></a>
-      <a href="#contato" id="menuContato">contato</a>
+      <div id="menuContainer">
+        <a href="/"><img src="img/agencia-ceos.png" alt="Agência Céos"></a>
+        <a href="#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
@@ -40,19 +68,44 @@
       <h2 class="corTituloAvancado">Plano Avançado</h2>
       <div class="planosgeral planosgeralAvancado">
         <div class="planosDivInferior planosprecos">
-          <p class="preco precofinal">Preço Sob Consulta</p>
+          <p class="preco precofinal precofinalAvancado">Preço Sob Consulta</p>
         </div>
         <div id="listaPlano" class="corListaAvancado">
           <ul>
-            <li>Site totalmente personalizado, de acordo com as demandas do cliente</li>
+            <li>
+              <div class="tooltip">Site totalmente personalizado, de acordo com as demandas do cliente
+                <span class="tooltiptext">Iremos desenvolver seu site do zero, de acordo com as suas especificações
+                </span>
+              </div>
+            </li>
             <li>Site Desenvolvido em HTML 5, CSS, PHP e Javascript</li>
-            <li>Registro do Domínio e envio do site ao servidor</li>
-            <li>Site Responsivo para Tablets e celulares</li>
-            <li>SEO (Otimização para Mecanismos de Busca)</li>
-            <li>Envio do Sitemap ao Google</li>
-            <li>Configurado para o Google Adwords e Analytics</li>
-            <li>Criação do Google My Business</li>
-            <li>Wordpress</li>
+            <li>
+              <div class="tooltip">Domínio e Hospedagem<span class="tooltiptext">Registro do Domínio e envio do site ao servidor</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Responsivo para Tablets e Celulares<span class="tooltiptext">Site responsivo para diversos dispositivos: desktops, notebooks, smartphones, tablets
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">SEO e Envio do Sitemap ao Google<span class="tooltiptext">Desenvolvemos todo o conteúdo de SEO (Otimização para Mecanismos de Busca) do seu site, para melhorar o posicionamento orgânico nos mecanismos de busca, e enviamos o seu Sitemap ao Google</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Configurado para o Google Adwords e Analytics<span class="tooltiptext">Criamos seu site com as configurações necessárias para ser divulgado pelo Google Adwords e monitorado pelo Google Analytics</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Criação do Google My Business
+                <span class="tooltiptext">Criamos a sua página no Google My Business para você. Esta é uma das principais ferramentas do Google para validar empresas e permitir que os usuários achem informações sobre sua empresa de forma rápida</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Wordpress
+                <span class="tooltiptext">Desenvolvemos o seu site em Wordpress para permitir que você faça atualizações de forma fácil e a qualquer hora</span></div>
+            </li>
+            <li>E-mail (espaço sob demanda)</li>
+            <li>
+              <div class="tooltip">Envio do código
+                <span class="tooltiptext">Transferência da propriedade do código de programação para o cliente</span></div>
+            </li>
           </ul>
         </div>
       </div>
@@ -90,27 +143,31 @@
             <span>enviar</span>
           </button>
         </div>
+        <input type="hidden" name="redirect" value="http://agenciaceos.com.br/thanks-page.html">
       </form>
     </section>
     <!-- End of Contato -->
     <!-- Sub Menu -->
     <section id="subMenu">
-      <a href="/">
-        <h3>CÉOS</h3>
-      </a>
-      <a href="index.html#servicos">Serviços</a>
-      <a href="planos.html">Planos</a>
-      <a href="index.html#contato">Contato</a>
+      <div id="subMenuContainer">
+        <a href="/">
+          <h3>CÉOS</h3>
+        </a>
+        <!-- <a href="index.html#servicos">Serviços</a> -->
+        <a href="planos.html">Planos</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
     </section>
     <!-- End of Sub Menu -->
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Ceos_bottom.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!--Custom Java for Scrolling -->
@@ -121,5 +178,7 @@
     <script src="js/layout.js"></script>
     <!--Custom Java for Screen Size Variations -->
     <script src="js/screen-resize.js"></script>
+    <!--Custom Java for Tooltip -->
+    <script src="js/tooltip-movement.js"></script>
   </body>
 </html>

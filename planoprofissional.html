@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="pt">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121900319-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121900319-1');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="description" content="Escolha o seu Plano! Websites de acordo com as melhores práticas de SEO, totalmente responsivo para Tablets e Smartphone, Design sofisticado e planos que cabem no seu bolso!">
@@ -24,14 +35,31 @@
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
     <title>Céos – Plano Profissional</title>
-    <link rel="shortcut icon" href="img/Favicon.png">
+    <link rel="shortcut icon" href="img/Favicon_CEOS.png">
 
   </head>
   <body id="body">
+
+    <!-- Setas -->
+    <div id="setasContainer">
+      <a href="planos.html" id="setasContainer1"></a>
+      <a href="planoavancado.html" id="setasContainer2"></a>
+      <a href="planobasico.html" id="setasContainer3"></a>
+    </div>
+    <div id="setaVoltar"><img src="../img/arrow.png" alt="">
+      <span class="setaData">Planos</span></div>
+    <div id="setaPlano1"><img class="setaPlano1Profissional" src="../img/arrow.png" alt="">
+      <span class="setaData">Avançado</span></div>
+    <div id="setaPlano2"><img class="setaPlano2Profissional" src="../img/arrow.png" alt="">
+      <span class="setaData">Básico</span></div>
+
     <!-- Menu -->
     <section id="menu">
-      <a href="/"><img src="img/Thot1.png" alt=""></a>
-      <a href="#contato" id="menuContato">contato</a>
+      <div id="menuContainer">
+        <a href="/"><img src="img/agencia-ceos.png" alt="Agência Céos"></a>
+        <a href="#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
@@ -40,28 +68,57 @@
       <h2 class="corTituloProfissional">Plano Profissional</h2>
       <div class="planosgeral">
         <div class="planosDivInferior planosprecos">
+          <p>Setup único</p>
           <p class="preco precofinal">R$ 1080</p>
           <p>+</p>
           <p>R&#36; 60 p&#47;m&#234;s</p>
-          <p class="taxa">&#42;&#40;taxa de manuten&#231;&#227;o&#41;</p>
+          <p class="taxa">&#42;&#40;manuten&#231;&#227;o&#41;</p>
         </div>
         <div id="listaPlano" class="corListaProfissional">
           <ul>
-            <li>Inserção do seu conteúdo na estrutura do tema escolhido</li>
             <li>Site Desenvolvido em HTML 5, CSS, PHP e Javascript</li>
-            <li>Registro do Domínio e envio do site ao servidor</li>
-            <li>Site Responsivo para Tablets e celulares</li>
-            <li>SEO (Otimização para Mecanismos de Busca)</li>
-            <li>Envio do Sitemap ao Google</li>
-            <li>Configurado para o Google Adwords e Analytics</li>
-            <li>Permite alterações no Tema escolhido</li>
-            <li>2 Modificação do site finalizado</li>
-            <li>Criação do Google My Business</li>
-            <li>Wordpress</li>
-            <li>Vitrine virtual - até 20 produtos (sem sistema de pagamento)</li>
-            <li>Não há o envio do código do Website</li>
+            <li>
+              <div class="tooltip">Domínio e Hospedagem<span class="tooltiptext">Registro do Domínio e envio do site ao servidor</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Responsivo para Tablets e Celulares<span class="tooltiptext">Site responsivo para diversos dispositivos: desktops, notebooks, smartphones, tablets
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="tooltip">SEO e Envio do Sitemap ao Google<span class="tooltiptext">Desenvolvemos todo o conteúdo de SEO (Otimização para Mecanismos de Busca) do seu site, para melhorar o posicionamento orgânico nos mecanismos de busca, e enviamos o seu Sitemap ao Google</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Configurado para o Google Adwords e Analytics<span class="tooltiptext">Criamos seu site com as configurações necessárias para ser divulgado pelo Google Adwords e monitorado pelo Google Analytics</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Revisão de conteúdo
+                <span class="tooltiptext">Revisamos seu conteúdo e fazemos analise e edição das suas imagens para inserir no tema escolhido</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Permite alterações no Tema escolhido
+                <span class="tooltiptext">Faça alterações no tema escolhido para deixar o site do jeito que você quer</span></div>
+            </li>
+            <li>
+              <div class="tooltip">1 Atualização por mês
+                <span class="tooltiptext">1 atualização por mês, não acumulativa, podendo ser utilizadas de acordo com a sua conveniência</span></div>
+            </li>
+            <li>1,5GB de e-mail</li>
+            <li>
+              <div class="tooltip">Criação do Google My Business
+                <span class="tooltiptext">Criamos a sua página no Google My Business para você. Esta é uma das principais ferramentas do Google para validar empresas e permitir que os usuários achem informações sobre sua empresa de forma rápida</span></div>
+            </li>
+            <li>
+              <div class="tooltip">Wordpress
+                <span class="tooltiptext">Desenvolvemos o seu site em Wordpress para permitir que você faça atualizações de forma fácil e a qualquer hora</span></div>
+            </li>
+            <li>Vitrine virtual - até 30 produtos (sem sistema de pagamento)</li>
+            <li>
+              <div class="tooltip">Não há o envio do código
+                <span class="tooltiptext">Neste plano não há a transferência de propriedade do código de programação</span></div>
+            </li>
           </ul>
-          <p>*o pagamento da taxa de manutenção é obrigatório para garantir que o site seja mantido no ar, o não pagamento da taxa resultará em remoção do website do servidor</p>
+          <p>*o pagamento da taxa de manutenção é obrigatório para garantir que o site seja mantido no ar</p>
         </div>
       </div>
     </section>
@@ -70,50 +127,116 @@
     <!-- Layout -->
     <section id="layouts" class="planoProfissionalLayout">
       <h2>Escolha seu Tema</h2>
+      <div id="setaDireita" onclick="setaDireitaLayout()"><img src="img/next.png" alt=""></div>
+      <div id="setaEsquerda" onclick="setaEsquerdaLayout()"><img src="img/prev.png" alt=""></div>
       <div id="visualContainer">
-        <div class="innerSlide">
+        <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
-            <input type="radio" id="layout1" name="layout" value="Plano Profissional - Layout1">
+            <input type="radio" id="layout1" name="layout" value="Plano Basico - Layout1">
             <label for="layout1" class="checkmark">
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg1" onclick="reply_click(this.id)" src="img/template1.jpg" alt="Vizualição do tema escolhido em tela cheia"/>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg1" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template1/template1.jpg" alt="Tema Cabeleireiros"/>
+            <span class="tooltiptext2">Indicado para sites das áreas de Beleza e Moda (salões, estilistas, e outras áreas com apelo mais visual)</span></div>
         </div>
-        <div class="innerSlide">
+        <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
-            <input type="radio" id="layout2" name="layout" value="Plano Profissional - Layout2">
+            <input type="radio" id="layout2" name="layout" value="Plano Basico - Layout2">
             <label for="layout2" class="checkmark">
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg2" onclick="reply_click(this.id)" src="img/template2.jpg" alt="Vizualição do tema escolhido em tela cheia"/>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg2" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template2/template2.jpg" alt="Tema Cervejaria"/>
+            <span class="tooltiptext2">Ideal para Cervejarias, Barbearias, Estúdios de Tatuagem</span></div>
         </div>
-        <div class="innerSlide">
+        <div class="innerSlide innerSlideSelection">
           <div class="radioContainer">
-            <input type="radio" id="layout3" name="layout" value="Plano Profissional - Layout3">
+            <input type="radio" id="layout3" name="layout" value="Plano Basico - Layout3">
             <label for="layout3" class="checkmark">
               <span class="checkmarkSpan"></span>
             </label>
           </div>
-          <img class="slide-image slide-imagePlanos" id="myImg3" onclick="reply_click(this.id)" src="img/template3.jpg" alt="Vizualição do tema escolhido em tela cheia"/>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg3" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template3/template3.jpg" alt="Tema Negócios"/>
+            <span class="tooltiptext2">Indicado para sites na área de Negócios (Assessorias, Consultorias, Empresas da área de Finanças e Investimentos)</span></div>
+        </div>
+        <div class="innerSlide innerSlideSelection">
+          <div class="radioContainer">
+            <input type="radio" id="layout4" name="layout" value="Plano Basico - Layout4">
+            <label for="layout4" class="checkmark">
+              <span class="checkmarkSpan"></span>
+            </label>
+          </div>
+          <div class="tooltip"><img class="slide-image slide-imagePlanos" id="myImg4" data-tilt="data-tilt" data-tilt-axis="x" data-tilt-max="20" onclick="reply_click(this.id)" src="img/template4/template4.jpg" alt="Tema Serviços"/>
+            <span class="tooltiptext2">Recomendado para Empresas da área de Serviços em geral</span></div>
+        </div>
+        <div class="innerSlide innerSlideSelection">
+          <div class="radioContainer ">
+            <input type="radio" id="layout5" name="layout" value="Não Encontrei um Layout">
+            <label for="layout5" class="checkmark">
+              <span class="checkmarkSpan"></span>
+            </label>
+          </div>
+          <div class="tooltip">
+            <div id="coringaContainer">
+              <div id="flipper">
+                <img class="slide-image slide-imagePlanos" id="coringaFront" src="img/coringaFront.png" alt="tema servicos"/>
+                <!-- <img class="slide-image slide-imagePlanos" id="coringaBack" src="img/coringaBack.png" alt="tema servicos"/> -->
+                <div class="slide-image slide-imagePlanos" id="coringaBack">
+                  <span>
+                    <p>Não encontrou um tema do seu agrado?</p>
+                    <p>Clique Aqui</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <span class="tooltiptext2">Vanilla</span>
+          </div>
         </div>
       </div>
+
       <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <div id="imgModalContainer">
-          <span class="close">&times;</span>
-          <img class="modal-content" src="" id="imgModal" alt="Visualização do tema em tela cheia"></div>
+
+      <div id="mySiteModal" class="modal">
+        <div id="siteModalBar">
+          <div class="siteModalMenu">
+            <ul>
+              <li id="smartphone" onclick="frameSize(this.id)">
+                <p>celular</p>
+              </li>
+              <li id="tablet" onclick="frameSize(this.id)">
+                <p>tablet</p>
+              </li>
+              <li id="desktop" onclick="frameSize(this.id)">
+                <p>desktop</p>
+              </li><hr/></ul>
+          </div>
+          <div class="siteClose">&times;</div>
+        </div>
+        <div id="iframeContainer">
+          <div id="loader-wrapper">
+            <div id="loader"></div>
+          </div>
+          <div id="guiaDispositivo">
+            <div>
+              <h3>Selecione um Dispositivo</h3>
+              <p>Ao selecionar, será apresentada a visualização correspondente ao tamanho da tela do dispositivo.</p>
+            </div>
+          </div>
+          <!-- <object rel="import" id="siteModal" data="http://192.168.0.110:49695"> Error: Embedded data could not be displayed. </object> -->
+
+          <img class="modal-content" src="" id="siteImgModal" alt="Visualização do tema em tela cheia">
+        </div>
       </div>
     </section>
     <!-- End of Layout -->
     <!-- Contato -->
     <section id="contato">
       <h2 class="contatoTituloPlanos corTituloProfissional">Dados</h2>
-      <form action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoProfissionalForm">
+      <form target="" action="http://www.agenciaceos.com.br/cgi-sys/formmail.pl" method="post" id="form" class="planoProfissionalForm">
         <!-- Hiden Input -->
         <input type="hidden" name="recipient" value="comercial@agenciaceos.com.br">
-        <input type="hidden" name="subject" value="E-Mail Agência Ceos">
+        <input id="assunto" type="hidden" name="subject" value="E-Mail Agência Ceos">
         <!-- End of Hiden Input -->
         <div id="formplanoProfissional">
           <div class="form-group form-text">
@@ -138,27 +261,31 @@
             <span>enviar</span>
           </button>
         </div>
+        <input type="hidden" name="redirect" value="http://agenciaceos.com.br/thanks-page.html">
       </form>
     </section>
     <!-- End of Contato -->
     <!-- Sub Menu -->
     <section id="subMenu">
-      <a href="/">
-        <h3>CÉOS</h3>
-      </a>
-      <a href="index.html#servicos">Serviços</a>
-      <a href="planos.html">Planos</a>
-      <a href="index.html#contato">Contato</a>
+      <div id="subMenuContainer">
+        <a href="/">
+          <h3>CÉOS</h3>
+        </a>
+        <!-- <a href="index.html#servicos">Serviços</a> -->
+        <a href="planos.html">Planos</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
     </section>
     <!-- End of Sub Menu -->
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Ceos_bottom.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!--Custom Java for Sending Radio with Form -->
@@ -166,10 +293,14 @@
     <!--Custom Java for Scrolling -->
     <script src="js/scrolling-nav.js"></script>
     <!--Custom Java for Scrolling -->
-    <script src="js/image-modal.js"></script>
+    <script src="js/site-modal.js"></script>
     <!--Custom Java for Layout -->
     <script src="js/layout.js"></script>
+    <!--Custom Java for Tooltip -->
+    <script src="js/tooltip-movement.js"></script>
     <!--Custom Java for Screen Size Variations -->
     <script src="js/screen-resize.js"></script>
+    <!--Library for 3D Perspective -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
   </body>
 </html>

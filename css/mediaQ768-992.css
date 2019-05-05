@@ -17,6 +17,17 @@ Agência Thot
 13. PAGINA PLANO PROFISSIONAL***
 14. PAGINA PLANO AVANCADO***
  ----------------------------------------------------------------------------------------*/
+
+.tooltip {
+  position   : relative;
+  display    : block;
+  opacity    : 1;
+  cursor     : help;
+  z-index    : auto;
+  font-family: "Montserrat", sans-serif;
+  font-size  : 14pt;
+}
+
 /*--------------------
       1. MENU
  ----------------------*/
@@ -39,10 +50,6 @@ Agência Thot
   padding: 100px 70px 240px;
 }
 
-#banner div {
-  padding: 0 300px 100px 0;
-}
-
 #banner div span {
   font-size: 24pt;
 }
@@ -52,7 +59,7 @@ Agência Thot
 }
 
 #typewriter {
-  /* max-width : 420px; */
+  max-width : 420px;
   min-height: 300px;
 }
 
@@ -97,6 +104,10 @@ Agência Thot
 /*--------------------
      4. LAYOUTS
 ----------------------*/
+#layouts {
+  padding: 50px 0 90px;
+}
+
 #visualContainer {
   padding: 0 60px;
 }
@@ -108,7 +119,7 @@ Agência Thot
 
 .innerSlide {
   display  : inline-block;
-  width    : 60%;
+  width    : 45%;
   margin   : 0 20px;
   max-width: 500px;
 }
@@ -117,6 +128,15 @@ Agência Thot
   position : relative;
   font-size: 50px;
 }
+
+#coringaBack div {
+  width: 80%;
+}
+
+#coringaBack p {
+  font-size: 16pt;
+}
+
 /*--------------------
      5. PLANOS
 ----------------------*/
@@ -143,16 +163,19 @@ Agência Thot
   margin   : 0 30px 60px;
 }
 
+#planosContainer {
+  margin: 0 0 130px;
+}
+
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
   font-size: 16pt;
   padding  : 20px 45px;
-  margin   : 0 0 130px;
 }
 
 #planos img {
   width : 70%;
-  margin: 0 0 -30px;
+  margin: 0 0 -50px;
 }
 /*--------------------
      6. TESTEMUNHOS
@@ -160,6 +183,7 @@ Agência Thot
 
 #testemunhos {
   padding: 60px 0;
+  height : inherit;
 }
 
 #testemunhos h2 {
@@ -256,8 +280,8 @@ Agência Thot
 }
 
 .planosContainer {
-  padding: 30px;
-  width  : 60%;
+  padding: 30px 20px;
+  width  : 50%;
 }
 
 .planosContainer .planosCategoria {
@@ -269,14 +293,14 @@ Agência Thot
 #planosMedianoBasico,
 #planosMedianoProfissional,
 .planosDivSuperior {
-  font-size: 14pt;
+  font-size: 12pt;
   padding  : 0 30px;
 }
 
 #planosMedianoAvancado span,
 #planosMedianoBasico span,
 #planosMedianoProfissional span {
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 #planosMedianoAvancado li,
@@ -289,11 +313,16 @@ Agência Thot
 
 .planosDivInferior {
   margin-top: 90px;
-  font-size : 16pt;
+  font-size : 14pt;
 }
 
 .preco {
-  font-size: 26pt;
+  font-size: 23pt;
+}
+
+.setupUnico {
+  font-size    : 11pt;
+  margin-bottom: 0;
 }
 
 .planosDetalhadoCliqueAqui {
@@ -343,4 +372,16 @@ Agência Thot
 
 #layouts h1 {
   font-size: 25pt;
+}
+
+.precofinal {
+  font-size: 23pt !important;
+}
+
+/*--------------------
+    Site Modal
+----------------------*/
+
+#iframeContainer {
+  margin-top: 25px;
 }

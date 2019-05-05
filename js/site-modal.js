@@ -1,64 +1,32 @@
 // Get the modal
 var modal = document.getElementById('mySiteModal');
-
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var modalImg = document.getElementById("siteModal");
+var modalImg = document.getElementById("siteImgModal");
+// Global variable for getting id from clicked layout
+var clicketTemplate;
 
+// Funcion to open modal and store id from clicked layout
 function reply_click(clicked_id) {
+
   modal.style.display = "flex";
   $("body").addClass("modal-open"); //block body scroll
+  $("#setaPlano1").css("display", "none");
+  $("#setaPlano2").css("display", "none");
+  $("#setaVoltar").css("display", "none");
+  $("#setasContainer").css("display", "none");
+  $(".tooltiptext").css("display", "none");
 
+  clicketTemplate = clicked_id;
 
-  var srcString = String(document.getElementById(clicked_id).src);
-
-  // String.prototype.splice = function(idx, rem, str) {
-  //   return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
-  // };
-  //
-  // if (screen.width < 992) {
-  //   var result = srcString.splice((srcString.length - 4), 0, "full");
-  // } else {
-  //   var result = srcString.splice((srcString.length - 4), 0, "full2");
-  // }
-  //
-  // modalImg.src = result;
-
-}
-
-// When the user clicks on modalImg, close the modal
-modalImg.onclick = function() {
-  modal.style.display = "none";
-  $("body").removeClass("modal-open"); //remove blocked scroll from body
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("siteClose")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  $("body").removeClass("modal-open"); //remove blocked scroll from body
-  $("#siteModal").css("display", "none");
-  $("#guiaDispositivo").css("display", "flex");
+  return clicketTemplate
 };
-
-
-
 
 //menu
 
-var buttonActive = false;
-
-function buttonActive() {
-  if (buttonActive == false) {
-    buttonActive = true;
-
-  }
-}
-
-
 $(document).ready(function() {
   $("#smartphone").click(function() {
+    $("#siteImgModal").css("display", "none");
+    $("#iframeContainer").css("max-width", "500px");
     $("#smartphone").children().css("color", "#bbb");
     $("#tablet").children().css("color", "white");
     $("#desktop").children().css("color", "white");
@@ -69,6 +37,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#tablet").click(function() {
+    $("#siteImgModal").css("display", "none");
+    $("#iframeContainer").css("max-width", "800px");
     $("#smartphone").children().css("color", "white");
     $("#tablet").children().css("color", "#bbb");
     $("#desktop").children().css("color", "white");
@@ -79,6 +49,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#desktop").click(function() {
+    $("#siteImgModal").css("display", "none");
+    $("#iframeContainer").css("max-width", "none");
     $("#smartphone").children().css("color", "white");
     $("#tablet").children().css("color", "white");
     $("#desktop").children().css("color", "#bbb");
@@ -108,36 +80,95 @@ $(document).ready(function() {
   });
 });
 
-
-
 //resize frame
 
 function frameSize(deviceValue) {
+  $('#loader').css('display', 'block');
+  $('#siteImgModal').css('display', 'none');
 
-  var device = {
-    smartphone: 500,
-    tablet: 900,
-    desktop: 1920
-  }
+  var srcString = String(document.getElementById(clicketTemplate).src);
+
+  String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+  };
 
   var deviceSetting = String(deviceValue);
 
-  var proportion = document.getElementById("iframeContainer").offsetWidth / device[deviceSetting];
+  if (deviceSetting == "smartphone") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "smartphone");
+  }
+  if (deviceValue == "tablet") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "tablet");
+  }
+  if (deviceValue == "desktop") {
+    var imgAdress = srcString.splice((srcString.length - 4), 0, "full");
+  }
 
+  modalImg.src = imgAdress;
 
-  // $("#" + deviceSetting).children().css("color", "#bbb");
-  $("#siteModal").css("display", "block");
-  $("#siteModal").css("width", device[deviceSetting]);
-  $("#siteModal").css("-webkit-transform", "scale(" + proportion + ")");
+  $.get(imgAdress, {}, function() {
+    $('#siteImgModal').css('display', 'flex');
+    $('#loader').css('display', 'none');
+  });
 
-
-  $(window).scroll(function() {
-    $("#siteModal").css("display", "block");
-    $("#siteModal").css("width", device[deviceSetting]);
-    $("#siteModal").css("-webkit-transform", "scale(" + proportion + ")");
-  })
+  //
+  //
+  //
+  //   var proportion = document.getElementById("iframeContainer").offsetWidth / device[deviceSetting];
+  //
+  //
+  //    $("#" + deviceSetting).children().css("color", "#bbb");
+  //   $("#siteModal").css("display", "block");
+  //   $("#siteModal").css("width", device[deviceSetting]);
+  //   $("#siteModal").css("-webkit-transform", "scale(" + proportion + ")");
+  //
+  //
+  //   $(window).scroll(function() {
+  //     $("#siteModal").css("display", "block");
+  //     $("#siteModal").css("width", device[deviceSetting]);
+  //     $("#siteModal").css("-webkit-transform", "scale(" + proportion + ")");
+  //   })
+  // }
 }
 
+// When the user clicks on modalImg, close the modal
+modalImg.onclick = function() {
+  modal.style.display = "none";
+  $("#siteImgModal").css('display', 'none');
+  $("body").removeClass("modal-open"); //remove blocked scroll from body
+  $("#siteModal").css("display", "none");
+  $("#guiaDispositivo").css("display", "flex");
+  if (screen.width >= 992) {
+    $("#siteImgModal").css("display", "none");
+    $("#setaPlano1").css("display", "block");
+    $("#setaPlano2").css("display", "block");
+    $("#setaVoltar").css("display", "block");
+    $("#setasContainer").css("display", "block");
+    $(".tooltiptext").css("display", "inline");
+  }
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("siteClose")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  $("#siteImgModal").css('display', 'none');
+  modal.style.display = "none";
+  $("body").removeClass("modal-open"); //remove blocked scroll from body
+  $("#siteModal").css("display", "none");
+  $("#guiaDispositivo").css("display", "flex");
+
+  if (screen.width >= 992) {
+    $("#siteImgModal").css("display", "none");
+    $("#siteImgModal").css("display", "none");
+    $("#setaPlano1").css("display", "block");
+    $("#setaPlano2").css("display", "block");
+    $("#setaVoltar").css("display", "block");
+    $("#setasContainer").css("display", "block");
+    $(".tooltiptext").css("display", "inline");
+  }
+};
 
 // block background when modal is open
 (function() {

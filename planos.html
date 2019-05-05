@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="pt">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121900319-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121900319-1');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="description" content="Escolha o seu Plano! Websites de acordo com as melhores práticas de SEO, totalmente responsivo para Tablets e Smartphone, Design sofisticado e planos que cabem no seu bolso!">
@@ -24,13 +35,16 @@
     <link rel="stylesheet" media="(min-width: 2000px)" href="css/mediaQMin2000.css"/>
 
     <title>Céos - Planos</title>
-    <link rel="shortcut icon" href="img/Favicon.png">
+    <link rel="shortcut icon" href="img/Favicon_CEOS.png">
   </head>
   <body id="body">
     <!-- Menu -->
     <section id="menu">
-      <a href="/"><img src="img/Thot1.png" alt=""></a>
-      <a href="index.html#contato" id="menuContato">contato</a>
+      <div id="menuContainer">
+        <a href="/"><img src="img/agencia-ceos.png" alt="Agência Céos"></a>
+        <a href="/#contato" id="menuContato">contato</a>
+        <!-- Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections. -->
+      </div>
     </section>
     <div id="menuSpacer"></div>
     <!-- End of Menu -->
@@ -42,7 +56,6 @@
         <div id="setaPlanosDireita" onclick="slider.setaDireitaClick()"><img src="img/next.png" alt=""></div>
         <div id="setaPlanosEsquerda" onclick="slider.setaEsquerdaClick()"><img src="img/prev.png" alt=""></div>
         <div class="sliderPlanos" id="sliderPlanos">
-
           <div class="holder">
             <div class="slide-wrapper">
               <div class="slidePlanos">
@@ -50,27 +63,31 @@
                   <div>
                     <h3 id="planoBasico" class="planosCategoria">BÁSICO</h3>
                     <ul class="planosDivSuperior">
-                      <li>Registro do Dom&#237;no e Hospedagem no Servidor</li>
+                      <li>Dom&#237;no e Hospedagem</li>
                       <li>Responsivo para tablets e celulares</li>
                       <li>SEO &#40;Optimiza&#231;&#227;o para Mecanismos de Busca&#41;</li>
-                      <li>Envio do Sitemap ao Google</li>
-                      <li>Configurado para o Google Adwords e Analytics</li>
+                      <li>Envio do Sitemap</li>
+                      <li>Configurado para Adwords e Analytics</li>
                     </ul>
                     <ul id="planosMedianoBasico">
                       <li>
-                        <span>N&#227;o h&#225; o envio do c&#243;digo da p&#225;gina</span></li>
+                        <span>Revis&#227;o de Conte&uacute;do</span></li>
                       <li>
-                        <span>1 modifica&#231;&#245;es no site ap&#243;s finaliza&#231;&#227;o</span></li>
+                        <span>N&#227;o h&#225; o envio do c&#243;digo</span></li>
+                      <li>
+                        <span>1 Atualiza&#231;&atilde;o por m&ecirc;s</span></li>
+                      <li>
+                        <span>1 GB de e-mail</span></li>
                       <li>
                         <span>Tema fixo</span></li>
                     </ul>
                   </div>
                   <div>
                     <div class="planosDivInferior">
+                      <p class="setupUnico">SETUP &Uacute;NICO</p>
                       <p class="preco">R$ 490</p>
                       <p>+</p>
                       <p>R&#36; 60 p&#47;m&#234;s</p>
-                      <p>&#42;&#40;taxa de manuten&#231;&#227;o&#41;</p>
                     </div>
                     <a href="planobasico.html" class="test">
                       <div class="planosDetalhadoCliqueAqui">clique aqui</div>
@@ -85,33 +102,35 @@
                   <div>
                     <h3 id="planoProfissional" class="planosCategoria">PROFISSIONAL</h3>
                     <ul class="planosDivSuperior">
-                      <li>Registro do Dom&#237;no e Hospedagem no Servidor</li>
+                      <li>Dom&#237;no e Hospedagem</li>
                       <li>Responsivo para tablets e celulares</li>
                       <li>SEO &#40;Optimiza&#231;&#227;o para Mecanismos de Busca&#41;</li>
-                      <li>Envio do Sitemap ao Google</li>
-                      <li>Configurado para o Google Adwords e Analytics</li>
+                      <li>Envio do Sitemap</li>
+                      <li>Configurado para Adwords e Analytics</li>
                     </ul>
                     <ul id="planosMedianoProfissional">
                       <li>
-                        <span>N&#227;o h&#225; o envio do c&#243;digo da p&#225;gina</span></li>
+                        <span>Revis&#227;o de Conte&uacute;do</span></li>
                       <li>
-                        <span>2 modifica&#231;&#245;es no site ap&#243;s finaliza&#231;&#227;o</span></li>
+                        <span>N&#227;o h&#225; o envio do c&#243;digo</span></li>
                       <li>
-                        <span>Permite altera&#231;&#245;es no Tema escolhido</span></li>
+                        <span>1 Atualiza&#231;&atilde;o por m&ecirc;s</span></li>
                       <li>
-                        <span>Cria&#231;&#245;o do Google My Business</span></li>
+                        <span>1,5 GB de e-mail</span></li>
+                      <li>
+                        <span>Permite altera&#231;&otilde;es no Tema escolhido</span></li>
                       <li>
                         <span>Wordpress</span></li>
                       <li>
-                        <span>Vitrine virtual &#40;at&#233; 20 produtos&#41;</span></li>
+                        <span>Vitrine Virtual (at&eacute; 30 produtos)</span></li>
                     </ul>
                   </div>
                   <div>
                     <div class="planosDivInferior">
+                      <p class="setupUnico">SETUP &Uacute;NICO</p>
                       <p class="preco">R$ 1080</p>
                       <p>+</p>
                       <p>R&#36; 60 p&#47;m&#234;s</p>
-                      <p>&#42;&#40;taxa de manuten&#231;&#227;o&#41;</p>
                     </div>
                     <a href="planoprofissional.html">
                       <div class="planosDetalhadoCliqueAqui">clique aqui</div>
@@ -126,35 +145,32 @@
                   <div>
                     <h3 id="planosAvancado" class="planosCategoria">AVANÇADO</h3>
                     <ul class="planosDivSuperior">
-                      <li>Registro do Dom&#237;no e Hospedagem no Servidor</li>
+                      <li>Dom&#237;no e Hospedagem</li>
                       <li>Responsivo para tablets e celulares</li>
                       <li>SEO &#40;Optimiza&#231;&#227;o para Mecanismos de Busca&#41;</li>
-                      <li>Envio do Sitemap ao Google</li>
-                      <li>Configurado para o Google Adwords e Analytics</li>
+                      <li>Envio do Sitemap</li>
+                      <li>Configurado para Adwords e Analytics</li>
                     </ul>
                     <ul id="planosMedianoAvancado">
                       <li>
-                        <span>Envio do c&#243;digo do Website ao cliente</span></li>
+                        <span>
+                          <strong>Site Totalmente Personalizado</strong></span></li>
                       <li>
-                        <span>Modifica&#231;&#245;es
-                          <strong>ilimitadas</strong>
-                          no tema</span></li>
+                        <span>E-mail sob demanda</span></li>
                       <li>
-                        <span>Site
-                          <strong>totalmente personalizado</strong></span></li>
-                      <li>
-                        <span>Cria&#231;&#245;o do Google My Business</span></li>
+                        <span>Cria&#231;&atilde;o do Google My Business</span></li>
                       <li>
                         <span>Wordpress</span></li>
                       <li>
                         <span>Site adpatado as demandas do cliente</span></li>
+                      <li>
+                        <span>Envio do c&oacute;digo</span></li>
                     </ul>
                   </div>
                   <div>
                     <div class="planosDivInferior">
                       <p class="preco">Sob Consulta</p>
                       <p>...</p>
-                      <p>&nbsp;</p>
                       <p>&nbsp;</p>
                     </div>
                     <a href="planoavancado.html">
@@ -171,22 +187,25 @@
     <!-- End of Planos -->
     <!-- Sub Menu -->
     <section id="subMenu">
-      <a href="/">
-        <h3>CÉOS</h3>
-      </a>
-      <a href="index.html#servicos">Serviços</a>
-      <a href="#planosDetalhado">Planos</a>
-      <a href="index.html#contato">Contato</a>
+      <div id="subMenuContainer">
+        <a href="/">
+          <h3>CÉOS</h3>
+        </a>
+        <!-- <a href="index.html#servicos">Serviços</a> -->
+        <a href="#menuSpacer">Planos</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
     </section>
     <!-- End of Sub Menu -->
     <footer>
-      <img src="img/Thot_bottom2.png" alt="">
-      <p>© 2018 CÉOS. All rights reserved</p>
-      <div></div>
+      <div id="footerContainer">
+        <img src="img/Ceos_bottom.png" alt="">
+        <p>© 2018 CÉOS. All rights reserved</p>
+        <div></div>
+      </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!--Custom Java for Planos Carousel-->

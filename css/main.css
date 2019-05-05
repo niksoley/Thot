@@ -21,6 +21,57 @@ Agência Thot
     0. GLOBAL
  ----------------------*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.opacity {
+  opacity: 0 !important;
+}
+
+.tooltip {
+  position   : inherit;
+  display    : block;
+  opacity    : 1;
+  cursor     : help;
+  z-index    : inherit;
+  font-family: "Montserrat", sans-serif;
+  font-size  : 12pt;
+}
+
+.tooltip .tooltiptext {
+  opacity         : 0;
+  font-family     : "Montserrat", sans-serif;
+  font-size       : 9pt;
+  line-height     : 1.5;
+  color           : black;
+  text-align      : left;
+  background-color: white;
+  width           : 200px;
+  padding         : 8px;
+  border          : 1px solid black;
+  z-index         : 9999 !important;
+  display         : none;
+
+  /* Position the tooltip */
+  position        : absolute;
+
+}
+
+.tooltip:hover .tooltiptext {
+  opacity   : 1;
+  position  : fixed;
+  overflow  : hidden;
+  transition: opacity 0.6s;
+
+}
+
+/*--- Setas ---*/
+
+#setaPlano1,
+#setaPlano2,
+#setaVoltar,
+#setasContainer {
+  display: none;
+}
+
 /*--------------------
      1. MENU
 ----------------------*/
@@ -33,11 +84,20 @@ Agência Thot
   z-index        : 10;
   box-shadow     : 0 10px 8px -1px rgba(0, 0, 0, 0.3), 0 15px 12px -12px rgba(0, 0, 0, 0.6);
   position       : relative;
-  z-index        : 5;
+  z-index        : 90;
+}
+
+#menuContainer {
+  display         : flex;
+  justify-content : space-between;
+  background-color: white;
+  z-index         : 10;
+  width           : 100%;
+  margin          : auto;
 }
 
 #menu img {
-  height: 55px;
+  height: 60px;
 }
 
 #menuContato,
@@ -65,8 +125,8 @@ Agência Thot
 ----------------------*/
 #banner {
   width              : 100%;
-  padding            : 70px 30px 100px;
-  background-image   : url("../img/Banner_mobile1.jpg");
+  padding            : 80px 28px 180px;
+  background-image   : url("../img/banner-desenvolvimento-sites.jpg");
   background-repeat  : no-repeat;
   background-position: center;
   background-size    : cover;
@@ -74,7 +134,17 @@ Agência Thot
   align-items        : center;
   max-height         : 90vh;
   text-align         : left;
+  position           : relative;
 
+}
+
+#particles-js {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+  padding : 0 !important;
 }
 
 #banner span {
@@ -100,6 +170,7 @@ Agência Thot
 #typewriter {
   /* max-width : 420px; */
   min-height: 205px;
+  opacity   : 0;
 }
 
 #typewriter::after {
@@ -203,6 +274,7 @@ Agência Thot
   background-color: black;
   padding         : 25px 0 60px;
   color           : white;
+  position        : relative;
 }
 
 #layouts h2 {
@@ -226,6 +298,7 @@ Agência Thot
   -webkit-overflow-scrolling: touch;
   -overflow-scrolling       : touch;
   -ms-overflow-style        : -ms-autohiding-scrollbar;
+
 }
 
 #visualContainer::-webkit-scrollbar {
@@ -237,6 +310,7 @@ Agência Thot
   width    : 80%;
   margin   : 0 5px;
   max-width: 350px;
+  z-index  : 5;
 }
 
 .slide-image {
@@ -246,6 +320,7 @@ Agência Thot
   border-width: 5px;
   border-color: white;
   cursor      : pointer;
+  z-index     : 15;
 }
 
 .modal-open {
@@ -286,6 +361,10 @@ Agência Thot
   width: 90%;
 }
 
+#imgModal {
+  display: none;
+}
+
 .imgModal {
   margin            : auto;
   display           : block;
@@ -299,6 +378,7 @@ Agência Thot
   position          : relative;
   z-index           : 16;
 }
+
 @keyframes zoom {
   from {
     transform: scale(0);
@@ -308,6 +388,86 @@ Agência Thot
     transform: scale(1);
   }
 }
+
+/* Loader */
+#loader-wrapper {
+  z-index: 20;
+}
+
+#loader {
+  display          : none;
+  position         : absolute;
+  top              : 50%;
+  left             : 50%;
+  width            : 100px;
+  height           : 100px;
+  margin           : -75px 0 0 -50px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #A0444B;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:before {
+  content          : "";
+  position         : absolute;
+  top              : 5px;
+  left             : 5px;
+  right            : 5px;
+  bottom           : 5px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #5A7F90;
+  -webkit-animation: myanim 1.5s infinite;
+  animation        : myanim 1.5s infinite;
+}
+
+#loader:after {
+  content          : "";
+  position         : absolute;
+  top              : 15px;
+  left             : 15px;
+  right            : 15px;
+  bottom           : 15px;
+  border-radius    : 50%;
+  border           : 3px solid transparent;
+  border-top-color : #AFD14A;
+  -webkit-animation: myanim 1.5s infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation        : myanim 1.5s infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+@keyframes myanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform    : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform    : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+
 /* The Close Button */
 
 .close {
@@ -325,6 +485,107 @@ Agência Thot
   text-decoration: none;
   cursor         : pointer;
 }
+
+#coringaContainer {
+  display            : inline-block;
+  background         : #1D1F20;
+  position           : relative;
+  background         : linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  animation          : animatedgradient 10s ease alternate infinite;
+  background-size    : 300% 300%;
+  margin             : auto;
+
+  -webkit-perspective: 1000;
+  -moz-perspective   : 1000;
+  -o-perspective     : 1000;
+  perspective        : 1000;
+}
+
+#coringaContainer.hover #flipper,
+#coringaContainer:hover #flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform   : rotateY(180deg);
+  -o-transform     : rotateY(180deg);
+  transform        : rotateY(180deg);
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+#flipper {
+  position               : relative;
+
+  -webkit-transition     : 0.9s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition        : 0.9s;
+  -moz-transform-style   : preserve-3d;
+
+  -o-transition          : 0.9s;
+  -o-transform-style     : preserve-3d;
+
+  transition             : 0.9s;
+  transform-style        : preserve-3d;
+}
+
+#coringaBack,
+#coringaFront {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility   : hidden;
+  -o-backface-visibility     : hidden;
+  backface-visibility        : hidden;
+  border-color               : rgba(255,255,255,0);
+}
+
+#coringaBack {
+  position        : absolute;
+  top             : 1.5%;
+  left            : 1.5%;
+  width           : 97%;
+  height          : 97%;
+  background-color: #1D1F20;
+  z-index         : 200;
+}
+
+#coringaBack div {
+  position : absolute;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%,-50%);
+  width    : 90%;
+}
+
+#coringaBack p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size  : 12pt;
+  white-space: normal;
+  text-align : center;
+  margin     : 30px 0 20px;
+}
+
+#coringaFront {
+  z-index: 2;
+}
+
+#coringaBack {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform   : rotateY(180deg);
+  -o-transform     : rotateY(180deg);
+  transform        : rotateY(180deg);
+}
+
 /*--------------------
      5. PLANOS
 ----------------------*/
@@ -361,6 +622,10 @@ Agência Thot
   margin     : 0 30px 50px;
 }
 
+#planosContainer {
+  margin: 0 0 100px;
+}
+
 #planosCliqueAqui,
 #planosCliqueAqui:hover {
   font-family     : "Montserrat", sans-serif;
@@ -370,7 +635,6 @@ Agência Thot
   text-decoration : none;
   background-color: #5A7F90;
   padding         : 20px 35px;
-  margin          : 0 0 100px;
 }
 
 #planosCliqueAqui:hover {
@@ -590,11 +854,11 @@ Agência Thot
 footer {
   background-color: black;
   text-align      : center;
-  padding         : 20px;
+  padding         : 15px;
 }
 
 footer img {
-  height: 30px;
+  height: 50px;
 }
 
 footer p {
@@ -770,7 +1034,7 @@ footer p {
 }
 
 #setaPlanosDireita {
-  position: absolute;
+  position: fixed;
   padding : 15px 7px;
   top     : 40%;
   right   : 0;
@@ -779,7 +1043,7 @@ footer p {
 }
 
 #setaPlanosEsquerda {
-  position: absolute;
+  position: fixed;
   padding : 15px 0 0 7px;
   top     : 40%;
   left    : 0;
@@ -839,7 +1103,7 @@ footer p {
 }
 
 #listaPlano {
-  font-size    : 14px;
+  font-size    : 12pt;
   border-color : black;
   border-width : 2px;
   border-style : solid;
@@ -863,9 +1127,24 @@ footer p {
   font-weight: bold;
 }
 
+#setaDireita {
+  display: none;
+}
+
+#setaEsquerda {
+  display: none;
+}
+
+.tooltip .tooltiptext2 {
+  display: none;
+}
+
+/*--------------------
+    Site Modal
+----------------------*/
+
 #mySiteModal {
-  padding : 0;
-  overflow: hidden;
+  padding: 0 0 50px;
 }
 
 #siteModalContainer {
@@ -958,12 +1237,14 @@ hr {
 }
 
 #iframeContainer {
-  width   : 100%;
-  height  : 80vh;
-  padding : 0;
-  margin  : 0;
-  overflow: hidden;
-  position: relative;
+  width           : 90%;
+  height          : 90%;
+  padding         : 0;
+  z-index         : 10;
+  border-color    : rgba(0, 0, 0, 0);
+  border-style    : none;
+  border-radius   : 3% 3% 0 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #guiaDispositivo {
@@ -1005,6 +1286,14 @@ hr {
   -webkit-transform       : scale(0.17);
   -webkit-transform-origin: 0 0;
   position                : relative;
+}
+
+#siteImgModal {
+  display         : none;
+  border-style    : none;
+  background-color: rgba(0,0,0,0);
+  padding         : 0 0 50px;
+
 }
 
 /*--------------------
@@ -1118,6 +1407,12 @@ hr {
   color           : white;
 }
 
+.precofinalAvancado {
+  max-width : 200px;
+  margin    : auto;
+  text-align: center;
+}
+
 /*--------------------------------------------------------
      15.  Pagina de Agradecimento
 ---------------------------------------------------------*/
@@ -1160,5 +1455,4 @@ hr {
   right   : 0;
   left    : 0;
   bottom  : 0;
-
 }

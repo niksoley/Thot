@@ -5,6 +5,9 @@ var modal = document.getElementById('myModal');
 var modalImg = document.getElementById("imgModal");
 
 function reply_click(clicked_id) {
+
+  $('#loader').css('display', 'block');
+
   modal.style.display = "flex";
   $("body").addClass("modal-open"); //block body scroll
 
@@ -15,13 +18,15 @@ function reply_click(clicked_id) {
     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
   };
 
-  if (screen.width < 992) {
-    var result = srcString.splice((srcString.length - 4), 0, "full");
-  } else {
-    var result = srcString.splice((srcString.length - 4), 0, "full2");
-  }
+  var result = srcString.splice((srcString.length - 4), 0, "full");
+
 
   modalImg.src = result;
+
+  $.get(result, {}, function() {
+    $('#imgModal').css('display', 'flex');
+    $('#loader').css('display', 'none');
+  });
 
 }
 
